@@ -1,0 +1,23 @@
+Feature: Log in to separate website for officers
+
+	As an officer,
+	I only want a login specific for officers of the club
+	So that we can add new horses and also create/edit assignments
+
+Background:
+	Given I am on the home page
+	Then I should see "Welcome to the home page!"
+
+Scenario: Successfully login as an officer
+	Given I am on the home page
+	And I follow "Officer Login"
+	And I fill in "Password" with "polo"
+	Then I should be into the officers panel
+
+Scenario: Unsuccessful login 
+	Given I am on the home page
+	And I follow "Officer Login"
+	And I fill in "Password" with "ihatepolo"
+	Then I should see "Incorrect Login Information Provided"
+	And I should be on the home page
+
