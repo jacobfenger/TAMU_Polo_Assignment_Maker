@@ -1,4 +1,9 @@
-module ApplicationHelper
+module SessionsHelper
+
+  def log_in
+    session[:officer] = true
+  end
+
   # Returns true if an officer is logged in
   def logged_in?
 	!current_user.nil?
@@ -11,9 +16,7 @@ module ApplicationHelper
   end
 
   def log_out
-  	p "LOGGING OUT"
     session[:officer] = false
     @current_user = nil
-    link_to root_path
   end
 end

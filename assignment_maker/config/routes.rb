@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
-  get 'home/index'
-
   root 'home#index'
+  get 'home/index'
+  get '/login', to: 'sessions#new'
+  post '/login', to: 'sessions#create'
+  delete '/logout', to: 'sessions#destroy'
+
 end
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -1,0 +1,26 @@
+!!!
+%html
+  %head
+    // Meta head stuff here (Not really sure if it's necessary)
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
+    %title AssignmentMaker
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+    // Header stuff here
+    %h1 Texas A&M Polo Assignment Maker
+
+    // Home button to always be displayed in header
+    = link_to 'Home', root_path
+
+    // Only show 'Login' if user is not logged in
+    // Vice-versa if logged in
+    - if not logged_in?
+      = link_to 'Login', login_path 
+    - else
+      = link_to 'Logout', logout_path, method: :delete
+  %body
+    = yield
+    // Footer stuff here
+
+

@@ -1,0 +1,8 @@
+%h1 Officer Log In
+
+= form_tag login_path do
+
+  = label :password, :password, 'Password'
+  = text_field :password, 'password'
+
+  = submit_tag 'Save Changes'
