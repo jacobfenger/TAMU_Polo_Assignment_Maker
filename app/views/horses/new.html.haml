@@ -1,0 +1,15 @@
+= form_tag do # Do we need to label the form_tag?
+  
+  = label :horse, :name, 'Name:'
+  = text_field :horse, 'name'
+
+  <br>
+  = label :horse, :age, 'Age:'
+  = text_field :horse, 'age'
+
+  <br>
+  = label :horse, :summary, 'Summary:'
+  = text_field :horse, 'summary' 
+
+  <br> <br>
+  = submit_tag 'Save Changes'

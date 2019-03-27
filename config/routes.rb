@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
 
+  get '/horses', to: 'horses#index'
+  get '/horses/new', to: 'horses#new'
+  post '/horses/new', to: 'horses#create'
 end
 
   # The priority is based upon order of creation: first created -> highest priority.

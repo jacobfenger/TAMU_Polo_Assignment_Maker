@@ -1,0 +1,17 @@
+// Display all horses
+%table#horses
+  %thead
+    %tr
+      %th Name
+      %th Age
+      %th Summary
+  %tbody
+    - @horses.each do |h|
+      %tr
+        %td= h.name
+        %td= h.age
+        %td= h.summary
+
+%p 
+- if logged_in?
+  = link_to 'Add a horse', horses_new_path

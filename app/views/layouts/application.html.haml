@@ -13,12 +13,17 @@
     // Home button to always be displayed in header
     = link_to 'Home', root_path
 
+    // Horses list button
+    = link_to 'Horses', horses_path
+
     // Only show 'Login' if user is not logged in
     // Vice-versa if logged in
     - if not logged_in?
       = link_to 'Login', login_path 
     - else
       = link_to 'Logout', logout_path, method: :delete
+
+    <br> <br>
   %body
     = yield
     // Footer stuff here
