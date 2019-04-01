@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
   		log_in # Call log in function from app controller
   	  redirect_to root_path # Redirect to home if login successfull
   	else # Incorrect password entered
-  		flash[:danger] = "Incorrect password entered."
+  		flash[:notice] = "Incorrect password entered."
   		render 'new'
   	end
   end  

@@ -6213,3 +6213,740 @@ Started GET "/" for 127.0.0.1 at 2019-03-27 15:07:45 -0500
 Processing by HomeController#index as HTML
   Rendered home/index.html.haml within layouts/application (0.1ms)
 Completed 200 OK in 32ms (Views: 31.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-28 15:16:32 -0500
+
+PG::ConnectionBad (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+):
+  activerecord (4.2.10) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `initialize'
+  activerecord (4.2.10) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `new'
+  activerecord (4.2.10) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `connect'
+  activerecord (4.2.10) lib/active_record/connection_adapters/postgresql_adapter.rb:242:in `initialize'
+  activerecord (4.2.10) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `new'
+  activerecord (4.2.10) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `postgresql_connection'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /home/jacob/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/monitor.rb:214:in `mon_synchronize'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /home/jacob/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/monitor.rb:214:in `mon_synchronize'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:571:in `retrieve_connection'
+  activerecord (4.2.10) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.10) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.10) lib/active_record/migration.rb:383:in `connection'
+  activerecord (4.2.10) lib/active_record/migration.rb:370:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.11) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.11) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.11) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  rack (1.6.11) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.11) lib/rack/handler/webrick.rb:88:in `service'
+  /home/jacob/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+  /home/jacob/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+  /home/jacob/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+
+
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.6ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (118.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-28 16:08:51 -0500
+
+PG::ConnectionBad (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+):
+  activerecord (4.2.10) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `initialize'
+  activerecord (4.2.10) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `new'
+  activerecord (4.2.10) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `connect'
+  activerecord (4.2.10) lib/active_record/connection_adapters/postgresql_adapter.rb:242:in `initialize'
+  activerecord (4.2.10) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `new'
+  activerecord (4.2.10) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `postgresql_connection'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /home/jacob/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/monitor.rb:214:in `mon_synchronize'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /home/jacob/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/monitor.rb:214:in `mon_synchronize'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:571:in `retrieve_connection'
+  activerecord (4.2.10) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.10) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.10) lib/active_record/migration.rb:383:in `connection'
+  activerecord (4.2.10) lib/active_record/migration.rb:370:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.11) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.11) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.11) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  rack (1.6.11) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.11) lib/rack/handler/webrick.rb:88:in `service'
+  /home/jacob/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+  /home/jacob/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+  /home/jacob/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+
+
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (35.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-28 16:12:08 -0500
+
+ActiveRecord::NoDatabaseError (FATAL:  role "jacob" does not exist
+):
+  activerecord (4.2.10) lib/active_record/connection_adapters/postgresql_adapter.rb:661:in `rescue in connect'
+  activerecord (4.2.10) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `connect'
+  activerecord (4.2.10) lib/active_record/connection_adapters/postgresql_adapter.rb:242:in `initialize'
+  activerecord (4.2.10) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `new'
+  activerecord (4.2.10) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `postgresql_connection'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /home/jacob/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/monitor.rb:214:in `mon_synchronize'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /home/jacob/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/monitor.rb:214:in `mon_synchronize'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:571:in `retrieve_connection'
+  activerecord (4.2.10) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.10) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.10) lib/active_record/migration.rb:383:in `connection'
+  activerecord (4.2.10) lib/active_record/migration.rb:370:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.11) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.11) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.11) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  rack (1.6.11) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.11) lib/rack/handler/webrick.rb:88:in `service'
+  /home/jacob/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+  /home/jacob/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+  /home/jacob/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+
+
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.3ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (35.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-28 16:22:05 -0500
+
+ActiveRecord::NoDatabaseError (FATAL:  role "jacob" does not exist
+):
+  activerecord (4.2.10) lib/active_record/connection_adapters/postgresql_adapter.rb:661:in `rescue in connect'
+  activerecord (4.2.10) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `connect'
+  activerecord (4.2.10) lib/active_record/connection_adapters/postgresql_adapter.rb:242:in `initialize'
+  activerecord (4.2.10) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `new'
+  activerecord (4.2.10) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `postgresql_connection'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /home/jacob/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/monitor.rb:214:in `mon_synchronize'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /home/jacob/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/monitor.rb:214:in `mon_synchronize'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:571:in `retrieve_connection'
+  activerecord (4.2.10) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.10) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.10) lib/active_record/migration.rb:383:in `connection'
+  activerecord (4.2.10) lib/active_record/migration.rb:370:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.11) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.11) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.11) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  rack (1.6.11) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.11) lib/rack/handler/webrick.rb:88:in `service'
+  /home/jacob/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+  /home/jacob/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+  /home/jacob/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+
+
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.6ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (35.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-28 16:23:39 -0500
+
+ActiveRecord::NoDatabaseError (FATAL:  database "assignment_maker_development" does not exist
+):
+  activerecord (4.2.10) lib/active_record/connection_adapters/postgresql_adapter.rb:661:in `rescue in connect'
+  activerecord (4.2.10) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `connect'
+  activerecord (4.2.10) lib/active_record/connection_adapters/postgresql_adapter.rb:242:in `initialize'
+  activerecord (4.2.10) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `new'
+  activerecord (4.2.10) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `postgresql_connection'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /home/jacob/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/monitor.rb:214:in `mon_synchronize'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /home/jacob/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/monitor.rb:214:in `mon_synchronize'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:571:in `retrieve_connection'
+  activerecord (4.2.10) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.10) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.10) lib/active_record/migration.rb:383:in `connection'
+  activerecord (4.2.10) lib/active_record/migration.rb:370:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.11) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.11) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.11) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  rack (1.6.11) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.11) lib/rack/handler/webrick.rb:88:in `service'
+  /home/jacob/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+  /home/jacob/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+  /home/jacob/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+
+
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.3ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (36.3ms)
+  [1m[36mSQL (0.6ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (46.1ms)[0m  CREATE TABLE "horses" ("id" serial primary key, "name" character varying, "age" integer, "summary" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (18.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (20.4ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.6ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (10.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20190327185440')
+  [1m[36mSQL (0.6ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (42.4ms)[0m  CREATE TABLE "horses" ("id" serial primary key, "name" character varying, "age" integer, "summary" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (15.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (15.3ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.6ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (9.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20190327185440')
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.8ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'horses'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-28 16:24:17 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (15.5ms)
+Completed 200 OK in 451ms (Views: 433.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/horses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2019-03-28 16:24:18 -0500
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2019-03-28 16:24:18 -0500
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2019-03-28 16:24:18 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2019-03-28 16:24:18 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2019-03-28 16:24:18 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2019-03-28 16:24:18 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2019-03-28 16:24:18 -0500
+
+
+Started GET "/assets/turbolinks.self-2db6ec539b9190f75e1d477b305df53d12904d5cafdd47c7ffd91ba25cbec128.js?body=1" for 127.0.0.1 at 2019-03-28 16:24:18 -0500
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2019-03-28 16:24:18 -0500
+
+
+Started GET "/assets/horses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2019-03-28 16:24:18 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2019-03-28 16:24:18 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2019-03-28 16:24:18 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2019-03-28 16:24:18 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-01 15:55:59 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (11.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (20.9ms)
+Completed 200 OK in 456ms (Views: 435.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/horses" for 127.0.0.1 at 2019-04-01 15:56:04 -0500
+Processing by HorsesController#index as HTML
+  [1m[35mHorse Load (6.3ms)[0m  SELECT "horses".* FROM "horses"
+  Rendered horses/index.html.haml within layouts/application (11.2ms)
+Completed 200 OK in 60ms (Views: 43.8ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-04-01 15:56:05 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.haml within layouts/application (18.1ms)
+Completed 200 OK in 57ms (Views: 56.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-01 16:01:45 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (14.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (32.5ms)
+Completed 500 Internal Server Error in 156ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/mnt/c/Projects/TAMU_Polo_Assignment_Maker/app/views/layouts/application.html.haml:29: syntax error, unexpected ')'
+)).to_s);).to_s);; _hamlout.buf
+ ^
+/mnt/c/Projects/TAMU_Polo_Assignment_Maker/app/views/layouts/application.html.haml:35: syntax error, unexpected keyword_ensure, expecting ')'
+Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer.u
+                              ^
+/mnt/c/Projects/TAMU_Polo_Assignment_Maker/app/views/layouts/application.html.haml:35: syntax error, unexpected keyword_end, expecting ')'
+ffer.upper if @haml_buffer;end;
+                              ^
+/mnt/c/Projects/TAMU_Polo_Assignment_Maker/app/views/layouts/application.html.haml:38: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  app/views/layouts/application.html.haml:29: syntax error, unexpected ')'
+  app/views/layouts/application.html.haml:35: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/layouts/application.html.haml:35: syntax error, unexpected keyword_end, expecting ')'
+  app/views/layouts/application.html.haml:38: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.9ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.4ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (214.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-01 16:02:11 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 965ms (Views: 964.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/horses" for 127.0.0.1 at 2019-04-01 16:02:20 -0500
+Processing by HorsesController#index as HTML
+  [1m[35mHorse Load (7.1ms)[0m  SELECT "horses".* FROM "horses"
+  Rendered horses/index.html.haml within layouts/application (14.5ms)
+Completed 200 OK in 109ms (Views: 83.6ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-04-01 16:02:21 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.haml within layouts/application (26.3ms)
+Completed 200 OK in 96ms (Views: 94.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-04-01 16:02:24 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/Nj8RztZVVD6HtT9UJDFLGJyuoiHEkncwter7M2umuNlCKsIg6wlM7HlEKY1YJe9JTNyF4crZjxndCvlhX7T/g==", "password"=>"[FILTERED]", "commit"=>"Save Changes"}
+  Rendered sessions/new.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 72ms (Views: 71.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-04-01 16:02:30 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6k1cMHaMRFOKV9P7UEon4h8HkGT7c9a4SZFyJXvCRrFznQt/znk0MMGsF6A1unVzWEZY+/tK+VjsMvIsMxIPrA==", "password"=>"[FILTERED]", "commit"=>"Save Changes"}
+  Rendered sessions/new.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 91ms (Views: 89.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-04-01 16:02:47 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6+t1QDSO2NnWTkLOVcLv3ma2p6WhFBMRc/9fQZtJ6ptyOyIPjHuoup21hpUwMr1PIfdvOqEtPPHWXN9I05mjhg==", "password"=>"[FILTERED]", "commit"=>"Save Changes"}
+  Rendered sessions/new.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 63ms (Views: 62.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-04-01 16:02:48 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"m/KKAgPt3BpNjsbkU5b1FiHcY+xUILDLzOBkbKlO6SkCIt1NuxiseQZ1Ar82ZqeHZp2rc1QZnytpQ+Rl4Z6gNA==", "password"=>"[FILTERED]", "commit"=>"Save Changes"}
+  Rendered sessions/new.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 57ms (Views: 56.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-04-01 16:02:49 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7E6wXOF4AekE5EdAXP41DInlm3tVyMCkTmQRafmSyxx1nucTWY1xik8fgxs5DmedzqRT5FXx70Trx5FgsUKCAQ==", "password"=>"[FILTERED]", "commit"=>"Save Changes"}
+  Rendered sessions/new.html.haml within layouts/application (1.7ms)
+Completed 200 OK in 67ms (Views: 66.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-04-01 16:02:50 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TnWkv3mUoseEut6rXQADxuDRmnTbFxL1YVy/k0jssXXXpfPwwWHSpM9BGvA48FFXp5BS69suPRXE/z+aADz4aA==", "password"=>"[FILTERED]", "commit"=>"Save Changes"}
+  Rendered sessions/new.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 74ms (Views: 72.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-04-01 16:03:01 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.haml within layouts/application (2.8ms)
+Completed 200 OK in 65ms (Views: 64.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-04-01 16:03:02 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.haml within layouts/application (1.5ms)
+Completed 200 OK in 63ms (Views: 62.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-04-01 16:03:02 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.haml within layouts/application (1.7ms)
+Completed 200 OK in 73ms (Views: 72.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-04-01 16:03:05 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/4N/Trq4+6n+Pc9sWAs2vGB3ypRjzfEyjxa2rfJ6RqlmUygBAk2LyrXGCzc9+2QtJzYCC2P03tIqtTakuqoPtA==", "password"=>"[FILTERED]", "commit"=>"Save Changes"}
+  Rendered sessions/new.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 63ms (Views: 61.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-04-01 16:03:16 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dAGN6pvJ1skzXFLE0/Jdk1yCD1XfgubZcu6oWMKmdTLt0dqlIzymqninlp+2Ag8CG8PHyt+7yTnXTShRinY8Lw==", "password"=>"[FILTERED]", "commit"=>"Save Changes"}
+  Rendered sessions/new.html.haml within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Illegal nesting: nesting within a tag that already has content is illegal.):
+    28:     = flash.each do |key, value|
+    29:       .alert{ :class => "alert-#{key}" }
+    30:       //%strong
+    31:         //= value
+    32:   %body
+    33:     = yield
+    34:     // Footer stuff here
+  app/views/layouts/application.html.haml:31
+  app/controllers/sessions_controller.rb:16:in `create'
+
+
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.9ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (67.5ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-04-01 16:03:29 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dAGN6pvJ1skzXFLE0/Jdk1yCD1XfgubZcu6oWMKmdTLt0dqlIzymqninlp+2Ag8CG8PHyt+7yTnXTShRinY8Lw==", "password"=>"[FILTERED]", "commit"=>"Save Changes"}
+  Rendered sessions/new.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 50ms (Views: 48.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-04-01 16:03:33 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aguEXeXmEnd387M5eZG0FiM1JBVo8Arl1QWSREcAHF3z29MSXRNiFDwId2IcYeaHZHTsimjJJQVwphJND9BVQA==", "password"=>"[FILTERED]", "commit"=>"Save Changes"}
+  Rendered sessions/new.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 54ms (Views: 53.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-04-01 16:03:33 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8LYF0ZBwSIGbJKmhAVr3uMOzSPuJ0fJAcTiczbf4d7JpZlKeKIU44tDfbfpkqqUphPKAZIno3aDUmxzE/yg+rw==", "password"=>"[FILTERED]", "commit"=>"Save Changes"}
+  Rendered sessions/new.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 59ms (Views: 58.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-04-01 16:04:27 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 54ms (Views: 53.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-04-01 16:04:28 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 48ms (Views: 47.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-04-01 16:04:28 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.haml within layouts/application (1.6ms)
+Completed 200 OK in 66ms (Views: 65.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-04-01 16:04:29 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.haml within layouts/application (1.3ms)
+Completed 200 OK in 55ms (Views: 53.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-01 16:04:31 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 68ms (Views: 67.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/horses" for 127.0.0.1 at 2019-04-01 16:04:31 -0500
+Processing by HorsesController#index as HTML
+  [1m[36mHorse Load (0.6ms)[0m  [1mSELECT "horses".* FROM "horses"[0m
+  Rendered horses/index.html.haml within layouts/application (4.0ms)
+Completed 200 OK in 83ms (Views: 68.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/horses" for 127.0.0.1 at 2019-04-01 16:04:45 -0500
+Processing by HorsesController#index as HTML
+  [1m[35mHorse Load (0.4ms)[0m  SELECT "horses".* FROM "horses"
+  Rendered horses/index.html.haml within layouts/application (1.5ms)
+Completed 200 OK in 66ms (Views: 63.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/horses" for 127.0.0.1 at 2019-04-01 16:04:45 -0500
+Processing by HorsesController#index as HTML
+  [1m[36mHorse Load (0.5ms)[0m  [1mSELECT "horses".* FROM "horses"[0m
+  Rendered horses/index.html.haml within layouts/application (1.8ms)
+Completed 200 OK in 63ms (Views: 62.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-04-01 16:04:46 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 60ms (Views: 59.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-04-01 16:04:48 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"puyGsXVt5H4v1kOz5kaqXPX4OVUw7lp6urchqgoz4UE/PNH+zZiUHWQth+iDtvjNsrnxyjDXdZofFKGjQuOoXA==", "password"=>"[FILTERED]", "commit"=>"Save Changes"}
+  Rendered sessions/new.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 68ms (Views: 66.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-04-01 16:04:59 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 70ms (Views: 67.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-04-01 16:04:59 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 57ms (Views: 56.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-04-01 16:05:02 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Cmc9/syvJMO04m2M3WTToGpWRlYeB9ZiMg6MTvp5g/+Tt2qxdFpUoP8Zqde4lIExLReOyR4++YKXrQxHsqnK4g==", "password"=>"[FILTERED]", "commit"=>"Save Changes"}
+  Rendered sessions/new.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 60ms (Views: 58.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-04-01 16:05:05 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Chk8JFHwoZolTqoyuL2gFiMacSd9SZKAgg2M65d65QyTyWtr6QXR+W61bmndTfKHZFu5uH1wvWAnrgzi36qsEQ==", "password"=>"[FILTERED]", "commit"=>"Save Changes"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-01 16:05:05 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 62ms (Views: 61.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-01 16:05:08 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 58ms (Views: 57.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-01 16:05:15 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 75ms (Views: 74.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-01 16:05:15 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 74ms (Views: 73.5ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2019-04-01 16:05:17 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"8cZc3WMl9rMmDNHahT8bI9FP8LGrMIMoK9NCbgd+aBhoFguS29CG0G33FYHgz0mylg44LqsJrMiOcMJnT64hBQ=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-01 16:05:17 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 62ms (Views: 61.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-04-01 16:05:17 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 55ms (Views: 53.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-04-01 16:05:19 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7OxitaaXDZFF4GDz1a2RZO08pAgFJMcvFPDBXq1ljid1PDX6HmJ98g4bpKiwXcP1qn1slwUd6M+xU0FX5bXHOg==", "password"=>"[FILTERED]", "commit"=>"Save Changes"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-01 16:05:19 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 63ms (Views: 62.1ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2019-04-01 16:05:33 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"pu6LMNqxzCIs+Bl+kxeS+WNq98EuoxFXP48k3duAq1Y/Ptx/YkS8QWcD3SX258BoJCs/Xi6aPreaLKTUk1DiSw=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-01 16:05:33 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 54ms (Views: 53.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-04-01 16:05:33 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.haml within layouts/application (0.6ms)
+Completed 200 OK in 54ms (Views: 53.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-04-01 16:05:35 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"d5pODNhNFkHV4Vd6sjwDp2hjsl39oLHfFOG3RNUrBO3uShlDYLhmIp4akyHXzFE2LyJ6wv2Znj+xQjdNnftN8A==", "password"=>"[FILTERED]", "commit"=>"Save Changes"}
+  Rendered sessions/new.html.haml within layouts/application (1.6ms)
+Completed 200 OK in 74ms (Views: 73.6ms | ActiveRecord: 0.0ms)

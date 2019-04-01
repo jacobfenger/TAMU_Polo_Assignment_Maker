@@ -24,6 +24,12 @@
       = link_to 'Logout', logout_path, method: :delete
 
     <br> <br>
+
+    - if flash[:notice]
+      #notice.message= flash[:notice]
+    - elsif flash[:warning]
+      #warning.message= flash[:warning]
+
   %body
     = yield
     // Footer stuff here
