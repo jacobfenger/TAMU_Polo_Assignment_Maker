@@ -18,7 +18,7 @@ RSpec.describe SessionsController, type: :controller do
     
     it "should not login with incorrect password" do
       get :create, :password => {:password => 'wrong'}
-      expect(flash[:danger]).to eq("Incorrect password entered.")
+      expect(flash[:notice]).to eq("Incorrect password entered.")
       # redirect to somewhere **
       # expect to not be logged in **
     end

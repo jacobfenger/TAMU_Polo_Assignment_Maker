@@ -10,7 +10,7 @@ RSpec.describe HorsesController, type: :controller do
         
         it 'should display error for invalid horse' do
             get :create, :horse => {:name => 'name'}
-            expect(flash[:error]).to eq("Both name and age are required.")
+            expect(flash[:notice]).to eq("Horse was not saved successfully")
             expect(response).to redirect_to(horses_path)
         end
     end
