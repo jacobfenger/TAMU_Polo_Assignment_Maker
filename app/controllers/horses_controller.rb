@@ -12,9 +12,10 @@ class HorsesController < ApplicationController
 		# adding a horse as an officer
 		if @horse.has_required_fields?
 			@horse.save
+			flash[:notice] = "Horse was saved successfully"
 			redirect_to horses_path
 		else
-			flash[:notice] = "Both name and age are required."
+			flash[:notice] = "Horse was not saved successfully"
 			redirect_to horses_path
 		end
 	end

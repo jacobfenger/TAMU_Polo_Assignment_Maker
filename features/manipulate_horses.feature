@@ -6,11 +6,13 @@ Feature: Add and edit horses to the database
 
 Background:
 	Given I am logged into the officers panel
+	And I follow "Horses"
 
 Scenario: Successfully add a horse
 	Given I am on the horses page
 	And I follow "Add a horse"
 	And I fill in "Name" with "NEIGHBOR"
+	And I fill in "Age" with "1"
 	And I press "Save Changes"
 	Then I should see "Horse was saved successfully"
 
