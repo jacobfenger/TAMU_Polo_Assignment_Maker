@@ -1,5 +1,7 @@
 class SessionsController < ApplicationController
+
   def new
+
   end
 
   def create
@@ -13,7 +15,7 @@ class SessionsController < ApplicationController
   	  redirect_to root_path # Redirect to home if login successfull
   	else # Incorrect password entered
   		flash[:notice] = "Incorrect password entered."
-  		render 'new'
+  		redirect_to login_path
   	end
   end  
 
