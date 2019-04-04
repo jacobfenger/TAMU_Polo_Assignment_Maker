@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'users/new'
+
   root 'home#index'
   get 'home/index'
   get '/login', to: 'sessions#new'
@@ -8,6 +10,13 @@ Rails.application.routes.draw do
   get '/horses', to: 'horses#index'
   get '/horses/new', to: 'horses#new'
   post '/horses/new', to: 'horses#create'
+
+  post '/users/new', to: 'users#create'
+  get '/users', to: 'users#show'
+  get '/users/promote', to: 'users#promote'
+  get '/users/demote', to: 'users#demote'
+
+  resources :users
 end
 
   # The priority is based upon order of creation: first created -> highest priority.

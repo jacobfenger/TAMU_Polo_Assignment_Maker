@@ -16,9 +16,13 @@
     // Horses list button
     = link_to 'Horses', horses_path
 
+    // Show member information
+    - if logged_in
+      = link_to 'Member List', users_path
+
     // Only show 'Login' if user is not logged in
     // Vice-versa if logged in
-    - if not logged_in?
+    - if not logged_in
       = link_to 'Login', login_path 
     - else
       = link_to 'Logout', logout_path, method: :delete

@@ -1,0 +1,36 @@
+%h3 Enter your information below:
+
+// Count and list errors if errors when signing up
+- if @user.errors.any?
+  %h4= pluralize(@user.errors.count, "error")
+  %ul
+    - @user.errors.full_messages.each do |msg|
+      %li= msg
+
+= form_tag do
+
+  = label :user, :first_name, 'First Name:'
+  = text_field :user, 'first_name'
+
+  <br>
+  = label :user, :last_name, 'Last Name:'
+  = text_field :user, 'last_name'
+
+  <br>
+  = label :user, :email, 'Email:'
+  = text_field :user, 'email'
+
+  <br>
+  = label :user, :phone, 'Phone:'
+  = text_field :user, 'phone'
+
+  <br>
+  = label :user, :password, 'Password:'
+  = text_field :user, 'password'
+
+  <br>
+  = label :user, :password_confirmation, 'Password Confirmation:'
+  = text_field :user, 'password_confirmation'
+
+  <br>
+  = submit_tag 'Save Changes'

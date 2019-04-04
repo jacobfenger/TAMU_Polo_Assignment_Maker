@@ -13,5 +13,6 @@
         %td= h.summary
 
 %p 
-- if logged_in?
+// Only display if current user is an officer
+- if is_officer?
   = link_to 'Add a horse', horses_new_path

@@ -5,18 +5,18 @@ class SessionsController < ApplicationController
   end
 
   def create
-  	# Grab the entered password
-  	password = params[:password][:password]
 
-  	# NOTHING IS ENCRYPTED
-  	if (password == "polo")
-  		flash[:notice] = "Correct password entered."
-  		log_in # Call log in function from app controller
-  	  redirect_to root_path # Redirect to home if login successfull
-  	else # Incorrect password entered
-  		flash[:notice] = "Incorrect password entered."
-  		redirect_to login_path
-  	end
+    # Grab user based on email
+    user = User.find_by(email: params[:session][:email].downcase)
+
+    if user && user.authenticate(params[:session][:password]) 
+      log_in user
+      redirect_to root_path
+    else
+      # Incorrect password or email
+      flash[:notice] = "Invalid email or password entered."
+      render 'new'
+    end
   end  
 
   def destroy

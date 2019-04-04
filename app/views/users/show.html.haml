@@ -1,0 +1,25 @@
+%h3 User Information:
+
+// Display all horses
+%table#users
+  %thead
+    %tr
+      %th Id
+      %th Role
+      %th First Name
+      %th Last Name
+      %th Phone 
+      %th Email
+      %th Promote
+      %th Demote
+  %tbody
+    - @users.each do |u|
+      %tr
+        %td= u.id
+        %td= u.role
+        %td= u.first_name
+        %td= u.last_name
+        %td= u.phone
+        %td= u.email
+        %td= link_to "Promote Member to Officer", users_promote_path(u)
+        %td= link_to "Demote Officer to Member", users_demote_path(u)

@@ -1,8 +1,14 @@
-%h1 Officer Log In
+%h3 Login
 
 = form_tag login_path do
 
-  = label :password, :password, 'Password'
-  = text_field :password, 'password'
+  = label :email, 'Email:'
+  = text_field :session, 'email'
 
-  = submit_tag 'Save Changes'
+  = label :password, :password, 'Password'
+  = text_field :session, 'password'
+
+  = submit_tag 'Log In'
+
+Not a member? 
+= link_to 'Sign Up', users_new_path
