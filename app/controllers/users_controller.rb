@@ -18,7 +18,7 @@ class UsersController < ApplicationController
   	  log_in @user# If account creation is successful, log the user in
   	  redirect_to root_path
   	else
-  	  #flash[:notice] = @user.errors.full_messages
+  	  flash[:notice] = "There was an error in account creation."
   	  render "new"
  	  end 
   end
