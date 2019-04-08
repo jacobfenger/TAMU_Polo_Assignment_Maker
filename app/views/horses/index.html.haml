@@ -5,12 +5,15 @@
       %th Name
       %th Age
       %th Summary
+      
   %tbody
     - @horses.each do |h|
       %tr
         %td= h.name
         %td= h.age
         %td= h.summary
+        - if logged_in?
+          %td= link_to "Edit/Delete", horses_edit_path(h)
 
 %p 
 - if logged_in?
