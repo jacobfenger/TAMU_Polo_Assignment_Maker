@@ -23,7 +23,9 @@ module NavigationHelpers
     
     when /^the horses page$/ then '/horses'
       
-    
+    when /^the home page$/ then '/'
+
+    when /^the signup page$/ then '/users/new'
 
     else
       begin
