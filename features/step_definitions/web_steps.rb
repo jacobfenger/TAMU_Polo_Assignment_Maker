@@ -12,13 +12,20 @@ World(WithinHelpers)
 
 Given /^I am logged into the officers panel$/ do
   visit '/login'
-  fill_in 'password_password', :with => 'polo'
+  visit '/users/new'
+  fill_in 'First Name:', :with => 'admin_first'
+  fill_in 'Last Name:', :with => 'last_name'
+  fill_in 'Email:', :with => 'fake@email.com'
+  fill_in 'Phone:', :with => '911'
+  fill_in 'Password:', :with => 'admin123'
+  fill_in 'Password Confirmation:', :with => 'admin123'
   click_button 'Save Changes'
   if page.respond_to? :should
     page.should have_content('Logout')
   else
     assert page.has_content?('Logout')
   end
+  visit '/'
 end
 
 Given /^(?:|I )am on (.+)$/ do |page_name|

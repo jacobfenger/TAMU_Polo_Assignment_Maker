@@ -4,7 +4,8 @@ Feature: Add and edit horses to the database
 	I want to add a horse to the database 
 	So that I can assign the horse to a member
 
-Background:
+Background: 
+
 	Given I am logged into the officers panel
 	And I follow "Horses"
 

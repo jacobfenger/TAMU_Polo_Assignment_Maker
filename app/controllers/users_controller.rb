@@ -11,7 +11,7 @@ class UsersController < ApplicationController
 
   def create 
   	@user = User.new(user_params)
-  	@user.role = "member" # By default, set role to member
+  	@user.role = "Officer" # By default, set role to member
 
   	if @user.save 
   	  flash[:notice] = "Successfully created an account."

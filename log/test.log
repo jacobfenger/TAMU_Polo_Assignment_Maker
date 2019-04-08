@@ -836,3 +836,348 @@ Processing by SessionsController#destroy as HTML
 Redirected to http://test.host/
 Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
   [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (2072.4ms)[0m  [1mDROP DATABASE IF EXISTS "assignment_maker_test"[0m
+  [1m[35m (4998.9ms)[0m  CREATE DATABASE "assignment_maker_test" ENCODING = 'unicode'
+  [1m[36m (608.6ms)[0m  [1mDROP DATABASE IF EXISTS "assignment_maker_test"[0m
+  [1m[35m (1892.5ms)[0m  CREATE DATABASE "assignment_maker_test" ENCODING = 'unicode'
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/login" for 127.0.0.1 at 2019-04-08 13:10:08 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.haml within layouts/application (20.9ms)
+Completed 200 OK in 299ms (Views: 290.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/login" for 127.0.0.1 at 2019-04-08 13:10:08 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.haml within layouts/application (0.6ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/login" for 127.0.0.1 at 2019-04-08 13:22:11 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.haml within layouts/application (18.4ms)
+Completed 200 OK in 184ms (Views: 175.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+Started GET "/login" for 127.0.0.1 at 2019-04-08 13:22:11 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.haml within layouts/application (0.5ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/login" for 127.0.0.1 at 2019-04-08 13:23:56 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.haml within layouts/application (18.6ms)
+Completed 200 OK in 172ms (Views: 163.2ms | ActiveRecord: 0.0ms)
+Started GET "/users/new" for 127.0.0.1 at 2019-04-08 13:23:56 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (5.3ms)
+Completed 200 OK in 22ms (Views: 12.9ms | ActiveRecord: 2.6ms)
+Started POST "/users/new" for 127.0.0.1 at 2019-04-08 13:23:56 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"first_name"=>"admin_first", "last_name"=>"last_name", "email"=>"fake@email.com", "phone"=>"911", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Save Changes"}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.7ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('fake@email.com') LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "email", "phone", "password_digest", "role", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "admin_first"], ["last_name", "last_name"], ["email", "fake@email.com"], ["phone", "911"], ["password_digest", "$2a$04$6fsbGRbE4t6bJOFjMu3yMOVzSTzSTf2sxR0U5BQsz7jTAKkOXZnyC"], ["role", "member"], ["created_at", "2019-04-08 18:23:56.779364"], ["updated_at", "2019-04-08 18:23:56.779364"]]
+  [1m[35m (1.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 19ms (ActiveRecord: 2.5ms)
+Started GET "/" for 127.0.0.1 at 2019-04-08 13:23:56 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/login" for 127.0.0.1 at 2019-04-08 13:23:56 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.haml within layouts/application (0.5ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+Started GET "/users/new" for 127.0.0.1 at 2019-04-08 13:23:56 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+Started POST "/users/new" for 127.0.0.1 at 2019-04-08 13:23:56 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"first_name"=>"admin_first", "last_name"=>"last_name", "email"=>"fake@email.com", "phone"=>"911", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Save Changes"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('fake@email.com') LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "email", "phone", "password_digest", "role", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "admin_first"], ["last_name", "last_name"], ["email", "fake@email.com"], ["phone", "911"], ["password_digest", "$2a$04$/Ki9s8FOrQKqNQHxBXv0se6N07lPv3WAduaTmIiZtvCX3OCr6HHMC"], ["role", "member"], ["created_at", "2019-04-08 18:23:56.823990"], ["updated_at", "2019-04-08 18:23:56.823990"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 4ms (ActiveRecord: 0.7ms)
+Started GET "/" for 127.0.0.1 at 2019-04-08 13:23:56 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/login" for 127.0.0.1 at 2019-04-08 13:24:44 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.haml within layouts/application (19.2ms)
+Completed 200 OK in 177ms (Views: 168.6ms | ActiveRecord: 0.0ms)
+Started GET "/users/new" for 127.0.0.1 at 2019-04-08 13:24:44 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (5.6ms)
+Completed 200 OK in 22ms (Views: 13.4ms | ActiveRecord: 2.1ms)
+Started POST "/users/new" for 127.0.0.1 at 2019-04-08 13:24:44 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"first_name"=>"admin_first", "last_name"=>"last_name", "email"=>"fake@email.com", "phone"=>"911", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Save Changes"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.6ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('fake@email.com') LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "email", "phone", "password_digest", "role", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "admin_first"], ["last_name", "last_name"], ["email", "fake@email.com"], ["phone", "911"], ["password_digest", "$2a$04$apZnjWBZmlang6DwofGbq.fIU6yKSZmRaAWoyLioDxExiR4tMKl2O"], ["role", "member"], ["created_at", "2019-04-08 18:24:44.739967"], ["updated_at", "2019-04-08 18:24:44.739967"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 18ms (ActiveRecord: 1.2ms)
+Started GET "/" for 127.0.0.1 at 2019-04-08 13:24:44 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+Started GET "/users" for 127.0.0.1 at 2019-04-08 13:24:44 -0500
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"  ORDER BY "users"."id" ASC[0m
+  Rendered users/show.html.haml within layouts/application (2.8ms)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/login" for 127.0.0.1 at 2019-04-08 13:24:44 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.haml within layouts/application (0.5ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+Started GET "/users/new" for 127.0.0.1 at 2019-04-08 13:24:44 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+Started POST "/users/new" for 127.0.0.1 at 2019-04-08 13:24:44 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"first_name"=>"admin_first", "last_name"=>"last_name", "email"=>"fake@email.com", "phone"=>"911", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Save Changes"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('fake@email.com') LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("first_name", "last_name", "email", "phone", "password_digest", "role", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["first_name", "admin_first"], ["last_name", "last_name"], ["email", "fake@email.com"], ["phone", "911"], ["password_digest", "$2a$04$UHzbQrc/XGtWbH6XBe3GJ.5tsHsJgsvF1NP.FK5d57hQWoOe22T3m"], ["role", "member"], ["created_at", "2019-04-08 18:24:44.786759"], ["updated_at", "2019-04-08 18:24:44.786759"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+Started GET "/" for 127.0.0.1 at 2019-04-08 13:24:44 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+Started GET "/users" for 127.0.0.1 at 2019-04-08 13:24:44 -0500
+Processing by UsersController#show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"  ORDER BY "users"."id" ASC
+  Rendered users/show.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/login" for 127.0.0.1 at 2019-04-08 13:25:32 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.haml within layouts/application (21.5ms)
+Completed 200 OK in 179ms (Views: 171.1ms | ActiveRecord: 0.0ms)
+Started GET "/users/new" for 127.0.0.1 at 2019-04-08 13:25:33 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (5.4ms)
+Completed 200 OK in 22ms (Views: 13.0ms | ActiveRecord: 2.1ms)
+Started POST "/users/new" for 127.0.0.1 at 2019-04-08 13:25:33 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"first_name"=>"admin_first", "last_name"=>"last_name", "email"=>"fake@email.com", "phone"=>"911", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Save Changes"}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.6ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('fake@email.com') LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "email", "phone", "password_digest", "role", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "admin_first"], ["last_name", "last_name"], ["email", "fake@email.com"], ["phone", "911"], ["password_digest", "$2a$04$LuD/lsInnZVVEn/JdWVgZeBzcld/fEuED.47aJwWZgqhzjanUpD6i"], ["role", "member"], ["created_at", "2019-04-08 18:25:33.214568"], ["updated_at", "2019-04-08 18:25:33.214568"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 18ms (ActiveRecord: 1.3ms)
+Started GET "/" for 127.0.0.1 at 2019-04-08 13:25:33 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.0ms)
+Started GET "/users" for 127.0.0.1 at 2019-04-08 13:25:33 -0500
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"  ORDER BY "users"."id" ASC[0m
+  Rendered users/show.html.haml within layouts/application (2.7ms)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.4ms)
+Started GET "/users/promote.1" for 127.0.0.1 at 2019-04-08 13:25:33 -0500
+Processing by UsersController#promote as 
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+Started GET "/login" for 127.0.0.1 at 2019-04-08 13:25:33 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.haml within layouts/application (0.5ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+Started GET "/users/new" for 127.0.0.1 at 2019-04-08 13:25:33 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+Started POST "/users/new" for 127.0.0.1 at 2019-04-08 13:25:33 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"first_name"=>"admin_first", "last_name"=>"last_name", "email"=>"fake@email.com", "phone"=>"911", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Save Changes"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('fake@email.com') LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "email", "phone", "password_digest", "role", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "admin_first"], ["last_name", "last_name"], ["email", "fake@email.com"], ["phone", "911"], ["password_digest", "$2a$04$2RkQMtDzD/LI/UvXlysIquTS9mJzceCvNVnIVVFZm/lw4hZgRbqMi"], ["role", "member"], ["created_at", "2019-04-08 18:25:33.273013"], ["updated_at", "2019-04-08 18:25:33.273013"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+Started GET "/" for 127.0.0.1 at 2019-04-08 13:25:33 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+Started GET "/users" for 127.0.0.1 at 2019-04-08 13:25:33 -0500
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"  ORDER BY "users"."id" ASC[0m
+  Rendered users/show.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms)
+Started GET "/users/promote.1" for 127.0.0.1 at 2019-04-08 13:25:33 -0500
+Processing by UsersController#promote as 
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/login" for 127.0.0.1 at 2019-04-08 13:33:36 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.haml within layouts/application (21.1ms)
+Completed 200 OK in 179ms (Views: 170.6ms | ActiveRecord: 0.0ms)
+Started GET "/users/new" for 127.0.0.1 at 2019-04-08 13:33:36 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (5.3ms)
+Completed 200 OK in 22ms (Views: 12.9ms | ActiveRecord: 2.1ms)
+Started POST "/users/new" for 127.0.0.1 at 2019-04-08 13:33:36 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"first_name"=>"admin_first", "last_name"=>"last_name", "email"=>"fake@email.com", "phone"=>"911", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Save Changes"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.6ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('fake@email.com') LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "email", "phone", "password_digest", "role", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "admin_first"], ["last_name", "last_name"], ["email", "fake@email.com"], ["phone", "911"], ["password_digest", "$2a$04$64z74YcMq9d1sVhnrIPoseDzZhsgd92N1h2a9qHU/SpbMHh3/XNlq"], ["role", "Officer"], ["created_at", "2019-04-08 18:33:36.249688"], ["updated_at", "2019-04-08 18:33:36.249688"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 18ms (ActiveRecord: 1.2ms)
+Started GET "/" for 127.0.0.1 at 2019-04-08 13:33:36 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 8ms (Views: 7.7ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2019-04-08 13:33:36 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+Started GET "/horses" for 127.0.0.1 at 2019-04-08 13:33:36 -0500
+Processing by HorsesController#index as HTML
+  [1m[36mHorse Load (0.5ms)[0m  [1mSELECT "horses".* FROM "horses"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 7]]
+  Rendered horses/index.html.haml within layouts/application (13.5ms)
+Completed 200 OK in 24ms (Views: 19.1ms | ActiveRecord: 1.1ms)
+Started GET "/horses" for 127.0.0.1 at 2019-04-08 13:33:36 -0500
+Processing by HorsesController#index as HTML
+  [1m[36mHorse Load (0.2ms)[0m  [1mSELECT "horses".* FROM "horses"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 7]]
+  Rendered horses/index.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.4ms)
+Started GET "/horses/new" for 127.0.0.1 at 2019-04-08 13:33:36 -0500
+Processing by HorsesController#new as HTML
+  Rendered horses/new.html.haml within layouts/application (1.6ms)
+Completed 200 OK in 8ms (Views: 5.3ms | ActiveRecord: 0.4ms)
+Started POST "/horses/new" for 127.0.0.1 at 2019-04-08 13:33:36 -0500
+Processing by HorsesController#create as HTML
+  Parameters: {"utf8"=>"✓", "horse"=>{"name"=>"NEIGHBOR", "age"=>"1", "summary"=>""}, "commit"=>"Save Changes"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "horses" ("name", "age", "summary", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "NEIGHBOR"], ["age", 1], ["summary", ""], ["created_at", "2019-04-08 18:33:36.318324"], ["updated_at", "2019-04-08 18:33:36.318324"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/horses
+Completed 302 Found in 2ms (ActiveRecord: 0.6ms)
+Started GET "/horses" for 127.0.0.1 at 2019-04-08 13:33:36 -0500
+Processing by HorsesController#index as HTML
+  [1m[35mHorse Load (0.2ms)[0m  SELECT "horses".* FROM "horses"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  Rendered horses/index.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.6ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/login" for 127.0.0.1 at 2019-04-08 13:33:36 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.haml within layouts/application (0.5ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+Started GET "/users/new" for 127.0.0.1 at 2019-04-08 13:33:36 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+Started POST "/users/new" for 127.0.0.1 at 2019-04-08 13:33:36 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"first_name"=>"admin_first", "last_name"=>"last_name", "email"=>"fake@email.com", "phone"=>"911", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Save Changes"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('fake@email.com') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("first_name", "last_name", "email", "phone", "password_digest", "role", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["first_name", "admin_first"], ["last_name", "last_name"], ["email", "fake@email.com"], ["phone", "911"], ["password_digest", "$2a$04$Y2j14n7yZZa5JQykMYKpfewHXd2erCWK4KrnC7jqYu41FKyzU/FvK"], ["role", "Officer"], ["created_at", "2019-04-08 18:33:36.339784"], ["updated_at", "2019-04-08 18:33:36.339784"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+Started GET "/" for 127.0.0.1 at 2019-04-08 13:33:36 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2019-04-08 13:33:36 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+Started GET "/horses" for 127.0.0.1 at 2019-04-08 13:33:36 -0500
+Processing by HorsesController#index as HTML
+  [1m[35mHorse Load (0.3ms)[0m  SELECT "horses".* FROM "horses"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  Rendered horses/index.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.4ms)
+Started GET "/horses" for 127.0.0.1 at 2019-04-08 13:33:36 -0500
+Processing by HorsesController#index as HTML
+  [1m[35mHorse Load (0.2ms)[0m  SELECT "horses".* FROM "horses"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  Rendered horses/index.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.3ms)
+Started GET "/horses/new" for 127.0.0.1 at 2019-04-08 13:33:36 -0500
+Processing by HorsesController#new as HTML
+  Rendered horses/new.html.haml within layouts/application (0.6ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+Started POST "/horses/new" for 127.0.0.1 at 2019-04-08 13:33:36 -0500
+Processing by HorsesController#create as HTML
+  Parameters: {"utf8"=>"✓", "horse"=>{"name"=>"", "age"=>"", "summary"=>""}, "commit"=>"Save Changes"}
+Redirected to http://www.example.com/horses
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/horses" for 127.0.0.1 at 2019-04-08 13:33:36 -0500
+Processing by HorsesController#index as HTML
+  [1m[35mHorse Load (0.2ms)[0m  SELECT "horses".* FROM "horses"
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  Rendered horses/index.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
