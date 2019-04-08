@@ -1,0 +1,21 @@
+-# almost the same as new, should probably be combined
+%h1 Edit Existing Horse
+
+= form_tag horses_path(@horse), :method => :put do
+  
+  = label :horse, :name, 'Name:'
+  = text_field :horse, 'name'
+
+  <br>
+  = label :horse, :age, 'Age:'
+  = text_field :horse, 'age'
+
+  <br>
+  = label :horse, :summary, 'Summary:'
+  = text_field :horse, 'summary' 
+
+  <br> <br>
+  = submit_tag 'Save Changes'
+  
+<br> <br>
+= button_to 'Delete', horses_path(@horse), :method => :delete

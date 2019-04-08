@@ -9,6 +9,9 @@ Rails.application.routes.draw do
 
   get '/horses', to: 'horses#index'
   get '/horses/new', to: 'horses#new'
+  get '/horses/edit', to: 'horses#edit'
+  put '/horses', to: 'horses#save'
+  delete '/horses', to: 'horses#delete'
   post '/horses/new', to: 'horses#create'
 
   post '/users/new', to: 'users#create'
