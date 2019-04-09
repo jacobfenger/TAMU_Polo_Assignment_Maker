@@ -42452,3 +42452,294 @@ Processing by SessionsController#create as HTML
   [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "fake@email.com"]]
   Rendered sessions/new.html.haml within layouts/application (0.5ms)
 Completed 200 OK in 77ms (Views: 32.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-08 14:27:57 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (8.5ms)
+Completed 200 OK in 277ms (Views: 268.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/horses" for 127.0.0.1 at 2019-04-08 14:27:58 -0500
+Processing by HorsesController#index as HTML
+  [1m[35mHorse Load (0.6ms)[0m  SELECT "horses".* FROM "horses"
+  Rendered horses/index.html.haml within layouts/application (7.7ms)
+Completed 200 OK in 45ms (Views: 38.0ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-04-08 14:27:59 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.haml within layouts/application (11.3ms)
+Completed 200 OK in 55ms (Views: 54.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2019-04-08 14:28:00 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (10.0ms)
+Completed 200 OK in 65ms (Views: 51.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/horses" for 127.0.0.1 at 2019-04-08 14:28:01 -0500
+Processing by HorsesController#index as HTML
+  [1m[36mHorse Load (0.2ms)[0m  [1mSELECT "horses".* FROM "horses"[0m
+  Rendered horses/index.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 37ms (Views: 36.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-04-08 14:28:02 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.haml within layouts/application (0.5ms)
+Completed 200 OK in 33ms (Views: 32.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2019-04-08 14:28:03 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 33ms (Views: 32.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/new" for 127.0.0.1 at 2019-04-08 14:28:06 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bPnJrFPFkeJ92L7J+FmPonPTQ1Vzcea6a2i9gx34/4oyq2kD+3n90a8RehfU7C4eypcz91E4PLPr3vQYNDy9mw==", "user"=>{"first_name"=>"Jacob", "last_name"=>"Fenger", "email"=>"jakefenger@gmail.com", "phone"=>"5037818387", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Save Changes"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('jakefenger@gmail.com') LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("first_name", "last_name", "email", "phone", "password_digest", "role", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["first_name", "Jacob"], ["last_name", "Fenger"], ["email", "jakefenger@gmail.com"], ["phone", "5037818387"], ["password_digest", "$2a$10$j32oKydvIdwjuWDx8EpOOuq5vg2iYZG002tD4tn/H40FEfkWCUET6"], ["role", "Officer"], ["created_at", "2019-04-08 19:28:06.973778"], ["updated_at", "2019-04-08 19:28:06.973778"]]
+  [1m[36m (52.7ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 116ms (ActiveRecord: 54.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-08 14:28:07 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 33ms (Views: 33.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-04-08 14:28:07 -0500
+Processing by UsersController#show as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"  ORDER BY "users"."id" ASC
+  Rendered users/show.html.haml within layouts/application (2.8ms)
+Completed 200 OK in 35ms (Views: 34.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/horses" for 127.0.0.1 at 2019-04-08 14:28:08 -0500
+Processing by HorsesController#index as HTML
+  [1m[36mHorse Load (0.2ms)[0m  [1mSELECT "horses".* FROM "horses"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered horses/index.html.haml within layouts/application (12.1ms)
+Completed 200 OK in 44ms (Views: 43.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/horses/edit.1" for 127.0.0.1 at 2019-04-08 14:28:08 -0500
+Processing by HorsesController#edit as 
+  [1m[35mHorse Load (0.2ms)[0m  SELECT  "horses".* FROM "horses" WHERE "horses"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered horses/edit.html.haml within layouts/application (1.9ms)
+Completed 200 OK in 59ms (Views: 57.7ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/horses.1" for 127.0.0.1 at 2019-04-08 14:28:09 -0500
+Processing by HorsesController#delete as 
+  Parameters: {"authenticity_token"=>"N6YbzuyCOpbjPWOkKwmO047AEiwAnJn08ti5AKhMIHRp9LthRD5WpTH0p3oHvC9vN4RijiLVQ/1ybvCbgYhiZQ=="}
+  [1m[36mHorse Load (0.2ms)[0m  [1mSELECT  "horses".* FROM "horses" WHERE "horses"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "horses" WHERE "horses"."id" = $1[0m  [["id", 1]]
+  [1m[35m (35.7ms)[0m  COMMIT
+Redirected to http://localhost:3000/horses
+Completed 302 Found in 39ms (ActiveRecord: 36.2ms)
+
+
+Started GET "/horses" for 127.0.0.1 at 2019-04-08 14:28:09 -0500
+Processing by HorsesController#index as HTML
+  [1m[36mHorse Load (0.3ms)[0m  [1mSELECT "horses".* FROM "horses"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered horses/index.html.haml within layouts/application (2.2ms)
+Completed 200 OK in 34ms (Views: 33.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-09 12:37:33 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (9.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (15.6ms)
+Completed 200 OK in 317ms (Views: 304.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-04-09 12:37:36 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.haml within layouts/application (35.5ms)
+Completed 200 OK in 88ms (Views: 70.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/horses" for 127.0.0.1 at 2019-04-09 12:37:36 -0500
+Processing by HorsesController#index as HTML
+  [1m[35mHorse Load (7.2ms)[0m  SELECT "horses".* FROM "horses"
+  Rendered horses/index.html.haml within layouts/application (11.5ms)
+Completed 200 OK in 53ms (Views: 36.1ms | ActiveRecord: 8.9ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-04-09 12:37:37 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.haml within layouts/application (0.6ms)
+Completed 200 OK in 35ms (Views: 34.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2019-04-09 12:37:38 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (11.0ms)
+Completed 200 OK in 87ms (Views: 48.8ms | ActiveRecord: 27.1ms)
+
+
+Started POST "/users/new" for 127.0.0.1 at 2019-04-09 12:37:42 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FuQ5hFy0mcgnO0y80yjUwMwop3r3rjzG+XyjX4q73BU99kWsFvfcutLZCWTnDrpvA/K8hD4RZLmoHPFVqyuK8A==", "user"=>{"first_name"=>"asd", "last_name"=>"asd", "email"=>"jakefenger@gmail.com", "phone"=>"5037818387", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Save Changes"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (7.1ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('jakefenger@gmail.com') LIMIT 1
+  [1m[36m (0.8ms)[0m  [1mROLLBACK[0m
+  Rendered users/new.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 243ms (Views: 34.6ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-04-09 12:37:44 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 35ms (Views: 34.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-04-09 12:37:46 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CmHk0uictXZeXCH4l33rDO7Rjh5rtx0tlIeDad/TaRchc5j6ot/wBKu+ZCCjW4WjIQuV4KIIRVLF59Fj/kM/8g==", "session"=>{"email"=>"jakefenger@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[35mUser Load (59.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "jakefenger@gmail.com"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 286ms (ActiveRecord: 59.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-09 12:37:46 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 36ms (Views: 35.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-04-09 12:37:47 -0500
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (48.9ms)[0m  [1mSELECT "users".* FROM "users"  ORDER BY "users"."id" ASC[0m
+  Rendered users/show.html.haml within layouts/application (51.5ms)
+Completed 200 OK in 88ms (Views: 38.2ms | ActiveRecord: 48.9ms)
+
+
+Started GET "/horses" for 127.0.0.1 at 2019-04-09 12:37:47 -0500
+Processing by HorsesController#index as HTML
+  [1m[35mHorse Load (0.2ms)[0m  SELECT "horses".* FROM "horses"
+  [1m[36mUser Load (39.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered horses/index.html.haml within layouts/application (41.4ms)
+Completed 200 OK in 74ms (Views: 34.3ms | ActiveRecord: 39.4ms)
+
+
+Started GET "/horses/new" for 127.0.0.1 at 2019-04-09 12:37:48 -0500
+Processing by HorsesController#new as HTML
+  Rendered horses/new.html.haml within layouts/application (1.6ms)
+Completed 200 OK in 44ms (Views: 41.0ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/horses/new" for 127.0.0.1 at 2019-04-09 12:37:50 -0500
+Processing by HorsesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"01AWb4Z14fjbs/qLTIN/sZlc3ljeh3Mg4dxpY5T6mI/4QmpHzDakii5Rv1N4pREeVobFphc4K1+wvDtptWrOag==", "horse"=>{"name"=>"asd", "age"=>"asd", "summary"=>"asd"}, "commit"=>"Save Changes"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (177.7ms)[0m  [1mINSERT INTO "horses" ("name", "age", "summary", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "asd"], ["age", 0], ["summary", "asd"], ["created_at", "2019-04-09 17:37:50.862530"], ["updated_at", "2019-04-09 17:37:50.862530"]]
+  [1m[35m (134.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/horses
+Completed 302 Found in 316ms (ActiveRecord: 311.9ms)
+
+
+Started GET "/horses" for 127.0.0.1 at 2019-04-09 12:37:51 -0500
+Processing by HorsesController#index as HTML
+  [1m[36mHorse Load (0.2ms)[0m  [1mSELECT "horses".* FROM "horses"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered horses/index.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 36ms (Views: 35.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-04-09 12:37:52 -0500
+Processing by UsersController#show as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"  ORDER BY "users"."id" ASC
+  Rendered users/show.html.haml within layouts/application (2.0ms)
+Completed 200 OK in 37ms (Views: 36.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/demote.1" for 127.0.0.1 at 2019-04-09 12:37:54 -0500
+Processing by UsersController#demote as 
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (10.2ms)[0m  [1mUPDATE "users" SET "role" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["role", "Member"], ["updated_at", "2019-04-09 17:37:54.036515"], ["id", 1]]
+  [1m[35m (66.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/users
+Completed 302 Found in 81ms (ActiveRecord: 76.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-04-09 12:37:54 -0500
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"  ORDER BY "users"."id" ASC[0m
+  Rendered users/show.html.haml within layouts/application (1.4ms)
+Completed 200 OK in 34ms (Views: 33.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/promote.1" for 127.0.0.1 at 2019-04-09 12:37:54 -0500
+Processing by UsersController#promote as 
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "role" = $1, "updated_at" = $2 WHERE "users"."id" = $3  [["role", "Officer"], ["updated_at", "2019-04-09 17:37:54.920152"], ["id", 1]]
+  [1m[36m (68.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 76ms (ActiveRecord: 69.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-04-09 12:37:54 -0500
+Processing by UsersController#show as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"  ORDER BY "users"."id" ASC
+  Rendered users/show.html.haml within layouts/application (1.3ms)
+Completed 200 OK in 33ms (Views: 32.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/promote.1" for 127.0.0.1 at 2019-04-09 12:37:55 -0500
+Processing by UsersController#promote as 
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-04-09 12:37:55 -0500
+Processing by UsersController#show as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"  ORDER BY "users"."id" ASC
+  Rendered users/show.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 34ms (Views: 33.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/horses" for 127.0.0.1 at 2019-04-09 12:37:55 -0500
+Processing by HorsesController#index as HTML
+  [1m[36mHorse Load (0.3ms)[0m  [1mSELECT "horses".* FROM "horses"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered horses/index.html.haml within layouts/application (2.1ms)
+Completed 200 OK in 35ms (Views: 34.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-09 12:37:56 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 32ms (Views: 31.4ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2019-04-09 12:37:56 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"vdIb49W5rxnFOoQXGZUOCdYECkEieqBjQjULN8g91ZeWwGfLn/rqazDYwc8ts2CmGd4Rv+vF+BwTVVk96a2Dcg=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-09 12:37:56 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.0ms)
+Completed 200 OK in 32ms (Views: 31.8ms | ActiveRecord: 0.0ms)
