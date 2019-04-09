@@ -23,6 +23,9 @@ end
 group :test do
   gem 'cucumber-rails', :require => false
   gem 'cucumber-rails-training-wheels'
+  gem 'factory_girl_rails'
+  gem 'faker'
+  gem 'simplecov', :require => false
 end
 
 group :production do
@@ -35,3 +38,5 @@ gem 'uglifier', '>= 2.7.1'
 gem 'pg', '~> 0.21'
 gem 'jquery-rails'
 gem 'haml'
+  
+
