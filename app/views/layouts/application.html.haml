@@ -3,39 +3,50 @@
   %head
     // Meta head stuff here (Not really sure if it's necessary)
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
+    %meta{:content => "width=device-width, initial-scale=1.0, shrink-to-fit=no", :name => "viewport"}/
     %title AssignmentMaker
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = stylesheet_link_tag    'navbar'
+    = stylesheet_link_tag    'application','https://fonts.googleapis.com/css?family=Open+Sans:400&subset=latin', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
-    // Header stuff here
-    %h1 Texas A&M Polo Assignment Maker
-
-    // Home button to always be displayed in header
-    = link_to 'Home', root_path
-
-    // Horses list button
-    = link_to 'Horses', horses_path
-
-    // Show member information
-    - if logged_in
-      = link_to 'Member List', users_path
-
-    // Only show 'Login' if user is not logged in
-    // Vice-versa if logged in
-    - if not logged_in
-      = link_to 'Login', login_path 
-    - else
-      = link_to 'Logout', logout_path, method: :delete
-
-    <br> <br>
-
-    - if flash[:notice]
-      #notice.message= flash[:notice]
-    - elsif flash[:warning]
-      #warning.message= flash[:warning]
 
   %body
-    = yield
-    // Footer stuff here
+    .page
+      %nav{:class => "navbar navbar-expand-lg navbar-dark"}
+        = link_to 'Texas A&M Polo Club', root_path, :class => "navbar-brand"
+        %button{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", :class => "navbar-toggler custom-toggler", "data-target" => "#navbarSupportedContent", "data-toggle" => "collapse", :type => "button"}
+          %span{:class => "navbar-toggler-icon"}
+        #navbarSupportedContent{:class => "collapse navbar-collapse"}
+          %ul{:class => "navbar-nav mr-auto"}
+            %li{:class => "nav-item active"}
+              // Home button to always be displayed in header
+              = link_to 'Home', root_path, :class => "nav-link"
+            %li{:class => "nav-item active"}
+              // Horses list button
+              = link_to 'Horses', horses_path, :class => "nav-link"
+            %li{:class => "nav-item active"}
+              // Show member information
+              - if logged_in
+                = link_to 'Member List', users_path, :class => "nav-link"
+            // Only show 'Login' if user is not logged in
+            // Vice-versa if logged in
+          - if not logged_in
+            = link_to 'Login', login_path, :class => "nav-link"
+            = link_to 'Sign Up', users_new_path, :class => "nav-link"
+          - else
+            = link_to 'Logout', logout_path, :class => "nav-link", method: :delete
+
+        // Header stuff here
+        - if flash[:notice]
+          #notice.message= flash[:notice]
+        - elsif flash[:warning]
+          #warning.message= flash[:warning]
+
+      .views
+        = yield
 
 
+      // Footer stuff here
+      %footer
+        © Developed by Team ToBeDetermined
