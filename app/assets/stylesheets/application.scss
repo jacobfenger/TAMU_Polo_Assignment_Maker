@@ -12,6 +12,7 @@
  *
  */
 @import "bootstrap";
+@import "font-awesome-sprockets";
 @import "font-awesome";
 
 html, body{
@@ -50,8 +51,7 @@ footer{
 }
 
 
-.custom_container{
-  text-align: center;
+.custom_container{  
   background: #fff;
   margin: 0 auto;
   padding: 20px 0;

@@ -32,15 +32,20 @@
             // Only show 'Login' if user is not logged in
             // Vice-versa if logged in
           - if not logged_in
+            %icon{:class => "fas fa-sign-in-alt"}
             = link_to 'Login', login_path, :class => "nav-link"
+            %icon{:class => "fas fa-user-plus"}
             = link_to 'Sign Up', users_new_path, :class => "nav-link"
           - else
+            %icon{:class => "fas fa-sign-out-alt"}
             = link_to 'Logout', logout_path, :class => "nav-link", method: :delete
 
         // Header stuff here
-        - if flash[:notice]
+      - if flash[:notice]
+        .alert{:class => "alert-success", :role => "alert"}
           #notice.message= flash[:notice]
-        - elsif flash[:warning]
+      - elsif flash[:warning]
+        .alert{:class => "alert-warning", :role => "alert"}
           #warning.message= flash[:warning]
 
       .views

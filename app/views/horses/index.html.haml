@@ -1,21 +1,52 @@
 // Display all horses
-%table#horses
-  %thead
-    %tr
-      %th Name
-      %th Age
-      %th Summary
-      
-  %tbody
-    - @horses.each do |h|
-      %tr
-        %td= h.name
-        %td= h.age
-        %td= h.summary
-        - if logged_in?
-          %td= link_to "Edit/Delete", horses_edit_path(h)
+-# %table#horses
+-#   %thead
+-#     %tr
+-#       %th Name
+-#       %th Age
+-#       %th Summary
+-#
+-#   %tbody
+-#     - @horses.each do |h|
+-#       %tr
+-#         %td= h.name
+-#         %td= h.age
+-#         %td= h.summary
+-#         - if logged_in?
+-#           %td= link_to "Edit/Delete", horses_edit_path(h)
+-#
+-# %p
+-# // Only display if current user is an officer
+-# - if is_officer?
+-#   = link_to 'Add a horse', horses_new_path
 
-%p 
-// Only display if current user is an officer
-- if is_officer?
-  = link_to 'Add a horse', horses_new_path
+-#   <div class="card" style="width: 18rem;">
+-#   <img class="card-img-top" src="..." alt="Card image cap">
+-#   <div class="card-body">
+-#     <h5 class="card-title">Card title</h5>
+-#     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+-#     <a href="#" class="btn btn-primary">Go somewhere</a>
+-#   </div>
+-# </div>
+.container
+  %h1
+    Horse Roster
+  - if is_officer?
+    = link_to 'Add a horse', horses_new_path, :class => "btn btn-primary"
+  <br> <br>
+  .row
+    - @horses.each do |h|
+      .col-sm-4
+        .card{:class => "bg-light mb-3 w-75"}
+          %img{:class => "card-img-top", :src => "https://imagesvc.timeincapp.com/v3/mm/image?url=https%3A%2F%2Ftimedotcom.files.wordpress.com%2F2016%2F03%2F25069634243_08e8d5b81a_o.jpg&w=800&c=sc&poi=face&q=85", :alt => "Horse"}
+          .card-body
+            %h5{:class => "card-title"}
+              =h.name
+            %p{:class => "card-text"}
+              Age:
+              =h.age
+              <br>
+              Summary:
+              =h.summary
+            - if logged_in?
+              = link_to "Edit/Delete", horses_edit_path(h), :class => "btn btn-info"
