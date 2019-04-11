@@ -5,10 +5,36 @@
 .custom_container{
   display: flex;
   width: 80%;
-  padding-bottom: 15rem;
 }
 
 #horse_image{
-  max-width: 300px;
-  max-height: 200px;
+  max-width: 150px;
+  max-height: 100px;
+}
+
+.login{
+  width: 90%;
+}
+
+#signup_cont{
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+}
+
+#login_cont{
+  padding-bottom: 15rem;
+}
+
+#horse_cont{
+  padding-bottom: 10rem;
+}
+
+@media (min-width: 785px){
+  .login{
+    width: 50%;
+  }
+  #horse_image{
+    max-width: 300px;
+    max-height: 200px;
+  }
 }

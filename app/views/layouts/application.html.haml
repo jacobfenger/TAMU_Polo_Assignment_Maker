@@ -1,10 +1,9 @@
-!!!
 %html
   %head
     // Meta head stuff here (Not really sure if it's necessary)
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
     %meta{:content => "width=device-width, initial-scale=1.0, shrink-to-fit=no", :name => "viewport"}/
-    %title AssignmentMaker
+    %title A&M Polo Club Horse Management System
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = stylesheet_link_tag    'navbar'
     = stylesheet_link_tag    'application','https://fonts.googleapis.com/css?family=Open+Sans:400&subset=latin', media: 'all', 'data-turbolinks-track' => true
@@ -42,8 +41,11 @@
 
         // Header stuff here
       - if flash[:notice]
-        .alert{:class => "alert-success", :role => "alert"}
+        .alert{:class => "alert-success alert-dismissible fade show", :role => "alert"}
           #notice.message= flash[:notice]
+          %button{ :type => "button", :class => "close", :'data-dismiss' => "alert", :'aria-label' => "Close" }
+            %span{ :aria-hidden =>  "true"}
+              &times;
       - elsif flash[:warning]
         .alert{:class => "alert-warning", :role => "alert"}
           #warning.message= flash[:warning]

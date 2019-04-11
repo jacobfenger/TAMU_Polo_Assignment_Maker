@@ -48,5 +48,5 @@
               <br>
               Summary:
               =h.summary
-            - if logged_in?
+            - if is_officer?
               = link_to "Edit/Delete", horses_edit_path(h), :class => "btn btn-info"

@@ -1,15 +1,24 @@
-= form_tag do # Do we need to label the form_tag?
-  
-  = label :horse, :name, 'Name:'
-  = text_field :horse, 'name'
+%head
+  = stylesheet_link_tag    'users'
+.custom_container{:id => "horse_cont"}
+  .container
+    .row{:class => "justify-content-center"}
+      %h1 Add a horse
+    .row{:class => "justify-content-center"}
+      .login
+        = form_tag do
+          .form-group
+            = label :horse, :name, 'Name'
+            = text_field :horse, 'name', :class => "form-control", :placeholder =>"Horse name"
 
-  <br>
-  = label :horse, :age, 'Age:'
-  = text_field :horse, 'age'
+          .form-group
+            = label :horse, :age, 'Age'
+            = text_field :horse, 'age', :type => "number", :class => "form-control", :placeholder =>"Age"
 
-  <br>
-  = label :horse, :summary, 'Summary:'
-  = text_field :horse, 'summary' 
+          .form-group
+            = label :horse, :summary, 'Summary'
+            = text_area :horse, 'summary', :class => "form-control", :placeholder =>"Summary"
 
-  <br> <br>
-  = submit_tag 'Save Changes'
+          = submit_tag 'Save Changes', :class => "btn btn-primary"
+
+      = image_tag "jockey.png", :alt => "A Jockey", :id => "horse_image"

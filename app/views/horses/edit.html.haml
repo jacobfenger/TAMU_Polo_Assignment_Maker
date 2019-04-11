@@ -1,21 +1,46 @@
--# almost the same as new, should probably be combined
-%h1 Edit Existing Horse
+%head
+  = stylesheet_link_tag    'users'
+.custom_container{:id => "horse_cont"}
+  .container
+    .row{:class => "justify-content-center"}
+      %h1 Edit Existing Horse
+    .row{:class => "justify-content-center"}
+      .login
+        = form_tag horses_path(@horse), :method => :put do
+          .form-group
+            = label :horse, :name, 'Name'
+            = text_field :horse, 'name', :class => "form-control", :placeholder =>"Horse name"
 
-= form_tag horses_path(@horse), :method => :put do
-  
-  = label :horse, :name, 'Name:'
-  = text_field :horse, 'name'
+          .form-group
+            = label :horse, :age, 'Age'
+            = text_field :horse, 'age', :type => "number", :class => "form-control", :placeholder =>"Age"
 
-  <br>
-  = label :horse, :age, 'Age:'
-  = text_field :horse, 'age'
+          .form-group
+            = label :horse, :summary, 'Summary'
+            = text_area :horse, 'summary', :class => "form-control", :placeholder =>"Summary"
 
-  <br>
-  = label :horse, :summary, 'Summary:'
-  = text_field :horse, 'summary' 
+          = submit_tag 'Save Changes', :class => "btn btn-primary col-4"
 
-  <br> <br>
-  = submit_tag 'Save Changes'
-  
-<br> <br>
-= button_to 'Delete', horses_path(@horse), :method => :delete
+        = button_to 'Delete', horses_path(@horse), :method => :delete, :class => "btn btn-danger col-4"
+
+      = image_tag "jockey.png", :alt => "A Jockey", :id => "horse_image"
+-# -# almost the same as new, should probably be combined
+-#
+-# = form_tag horses_path(@horse), :method => :put do
+-#
+-#   = label :horse, :name, 'Name:'
+-#   = text_field :horse, 'name'
+-#
+-#   <br>
+-#   = label :horse, :age, 'Age:'
+-#   = text_field :horse, 'age'
+-#
+-#   <br>
+-#   = label :horse, :summary, 'Summary:'
+-#   = text_field :horse, 'summary'
+-#
+-#   <br> <br>
+-#   = submit_tag 'Save Changes'
+-#
+-# <br> <br>
+-# = button_to 'Delete', horses_path(@horse), :method => :delete
