@@ -1,3 +1,40 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.custom_container{
+  display: flex;
+  width: 80%;
+}
+
+#horse_image{
+  max-width: 150px;
+  max-height: 100px;
+}
+
+.login{
+  width: 90%;
+}
+
+#signup_cont{
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+}
+
+#login_cont{
+  padding-bottom: 15rem;
+}
+
+#horse_cont{
+  padding-bottom: 10rem;
+}
+
+@media (min-width: 785px){
+  .login{
+    width: 50%;
+  }
+  #horse_image{
+    max-width: 300px;
+    max-height: 200px;
+  }
+}

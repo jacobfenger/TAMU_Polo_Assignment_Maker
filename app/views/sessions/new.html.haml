@@ -1,14 +1,22 @@
-%h3 Login
+%head
+  = stylesheet_link_tag    'users'
+.custom_container{:id => "login_cont"}
+  .container
+    .row{:class => "justify-content-center"}
+      %h1 Login
+    .row{:class => "justify-content-center"}
+      .login
+        = form_tag login_path do
+          .form-group
+            = label :email, 'Email'
+            = text_field :session, 'email', :type => "email", :class => "form-control", :placeholder =>"Email", :autocomplete => "email"
 
-= form_tag login_path do
+          .form-group
+            = label :password, :password, 'Password'
+            = text_field :session, 'password', :type => "password", :class => "form-control", :placeholder =>"Password", :autocomplete => "password"
 
-  = label :email, 'Email:'
-  = text_field :session, 'email'
+          = submit_tag 'Log In', :class => "btn btn-primary"
 
-  = label :password, :password, 'Password'
-  = text_field :session, 'password'
-
-  = submit_tag 'Log In'
-
-Not a member? 
-= link_to 'Sign Up', users_new_path
+        Not a member?
+        = link_to 'Sign Up', users_new_path
+      = image_tag "horse_main.png", :alt => "A Horse", :id => "horse_image"

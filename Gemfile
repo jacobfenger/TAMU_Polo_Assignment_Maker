@@ -6,7 +6,7 @@ gem 'rails', '4.2.10'
 gem 'turbolinks'
 gem 'haml'
 gem "haml-rails", "~> 1.0"
-gem 'bcrypt-ruby', :require => 'bcrypt' 
+gem 'bcrypt-ruby', :require => 'bcrypt'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -38,5 +38,5 @@ gem 'uglifier', '>= 2.7.1'
 gem 'pg', '~> 0.21'
 gem 'jquery-rails'
 gem 'haml'
-  
-
+gem 'bootstrap'
+gem 'font-awesome-sass'
