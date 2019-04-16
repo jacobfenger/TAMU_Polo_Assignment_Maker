@@ -1,0 +1,35 @@
+%head
+  = stylesheet_link_tag    'users'
+.custom_container{:id => "practice_cont"}
+  .container
+    .row{:class => "justify-content-center"}
+      %h1 Create a New Practice
+    .row{:class => "justify-content-center"}
+      - if @practice.errors.any?
+        .alert{:class => "alert-success alert-dismissible fade show", :role => "alert"}
+          // Count and list errors if errors when signing up
+          %h4= pluralize(@practice.errors.count, " errors")
+          %ul
+            - @practice.errors.full_messages.each do |msg|
+              %li= msg
+          %button{ :type => "button", :class => "close", :'data-dismiss' => "alert", :'aria-label' => "Close" }
+            %span{ :aria-hidden =>  "true"}
+              &times;
+    .row{:class => "justify-content-center"}         
+      .login
+        = form_tag do
+          / For some reason 'practice' is a keyword, so we have to label them with p
+          .form-group
+            = label :p, :time, 'Practice Time'
+            = time_field :p, 'time', :class => "form-control"
+
+          .form-group
+            = label :p, :date, 'Practice Date'
+            = date_field :p, 'date', :class => "form-control"
+
+
+          .form-group 
+            = label :p, :summary, 'Practice Summary'
+            = text_area :p, 'summary', :class => "form-control"
+
+          = submit_tag 'Save Changes', :class => "btn btn-primary"

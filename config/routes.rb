@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'practices/new'
+
   get 'users/new'
 
   root 'home#index'
@@ -18,6 +20,10 @@ Rails.application.routes.draw do
   get '/users', to: 'users#show'
   get '/users/promote', to: 'users#promote'
   get '/users/demote', to: 'users#demote'
+
+  get '/practices', to: 'practices#show'
+  post '/practices/new', to: 'practices#create'
+  get '/practices/new', to: 'practices#new'
 
   resources :users
 end

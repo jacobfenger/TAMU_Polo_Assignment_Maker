@@ -1,0 +1,24 @@
+.container
+  %h1 Practices
+  - if is_officer?
+    = link_to 'Create new practice', practices_new_path, :class => "btn btn-primary"
+
+  <br> <br>
+  // Display all practices //
+  %table#practices{:class => "table table-responsive-sm table-hover table-striped"}
+    %thead{:class => "thead-dark"}
+      %tr
+        %th{:scope => "col"} Date
+        %th{:scope => "col"} Time
+        %th{:scope => "col"} Summary
+        %th{:scope => "col"} Creator
+    %tbody
+      - @practices.each do |practice|
+        %tr
+          %td= practice.date.strftime("%B %d, %Y") # reformat date
+          %td= practice.time.strftime("%I:%M %p") # reformat time display
+          %td= practice.summary
+          %td= practice.user.first_name + " " + practice.user.last_name
+
+
+  
