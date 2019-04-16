@@ -25,10 +25,13 @@
               // Horses list button
               = link_to 'Horses', horses_path, :class => "nav-link"
             %li{:class => "nav-item active"}
-              // Show member information
+              // Show member information if logged in
               - if logged_in
                 = link_to 'Member List', users_path, :class => "nav-link"
-                = link_to 'Practices', practices_path, :class => "nav-link"
+
+                %li{:class => "nav-item active"}
+                  = link_to 'Practices', practices_path, :class => "nav-link"
+
             // Only show 'Login' if user is not logged in
             // Vice-versa if logged in
           - if not logged_in
