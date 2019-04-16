@@ -31,7 +31,7 @@
             = collection_select :a, :horse3, Horse.all, :id, :name
 
           .form-group 
-            = label :label_summary, :summary, 'Comments'
-            = text_area :a, 'summary', :class => "form-control"
+            = label :label_summary, :note, 'Comments'
+            = text_area :a, 'note', :class => "form-control"
 
           = submit_tag 'Save Changes', :class => "btn btn-primary"
