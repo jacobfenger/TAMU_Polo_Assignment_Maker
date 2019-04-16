@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   has_many :practices
+  has_many :assignments
   # TO DO: PHONE VALIDATION
   before_save { self.email = email.downcase }
   validates :first_name, presence: true, length: { maximum: 50 }

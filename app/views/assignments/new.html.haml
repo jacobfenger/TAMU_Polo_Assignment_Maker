@@ -1,1 +1,37 @@
-NEW PAGE
+%head
+  = stylesheet_link_tag    'users'
+.custom_container{:id => "practice_cont"}
+  .container
+    .row{:class => "justify-content-center"}
+      %h1 Signup for Practice
+    .row{:class => "justify-content-center"}
+      / - if @practice.errors.any?
+      /   .alert{:class => "alert-success alert-dismissible fade show", :role => "alert"}
+      /     // Count and list errors if errors when signing up
+      /     %h4= pluralize(@practice.errors.count, " errors")
+      /     %ul
+      /       - @practice.errors.full_messages.each do |msg|
+      /         %li= msg
+      /     %button{ :type => "button", :class => "close", :'data-dismiss' => "alert", :'aria-label' => "Close" }
+      /       %span{ :aria-hidden =>  "true"}
+      /         &times;
+    .row{:class => "justify-content-center"}         
+      .login
+        = form_tag do
+          .form-group
+            = label :label_horse1, :horse1, 'Horse 1: '
+            = collection_select :a, :horse1, Horse.all, :id, :name
+
+          .form-group
+            = label :label_horse2, :horse2, 'Horse 2: '
+            = collection_select :a, :horse2, Horse.all, :id, :name
+
+          .form-group
+            = label :label_horse3, :horse3, 'Horse 3: '
+            = collection_select :a, :horse3, Horse.all, :id, :name
+
+          .form-group 
+            = label :label_summary, :summary, 'Comments'
+            = text_area :a, 'summary', :class => "form-control"
+
+          = submit_tag 'Save Changes', :class => "btn btn-primary"

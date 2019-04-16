@@ -65480,3 +65480,1072 @@ Started GET "/assignments/new" for 127.0.0.1 at 2019-04-16 17:37:10 -0500
 Processing by AssignmentsController#new as HTML
   Rendered assignments/new.html.haml within layouts/application (4.1ms)
 Completed 200 OK in 131ms (Views: 129.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/practices/new" for 127.0.0.1 at 2019-04-16 17:38:51 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PracticesController#new as HTML
+  Rendered practices/new.html.haml within layouts/application (653.9ms)
+Completed 200 OK in 931ms (Views: 863.4ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/practices/new" for 127.0.0.1 at 2019-04-16 17:39:03 -0500
+Processing by PracticesController#new as HTML
+  Rendered practices/new.html.haml within layouts/application (16.2ms)
+Completed 200 OK in 190ms (Views: 189.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/practices/new" for 127.0.0.1 at 2019-04-16 17:39:06 -0500
+Processing by PracticesController#new as HTML
+  Rendered practices/new.html.haml within layouts/application (7.9ms)
+Completed 200 OK in 107ms (Views: 106.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/practices" for 127.0.0.1 at 2019-04-16 17:39:11 -0500
+Processing by PracticesController#show as HTML
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPractice Load (1.3ms)[0m  [1mSELECT "practices".* FROM "practices"  ORDER BY "practices"."date" ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered practices/show.html.haml within layouts/application (109.8ms)
+Completed 200 OK in 239ms (Views: 232.1ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/assignments/new" for 127.0.0.1 at 2019-04-16 17:39:12 -0500
+Processing by AssignmentsController#new as HTML
+  Rendered assignments/new.html.haml within layouts/application (3986.6ms)
+Completed 500 Internal Server Error in 4004ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( assignments.css )` to `config/initializers/assets.rb` and restart your server):
+    1: %head
+    2:   = stylesheet_link_tag    'assignments'
+    3: .custom_container{:id => "practice_cont"}
+    4:   .container
+    5:     .row{:class => "justify-content-center"}
+  app/views/assignments/new.html.haml:2:in `_app_views_assignments_new_html_haml___4211787311397764319_70195576516360'
+
+
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.2ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.1ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (67.9ms)
+
+
+Started GET "/assignments/new" for 127.0.0.1 at 2019-04-16 17:39:28 -0500
+Processing by AssignmentsController#new as HTML
+  Rendered assignments/new.html.haml within layouts/application (15.5ms)
+Completed 200 OK in 106ms (Views: 105.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assignments/new" for 127.0.0.1 at 2019-04-16 17:40:49 -0500
+Processing by AssignmentsController#new as HTML
+  Rendered assignments/new.html.haml within layouts/application (6.9ms)
+Completed 200 OK in 108ms (Views: 91.5ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assignments/new" for 127.0.0.1 at 2019-04-16 17:41:12 -0500
+Processing by AssignmentsController#new as HTML
+  Rendered assignments/new.html.haml within layouts/application (14.3ms)
+Completed 200 OK in 100ms (Views: 98.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assignments/new" for 127.0.0.1 at 2019-04-16 17:41:15 -0500
+Processing by AssignmentsController#new as HTML
+  Rendered assignments/new.html.haml within layouts/application (7.1ms)
+Completed 200 OK in 103ms (Views: 101.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assignments/new" for 127.0.0.1 at 2019-04-16 17:41:25 -0500
+Processing by AssignmentsController#new as HTML
+  Rendered assignments/new.html.haml within layouts/application (13.1ms)
+Completed 200 OK in 106ms (Views: 104.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assignments/new" for 127.0.0.1 at 2019-04-16 17:41:41 -0500
+Processing by AssignmentsController#new as HTML
+  Rendered assignments/new.html.haml within layouts/application (16.6ms)
+Completed 200 OK in 115ms (Views: 113.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assignments/new" for 127.0.0.1 at 2019-04-16 17:41:47 -0500
+Processing by AssignmentsController#new as HTML
+  Rendered assignments/new.html.haml within layouts/application (14.7ms)
+Completed 200 OK in 108ms (Views: 106.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assignments/new" for 127.0.0.1 at 2019-04-16 17:41:47 -0500
+Processing by AssignmentsController#new as HTML
+  Rendered assignments/new.html.haml within layouts/application (7.6ms)
+Completed 200 OK in 107ms (Views: 105.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assignments/new" for 127.0.0.1 at 2019-04-16 17:42:19 -0500
+Processing by AssignmentsController#new as HTML
+  Rendered assignments/new.html.haml within layouts/application (17.7ms)
+Completed 200 OK in 115ms (Views: 113.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assignments/new" for 127.0.0.1 at 2019-04-16 17:42:48 -0500
+Processing by AssignmentsController#new as HTML
+  Rendered assignments/new.html.haml within layouts/application (15.8ms)
+Completed 200 OK in 125ms (Views: 124.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assignments/new" for 127.0.0.1 at 2019-04-16 17:43:06 -0500
+Processing by AssignmentsController#new as HTML
+  Rendered assignments/new.html.haml within layouts/application (29.1ms)
+Completed 200 OK in 203ms (Views: 201.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assignments/new" for 127.0.0.1 at 2019-04-16 17:43:11 -0500
+Processing by AssignmentsController#new as HTML
+  Rendered assignments/new.html.haml within layouts/application (15.7ms)
+Completed 200 OK in 111ms (Views: 110.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assignments/new" for 127.0.0.1 at 2019-04-16 17:43:16 -0500
+Processing by AssignmentsController#new as HTML
+  Rendered assignments/new.html.haml within layouts/application (15.4ms)
+Completed 200 OK in 111ms (Views: 110.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assignments/new" for 127.0.0.1 at 2019-04-16 17:44:06 -0500
+Processing by AssignmentsController#new as HTML
+  Rendered assignments/new.html.haml within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Inconsistent indentation: 11 spaces used for indentation, but the rest of the document was indented using 2 spaces.):
+    21:           .form-group
+    22:             = label :p, :horse1, 'Horse 1'
+    23:             = collection_select
+    24:            / = text_field :p, 'horse1', :class => "form-control"
+    25: 
+    26:           .form-group
+    27:             = label :p, :horse2, 'Horse 2'
+  app/views/assignments/new.html.haml:24
+
+
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.7ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (69.0ms)
+
+
+Started GET "/assignments/new" for 127.0.0.1 at 2019-04-16 17:44:15 -0500
+Processing by AssignmentsController#new as HTML
+  Rendered assignments/new.html.haml within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Inconsistent indentation: 11 spaces used for indentation, but the rest of the document was indented using 2 spaces.):
+    21:           .form-group
+    22:             = label :p, :horse1, 'Horse 1'
+    23:             = collection_select
+    24:            / = text_field :p, 'horse1', :class => "form-control"
+    25: 
+    26:           .form-group
+    27:             = label :p, :horse2, 'Horse 2'
+  app/views/assignments/new.html.haml:24
+
+
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.0ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (42.5ms)
+
+
+Started GET "/assignments/new" for 127.0.0.1 at 2019-04-16 17:44:23 -0500
+Processing by AssignmentsController#new as HTML
+  Rendered assignments/new.html.haml within layouts/application (20.2ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (wrong number of arguments (given 0, expected 5..7)):
+    20:         = form_tag do
+    21:           .form-group
+    22:             = label :p, :horse1, 'Horse 1'
+    23:             = collection_select
+    24:             
+    25:           .form-group
+    26:             = label :p, :horse2, 'Horse 2'
+  app/views/assignments/new.html.haml:23:in `block in _app_views_assignments_new_html_haml___4211787311397764319_70195587469620'
+  app/views/assignments/new.html.haml:20:in `_app_views_assignments_new_html_haml___4211787311397764319_70195587469620'
+
+
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.5ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (65.7ms)
+
+
+Started GET "/assignments/new" for 127.0.0.1 at 2019-04-16 17:45:35 -0500
+Processing by AssignmentsController#new as HTML
+  [1m[35mHorse Load (1.2ms)[0m  SELECT "horses".* FROM "horses"
+  Rendered assignments/new.html.haml within layouts/application (48.2ms)
+Completed 200 OK in 152ms (Views: 147.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/horses" for 127.0.0.1 at 2019-04-16 17:45:40 -0500
+Processing by HorsesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mHorse Load (0.5ms)[0m  SELECT "horses".* FROM "horses"
+  Rendered horses/index.html.haml within layouts/application (30.6ms)
+Completed 200 OK in 134ms (Views: 129.8ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/horses/new" for 127.0.0.1 at 2019-04-16 17:45:41 -0500
+Processing by HorsesController#new as HTML
+  Rendered horses/new.html.haml within layouts/application (18.6ms)
+Completed 200 OK in 141ms (Views: 124.6ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/horses/new" for 127.0.0.1 at 2019-04-16 17:45:51 -0500
+Processing by HorsesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EqWKAqi9CpHqBLLLcp9Y44waFqqvMV4K7JiwXgBOw50t2uw76pmbTOWXyX/hOfVgfZ72gCB3wMbGpBZCJ9ViOg==", "horse"=>{"name"=>"Jacl", "age"=>"12", "summary"=>""}, "commit"=>"Save Changes"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (10.6ms)[0m  INSERT INTO "horses" ("name", "age", "summary", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Jacl"], ["age", 12], ["summary", ""], ["created_at", "2019-04-16 22:45:51.109834"], ["updated_at", "2019-04-16 22:45:51.109834"]]
+  [1m[36m (15.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/horses
+Completed 302 Found in 33ms (ActiveRecord: 26.1ms)
+
+
+Started GET "/horses" for 127.0.0.1 at 2019-04-16 17:45:51 -0500
+Processing by HorsesController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mHorse Load (0.7ms)[0m  [1mSELECT "horses".* FROM "horses"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered horses/index.html.haml within layouts/application (5.2ms)
+Completed 200 OK in 110ms (Views: 107.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/practices" for 127.0.0.1 at 2019-04-16 17:45:54 -0500
+Processing by PracticesController#show as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPractice Load (0.6ms)[0m  SELECT "practices".* FROM "practices"  ORDER BY "practices"."date" ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered practices/show.html.haml within layouts/application (19.6ms)
+Completed 200 OK in 128ms (Views: 116.0ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assignments/new" for 127.0.0.1 at 2019-04-16 17:45:55 -0500
+Processing by AssignmentsController#new as HTML
+  [1m[36mHorse Load (0.5ms)[0m  [1mSELECT "horses".* FROM "horses"[0m
+  Rendered assignments/new.html.haml within layouts/application (9.8ms)
+Completed 200 OK in 111ms (Views: 109.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/horses" for 127.0.0.1 at 2019-04-16 17:46:05 -0500
+Processing by HorsesController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mHorse Load (0.6ms)[0m  [1mSELECT "horses".* FROM "horses"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered horses/index.html.haml within layouts/application (7.1ms)
+Completed 200 OK in 129ms (Views: 126.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/horses/new" for 127.0.0.1 at 2019-04-16 17:46:06 -0500
+Processing by HorsesController#new as HTML
+  Rendered horses/new.html.haml within layouts/application (12.4ms)
+Completed 200 OK in 109ms (Views: 107.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/horses/new" for 127.0.0.1 at 2019-04-16 17:46:11 -0500
+Processing by HorsesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NjM6uae+Kum50Nn4b3KOjVc+TJPPEgpvL2MosHL9XBQJTFyA5Zq7NLZDokz81CMOprqsuUBUlKMFX46sVWb9sw==", "horse"=>{"name"=>"Malachi", "age"=>"27", "summary"=>""}, "commit"=>"Save Changes"}
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "horses" ("name", "age", "summary", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Malachi"], ["age", 27], ["summary", ""], ["created_at", "2019-04-16 22:46:11.361636"], ["updated_at", "2019-04-16 22:46:11.361636"]]
+  [1m[36m (12.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/horses
+Completed 302 Found in 23ms (ActiveRecord: 13.1ms)
+
+
+Started GET "/horses" for 127.0.0.1 at 2019-04-16 17:46:11 -0500
+Processing by HorsesController#index as HTML
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mHorse Load (0.5ms)[0m  [1mSELECT "horses".* FROM "horses"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered horses/index.html.haml within layouts/application (7.7ms)
+Completed 200 OK in 119ms (Views: 116.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/practices" for 127.0.0.1 at 2019-04-16 17:46:14 -0500
+Processing by PracticesController#show as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPractice Load (0.6ms)[0m  [1mSELECT "practices".* FROM "practices"  ORDER BY "practices"."date" ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered practices/show.html.haml within layouts/application (7.0ms)
+Completed 200 OK in 99ms (Views: 92.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assignments/new" for 127.0.0.1 at 2019-04-16 17:46:15 -0500
+Processing by AssignmentsController#new as HTML
+  [1m[35mHorse Load (0.5ms)[0m  SELECT "horses".* FROM "horses"
+  Rendered assignments/new.html.haml within layouts/application (10.5ms)
+Completed 200 OK in 107ms (Views: 105.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assignments/new" for 127.0.0.1 at 2019-04-16 17:46:31 -0500
+Processing by AssignmentsController#new as HTML
+  [1m[36mHorse Load (0.6ms)[0m  [1mSELECT "horses".* FROM "horses"[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT "horses".* FROM "horses"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "horses".* FROM "horses"[0m
+  Rendered assignments/new.html.haml within layouts/application (38.8ms)
+Completed 200 OK in 153ms (Views: 151.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assignments/new" for 127.0.0.1 at 2019-04-16 17:46:43 -0500
+Processing by AssignmentsController#new as HTML
+  [1m[35mHorse Load (0.4ms)[0m  SELECT "horses".* FROM "horses"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "horses".* FROM "horses"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "horses".* FROM "horses"
+  Rendered assignments/new.html.haml within layouts/application (18.0ms)
+Completed 200 OK in 113ms (Views: 111.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assignments/new" for 127.0.0.1 at 2019-04-16 17:46:45 -0500
+Processing by AssignmentsController#new as HTML
+  [1m[36mHorse Load (0.4ms)[0m  [1mSELECT "horses".* FROM "horses"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "horses".* FROM "horses"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "horses".* FROM "horses"[0m
+  Rendered assignments/new.html.haml within layouts/application (10.8ms)
+Completed 200 OK in 99ms (Views: 98.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assignments/new" for 127.0.0.1 at 2019-04-16 17:46:58 -0500
+Processing by AssignmentsController#new as HTML
+  [1m[35mHorse Load (0.4ms)[0m  SELECT "horses".* FROM "horses"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "horses".* FROM "horses"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "horses".* FROM "horses"
+  Rendered assignments/new.html.haml within layouts/application (18.6ms)
+Completed 200 OK in 92ms (Views: 90.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assignments/new" for 127.0.0.1 at 2019-04-16 17:46:58 -0500
+Processing by AssignmentsController#new as HTML
+  [1m[36mHorse Load (0.4ms)[0m  [1mSELECT "horses".* FROM "horses"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "horses".* FROM "horses"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "horses".* FROM "horses"[0m
+  Rendered assignments/new.html.haml within layouts/application (11.2ms)
+Completed 200 OK in 86ms (Views: 84.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assignments/new" for 127.0.0.1 at 2019-04-16 17:47:10 -0500
+Processing by AssignmentsController#new as HTML
+  [1m[35mHorse Load (0.5ms)[0m  SELECT "horses".* FROM "horses"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "horses".* FROM "horses"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "horses".* FROM "horses"
+  Rendered assignments/new.html.haml within layouts/application (19.2ms)
+Completed 200 OK in 114ms (Views: 111.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assignments/new" for 127.0.0.1 at 2019-04-16 17:47:10 -0500
+Processing by AssignmentsController#new as HTML
+  [1m[36mHorse Load (0.5ms)[0m  [1mSELECT "horses".* FROM "horses"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "horses".* FROM "horses"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "horses".* FROM "horses"[0m
+  Rendered assignments/new.html.haml within layouts/application (13.1ms)
+Completed 200 OK in 109ms (Views: 107.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/horses" for 127.0.0.1 at 2019-04-16 17:47:24 -0500
+Processing by HorsesController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mHorse Load (0.5ms)[0m  [1mSELECT "horses".* FROM "horses"[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered horses/index.html.haml within layouts/application (6.5ms)
+Completed 200 OK in 102ms (Views: 100.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/horses/new" for 127.0.0.1 at 2019-04-16 17:47:25 -0500
+Processing by HorsesController#new as HTML
+  Rendered horses/new.html.haml within layouts/application (10.6ms)
+Completed 200 OK in 96ms (Views: 95.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/horses/new" for 127.0.0.1 at 2019-04-16 17:47:35 -0500
+Processing by HorsesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"djzzHuKQpmlKAImP8fHAZfsJ8ci2RDsUnl40rswHTpFJQ5UnoLQ3tEWT8jtiV23mCo0R4jkCpdi0YpKy65zvNg==", "horse"=>{"name"=>"jacob", "age"=>"12", "summary"=>""}, "commit"=>"Save Changes"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "horses" ("name", "age", "summary", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "jacob"], ["age", 12], ["summary", ""], ["created_at", "2019-04-16 22:47:35.789123"], ["updated_at", "2019-04-16 22:47:35.789123"]]
+  [1m[35m (11.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/horses
+Completed 302 Found in 20ms (ActiveRecord: 12.1ms)
+
+
+Started GET "/horses" for 127.0.0.1 at 2019-04-16 17:47:35 -0500
+Processing by HorsesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mHorse Load (0.6ms)[0m  SELECT "horses".* FROM "horses"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered horses/index.html.haml within layouts/application (10.2ms)
+Completed 200 OK in 128ms (Views: 125.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/practices" for 127.0.0.1 at 2019-04-16 17:47:38 -0500
+Processing by PracticesController#show as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPractice Load (1.1ms)[0m  [1mSELECT "practices".* FROM "practices"  ORDER BY "practices"."date" ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered practices/show.html.haml within layouts/application (14.4ms)
+Completed 200 OK in 142ms (Views: 138.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assignments/new" for 127.0.0.1 at 2019-04-16 17:47:39 -0500
+Processing by AssignmentsController#new as HTML
+  [1m[35mHorse Load (0.4ms)[0m  SELECT "horses".* FROM "horses"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "horses".* FROM "horses"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "horses".* FROM "horses"
+  Rendered assignments/new.html.haml within layouts/application (13.2ms)
+Completed 200 OK in 125ms (Views: 123.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/assignments/new" for 127.0.0.1 at 2019-04-16 17:47:47 -0500
+Processing by AssignmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+W2Lmv/JrgB2+rfiCC1EEYOupC7LUqeEsshutBY9wpXGEu2jve0/3XlpzFabi+mScipEBEQUOUiY9MioMaZjMg==", "dropdown"=>{"horse_id"=>"2"}, "p"=>{"summary"=>""}, "commit"=>"Save Changes"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.5ms)
+
+NoMethodError (undefined method `user=' for #<Assignment:0x007faf5ecc5438>
+Did you mean?  user_id=):
+  app/controllers/assignments_controller.rb:10:in `create'
+
+
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.9ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (64.1ms)
+
+
+Started GET "/assignments/new" for 127.0.0.1 at 2019-04-16 17:48:22 -0500
+Processing by AssignmentsController#new as HTML
+  [1m[35mHorse Load (0.3ms)[0m  SELECT "horses".* FROM "horses"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "horses".* FROM "horses"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "horses".* FROM "horses"
+  Rendered assignments/new.html.haml within layouts/application (20.0ms)
+Completed 200 OK in 113ms (Views: 92.5ms | ActiveRecord: 3.6ms)
+
+
+Started POST "/assignments/new" for 127.0.0.1 at 2019-04-16 17:48:23 -0500
+Processing by AssignmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PRmgsbiwgflLBj9r4LcQIaRlnd1423vD2yIyzFCGjKcCZsaI+pQQJESVRN9zEb2iVeF99/ed5Q/xHpTQdx0tAA==", "dropdown"=>{"horse_id"=>"1"}, "p"=>{"summary"=>""}, "commit"=>"Save Changes"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 3.3ms)
+
+NoMethodError (undefined method `user=' for #<Assignment:0x007faf5edb5d48>
+Did you mean?  user_id=):
+  app/controllers/assignments_controller.rb:10:in `create'
+
+
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.8ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (55.7ms)
+
+
+Started GET "/assignments/" for 127.0.0.1 at 2019-04-16 17:48:47 -0500
+
+ActionController::RoutingError (No route matches [GET] "/assignments"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.11) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.11) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.11) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  rack (1.6.11) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.11) lib/rack/handler/webrick.rb:88:in `service'
+  /home/jacob/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+  /home/jacob/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+  /home/jacob/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+
+
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.4ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (15.5ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (184.3ms)
+
+
+Started POST "/assignments/new" for 127.0.0.1 at 2019-04-16 17:48:50 -0500
+Processing by AssignmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PRmgsbiwgflLBj9r4LcQIaRlnd1423vD2yIyzFCGjKcCZsaI+pQQJESVRN9zEb2iVeF99/ed5Q/xHpTQdx0tAA==", "dropdown"=>{"horse_id"=>"1"}, "p"=>{"summary"=>""}, "commit"=>"Save Changes"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 4.5ms)
+
+NoMethodError (undefined method `user=' for #<Assignment:0x007faf5e2a79b0>
+Did you mean?  user_id=):
+  app/controllers/assignments_controller.rb:10:in `create'
+
+
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (16.6ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (73.6ms)
+
+
+Started POST "/assignments/new" for 127.0.0.1 at 2019-04-16 17:48:57 -0500
+Processing by AssignmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PRmgsbiwgflLBj9r4LcQIaRlnd1423vD2yIyzFCGjKcCZsaI+pQQJESVRN9zEb2iVeF99/ed5Q/xHpTQdx0tAA==", "dropdown"=>{"horse_id"=>"1"}, "p"=>{"summary"=>""}, "commit"=>"Save Changes"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 5.2ms)
+
+NoMethodError (undefined method `user=' for #<Assignment:0x007faf5dfd5890>
+Did you mean?  user_id=):
+  app/controllers/assignments_controller.rb:10:in `create'
+
+
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.8ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (62.2ms)
+
+
+Started POST "/assignments/new" for 127.0.0.1 at 2019-04-16 17:49:14 -0500
+Processing by AssignmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PRmgsbiwgflLBj9r4LcQIaRlnd1423vD2yIyzFCGjKcCZsaI+pQQJESVRN9zEb2iVeF99/ed5Q/xHpTQdx0tAA==", "dropdown"=>{"horse_id"=>"1"}, "p"=>{"summary"=>""}, "commit"=>"Save Changes"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 5.6ms)
+
+NoMethodError (undefined method `user=' for #<Assignment:0x007faf5e2b5420>
+Did you mean?  user_id=):
+  app/controllers/assignments_controller.rb:10:in `create'
+
+
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (14.9ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (71.8ms)
+
+
+Started POST "/assignments/new" for 127.0.0.1 at 2019-04-16 17:49:35 -0500
+Processing by AssignmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PRmgsbiwgflLBj9r4LcQIaRlnd1423vD2yIyzFCGjKcCZsaI+pQQJESVRN9zEb2iVeF99/ed5Q/xHpTQdx0tAA==", "dropdown"=>{"horse_id"=>"1"}, "p"=>{"summary"=>""}, "commit"=>"Save Changes"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms)
+
+NoMethodError (undefined method `user=' for #<Assignment:0x007faf5ede68d0>
+Did you mean?  user_id=):
+  app/controllers/assignments_controller.rb:10:in `create'
+
+
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.7ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (67.1ms)
+
+
+Started POST "/assignments/new" for 127.0.0.1 at 2019-04-16 17:49:55 -0500
+Processing by AssignmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PRmgsbiwgflLBj9r4LcQIaRlnd1423vD2yIyzFCGjKcCZsaI+pQQJESVRN9zEb2iVeF99/ed5Q/xHpTQdx0tAA==", "dropdown"=>{"horse_id"=>"1"}, "p"=>{"summary"=>""}, "commit"=>"Save Changes"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 68ms (ActiveRecord: 6.1ms)
+
+ActionView::MissingTemplate (Missing template assignments/create, application/create with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :haml]}. Searched in:
+  * "/mnt/c/Projects/TAMU_Polo_Assignment_Maker/app/views"
+):
+  actionview (4.2.10) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.10) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.10) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.10) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.10) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.10) lib/action_view/renderer/renderer.rb:46:in `render_template'
+  actionview (4.2.10) lib/action_view/renderer/renderer.rb:27:in `render'
+  actionview (4.2.10) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.10) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.10) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.10) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.10) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.10) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.10) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.10) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.10) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/jacob/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/benchmark.rb:308:in `realtime'
+  activesupport (4.2.10) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.10) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.10) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.10) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.10) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.10) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.10) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.10) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.10) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.10) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.10) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.10) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.10) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.10) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.10) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.10) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.10) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.10) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.10) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.10) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.10) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.10) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.10) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.10) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.11) lib/rack/etag.rb:24:in `call'
+  rack (1.6.11) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.11) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.11) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.11) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.10) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.10) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.11) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.11) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.11) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  rack (1.6.11) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.11) lib/rack/handler/webrick.rb:88:in `service'
+  /home/jacob/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+  /home/jacob/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+  /home/jacob/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+
+
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.3ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (11.7ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (74.7ms)
+
+
+Started POST "/assignments/new" for 127.0.0.1 at 2019-04-16 17:50:08 -0500
+Processing by AssignmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PRmgsbiwgflLBj9r4LcQIaRlnd1423vD2yIyzFCGjKcCZsaI+pQQJESVRN9zEb2iVeF99/ed5Q/xHpTQdx0tAA==", "dropdown"=>{"horse_id"=>"1"}, "p"=>{"summary"=>""}, "commit"=>"Save Changes"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 67ms (ActiveRecord: 4.5ms)
+
+NameError (undefined local variable or method `practice_path' for #<AssignmentsController:0x007faf5e7884e8>
+Did you mean?  practices_path):
+  app/controllers/assignments_controller.rb:12:in `create'
+
+
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.7ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (62.4ms)
+
+
+Started POST "/assignments/new" for 127.0.0.1 at 2019-04-16 17:50:21 -0500
+Processing by AssignmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PRmgsbiwgflLBj9r4LcQIaRlnd1423vD2yIyzFCGjKcCZsaI+pQQJESVRN9zEb2iVeF99/ed5Q/xHpTQdx0tAA==", "dropdown"=>{"horse_id"=>"1"}, "p"=>{"summary"=>""}, "commit"=>"Save Changes"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Redirected to http://localhost:3000/practices
+Completed 302 Found in 50ms (ActiveRecord: 4.8ms)
+
+
+Started GET "/practices" for 127.0.0.1 at 2019-04-16 17:50:21 -0500
+Processing by PracticesController#show as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPractice Load (0.5ms)[0m  SELECT "practices".* FROM "practices"  ORDER BY "practices"."date" ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered practices/show.html.haml within layouts/application (18.9ms)
+Completed 200 OK in 132ms (Views: 118.8ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assignments/new" for 127.0.0.1 at 2019-04-16 17:50:23 -0500
+Processing by AssignmentsController#new as HTML
+  [1m[36mHorse Load (0.6ms)[0m  [1mSELECT "horses".* FROM "horses"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "horses".* FROM "horses"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "horses".* FROM "horses"[0m
+  Rendered assignments/new.html.haml within layouts/application (32.8ms)
+Completed 200 OK in 137ms (Views: 133.8ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/assignments/new" for 127.0.0.1 at 2019-04-16 17:50:24 -0500
+Processing by AssignmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"36KbIxgkSKFHlmhvluzBKXnF9vuiY2SeR4h/3naKhl3g3f0aWgDZfEgFE9sFSmyqiEEW0S0l+lJttNnCUREn+g==", "dropdown"=>{"horse_id"=>"1"}, "p"=>{"summary"=>""}, "commit"=>"Save Changes"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Redirected to http://localhost:3000/practices
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/practices" for 127.0.0.1 at 2019-04-16 17:50:24 -0500
+Processing by PracticesController#show as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPractice Load (0.6ms)[0m  SELECT "practices".* FROM "practices"  ORDER BY "practices"."date" ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered practices/show.html.haml within layouts/application (6.7ms)
+Completed 200 OK in 126ms (Views: 124.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assignments/new" for 127.0.0.1 at 2019-04-16 17:50:41 -0500
+Processing by AssignmentsController#new as HTML
+  [1m[36mHorse Load (0.6ms)[0m  [1mSELECT "horses".* FROM "horses"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "horses".* FROM "horses"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "horses".* FROM "horses"[0m
+  Rendered assignments/new.html.haml within layouts/application (15.7ms)
+Completed 200 OK in 132ms (Views: 130.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assignments/new" for 127.0.0.1 at 2019-04-16 17:50:41 -0500
+Processing by AssignmentsController#new as HTML
+  [1m[35mHorse Load (0.5ms)[0m  SELECT "horses".* FROM "horses"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "horses".* FROM "horses"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "horses".* FROM "horses"
+  Rendered assignments/new.html.haml within layouts/application (13.4ms)
+Completed 200 OK in 117ms (Views: 113.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/assignments/new" for 127.0.0.1 at 2019-04-16 17:50:46 -0500
+Processing by AssignmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bF4Jc8lZeFZCRqEm5hy2o+M/qXboMFB7lyfx4JVbyRNTIW9Ki33pi03V2pJ1uhsgErtJXGd2zre9G1f8ssBotA==", "dropdown"=>{"horse_id"=>"3"}, "p"=>{"summary"=>"asd"}, "commit"=>"Save Changes"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Redirected to http://localhost:3000/practices
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/practices" for 127.0.0.1 at 2019-04-16 17:50:46 -0500
+Processing by PracticesController#show as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPractice Load (0.4ms)[0m  [1mSELECT "practices".* FROM "practices"  ORDER BY "practices"."date" ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered practices/show.html.haml within layouts/application (9.0ms)
+Completed 200 OK in 136ms (Views: 134.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assignments/new" for 127.0.0.1 at 2019-04-16 17:51:09 -0500
+Processing by AssignmentsController#new as HTML
+  [1m[35mHorse Load (0.4ms)[0m  SELECT "horses".* FROM "horses"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "horses".* FROM "horses"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "horses".* FROM "horses"
+  Rendered assignments/new.html.haml within layouts/application (12.7ms)
+Completed 200 OK in 83ms (Views: 81.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/assignments/new" for 127.0.0.1 at 2019-04-16 17:51:28 -0500
+Processing by AssignmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UbpueaDCFjzQ61cmhWNuUBpuVzHadP/ClyN6X/blcfZuxQhA4uaH4d94LJIWxcPT6+q3G1UyYQ69H9xD0X7QUQ==", "horse_1"=>{"horse_id"=>"1"}, "dropdown"=>{"horse_id"=>"2"}, "p"=>{"summary"=>""}, "commit"=>"Save Changes"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Redirected to http://localhost:3000/practices
+Completed 302 Found in 15ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/practices" for 127.0.0.1 at 2019-04-16 17:51:28 -0500
+Processing by PracticesController#show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPractice Load (0.3ms)[0m  [1mSELECT "practices".* FROM "practices"  ORDER BY "practices"."date" ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered practices/show.html.haml within layouts/application (4.2ms)
+Completed 200 OK in 110ms (Views: 108.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assignments/new" for 127.0.0.1 at 2019-04-16 17:51:38 -0500
+Processing by AssignmentsController#new as HTML
+  [1m[35mHorse Load (0.4ms)[0m  SELECT "horses".* FROM "horses"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "horses".* FROM "horses"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "horses".* FROM "horses"
+  Rendered assignments/new.html.haml within layouts/application (21.4ms)
+Completed 200 OK in 124ms (Views: 123.0ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/assignments/new" for 127.0.0.1 at 2019-04-16 17:51:42 -0500
+Processing by AssignmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"13fO7W38eJNE9XFoGUyH21o99YiLKa4FUUd6aqg8jFToCKjUL9jpTktmCtyK6ipYq7kVogRvMMl7e9x2j6ct8w==", "horse_1"=>{"horse_id"=>"1"}, "horse_2"=>{"horse_id"=>"2"}, "horse_3"=>{"horse_id"=>"3"}, "p"=>{"summary"=>""}, "commit"=>"Save Changes"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Redirected to http://localhost:3000/practices
+Completed 302 Found in 6ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/practices" for 127.0.0.1 at 2019-04-16 17:51:42 -0500
+Processing by PracticesController#show as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPractice Load (0.5ms)[0m  [1mSELECT "practices".* FROM "practices"  ORDER BY "practices"."date" ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered practices/show.html.haml within layouts/application (7.0ms)
+Completed 200 OK in 133ms (Views: 131.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assignments/new" for 127.0.0.1 at 2019-04-16 17:52:05 -0500
+Processing by AssignmentsController#new as HTML
+  [1m[35mHorse Load (0.8ms)[0m  SELECT "horses".* FROM "horses"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "horses".* FROM "horses"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "horses".* FROM "horses"
+  Rendered assignments/new.html.haml within layouts/application (19.2ms)
+Completed 200 OK in 113ms (Views: 112.0ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/assignments/new" for 127.0.0.1 at 2019-04-16 17:52:07 -0500
+Processing by AssignmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Q8cqGAngueaq7cJUlNf2hUJXlMuaxT4Z/vr4++rp3cl8uEwhS8QoO6V+ueAHcVsGs9N04RWDoNXUxl7nzXJ8bg==", "horse1"=>{"horse_id"=>"1"}, "horse2"=>{"horse_id"=>"1"}, "horse3"=>{"horse_id"=>"1"}, "p"=>{"summary"=>""}, "commit"=>"Save Changes"}
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Redirected to http://localhost:3000/practices
+Completed 302 Found in 8ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/practices" for 127.0.0.1 at 2019-04-16 17:52:07 -0500
+Processing by PracticesController#show as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPractice Load (0.5ms)[0m  [1mSELECT "practices".* FROM "practices"  ORDER BY "practices"."date" ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered practices/show.html.haml within layouts/application (8.0ms)
+Completed 200 OK in 79ms (Views: 78.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assignments/new" for 127.0.0.1 at 2019-04-16 17:53:01 -0500
+Processing by AssignmentsController#new as HTML
+  Rendered assignments/new.html.haml within layouts/application (55.9ms)
+Completed 500 Internal Server Error in 78ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `horse_id' for #<Assignment:0x007faf5e4871e0>
+Did you mean?  horse3_id
+               horse2_id
+               horse1_id
+               horse3_id?
+               horse3_id=
+               horse2_id?
+               horse2_id=
+               horse1_id?
+               horse1_id=):
+    20:         = form_tag do
+    21:           .form-group
+    22:             = label :assignment, :horse1, 'Horse 1: '
+    23:             = collection_select :assignment, :horse_id, Horse.all, :id, :name
+    24: 
+    25:           .form-group
+    26:             = label :assignment, :horse2, 'Horse 2: '
+  app/views/assignments/new.html.haml:23:in `block in _app_views_assignments_new_html_haml___4211787311397764319_70195588900620'
+  app/views/assignments/new.html.haml:20:in `_app_views_assignments_new_html_haml___4211787311397764319_70195588900620'
+
+
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.9ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (68.5ms)
+
+
+Started GET "/assignments/new" for 127.0.0.1 at 2019-04-16 17:53:23 -0500
+Processing by AssignmentsController#new as HTML
+  [1m[35mHorse Load (0.9ms)[0m  SELECT "horses".* FROM "horses"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "horses".* FROM "horses"[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT "horses".* FROM "horses"
+  Rendered assignments/new.html.haml within layouts/application (56.2ms)
+Completed 500 Internal Server Error in 88ms (ActiveRecord: 1.0ms)
+
+ActionView::Template::Error (undefined method `summary' for #<Assignment:0x007faf5e112168>):
+    32: 
+    33:           .form-group 
+    34:             = label :assignment, :summary, 'Comments'
+    35:             = text_area :assignment, 'summary', :class => "form-control"
+    36: 
+    37:           = submit_tag 'Save Changes', :class => "btn btn-primary"
+  app/views/assignments/new.html.haml:35:in `block in _app_views_assignments_new_html_haml___4211787311397764319_70195587089320'
+  app/views/assignments/new.html.haml:20:in `_app_views_assignments_new_html_haml___4211787311397764319_70195587089320'
+
+
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.1ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (69.8ms)
+
+
+Started GET "/assignments/new" for 127.0.0.1 at 2019-04-16 17:53:34 -0500
+Processing by AssignmentsController#new as HTML
+  [1m[36mHorse Load (0.8ms)[0m  [1mSELECT "horses".* FROM "horses"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "horses".* FROM "horses"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "horses".* FROM "horses"[0m
+  Rendered assignments/new.html.haml within layouts/application (21.1ms)
+Completed 200 OK in 123ms (Views: 121.5ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/assignments/new" for 127.0.0.1 at 2019-04-16 17:53:36 -0500
+Processing by AssignmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M+1a/HKIGuGPShw0BHGyRqnrf0XnJCqFe9erYpDfM90MkjzFMKyLPIDZZ4CX1x/FWG+fb2hitElR6w1+t0SSeg==", "horse1"=>{"horse_id"=>"1"}, "horse2"=>{"horse_id"=>"1"}, "horse3"=>{"horse_id"=>"1"}, "summary"=>{"summary"=>""}, "commit"=>"Save Changes"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Redirected to http://localhost:3000/practices
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/practices" for 127.0.0.1 at 2019-04-16 17:53:36 -0500
+Processing by PracticesController#show as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPractice Load (0.6ms)[0m  SELECT "practices".* FROM "practices"  ORDER BY "practices"."date" ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered practices/show.html.haml within layouts/application (10.6ms)
+Completed 200 OK in 135ms (Views: 132.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assignments/new" for 127.0.0.1 at 2019-04-16 17:53:54 -0500
+Processing by AssignmentsController#new as HTML
+  [1m[36mHorse Load (0.6ms)[0m  [1mSELECT "horses".* FROM "horses"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "horses".* FROM "horses"
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "horses".* FROM "horses"[0m
+  Rendered assignments/new.html.haml within layouts/application (23.4ms)
+Completed 200 OK in 129ms (Views: 127.6ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/assignments/new" for 127.0.0.1 at 2019-04-16 17:53:56 -0500
+Processing by AssignmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kodnOr+mcWSzgxHOq/PRUEmXvcujlX2CcSH12lQolK6t+AED/YLgubwQano4VXzTuBNd4SzT405bHVPGc7M1CQ==", "horse"=>{"horse_id"=>"1"}, "summary"=>{"summary"=>""}, "commit"=>"Save Changes"}
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Redirected to http://localhost:3000/practices
+Completed 302 Found in 6ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/practices" for 127.0.0.1 at 2019-04-16 17:53:56 -0500
+Processing by PracticesController#show as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPractice Load (0.6ms)[0m  SELECT "practices".* FROM "practices"  ORDER BY "practices"."date" ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered practices/show.html.haml within layouts/application (9.6ms)
+Completed 200 OK in 113ms (Views: 111.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/practices" for 127.0.0.1 at 2019-04-16 17:54:11 -0500
+Processing by PracticesController#show as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPractice Load (0.5ms)[0m  SELECT "practices".* FROM "practices"  ORDER BY "practices"."date" ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered practices/show.html.haml within layouts/application (7.3ms)
+Completed 200 OK in 104ms (Views: 101.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assignments/new" for 127.0.0.1 at 2019-04-16 17:54:14 -0500
+Processing by AssignmentsController#new as HTML
+  [1m[36mHorse Load (0.5ms)[0m  [1mSELECT "horses".* FROM "horses"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "horses".* FROM "horses"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "horses".* FROM "horses"[0m
+  Rendered assignments/new.html.haml within layouts/application (21.4ms)
+Completed 200 OK in 125ms (Views: 123.6ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/assignments/new" for 127.0.0.1 at 2019-04-16 17:54:16 -0500
+Processing by AssignmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tmhiQ/JCuT1kYeGkWg03GaCi26esYpeszFvAlk1TBYCJFwR6sGYo4GvymhDJq5qaUSY7jSMkCWDmZ2aKasikJw==", "horse"=>{"horse1"=>"1", "horse2"=>"1", "horse3"=>"1"}, "summary"=>{"summary"=>""}, "commit"=>"Save Changes"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Redirected to http://localhost:3000/practices
+Completed 302 Found in 5ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/practices" for 127.0.0.1 at 2019-04-16 17:54:16 -0500
+Processing by PracticesController#show as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPractice Load (0.5ms)[0m  SELECT "practices".* FROM "practices"  ORDER BY "practices"."date" ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered practices/show.html.haml within layouts/application (8.5ms)
+Completed 200 OK in 122ms (Views: 120.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/practices" for 127.0.0.1 at 2019-04-16 17:55:30 -0500
+Processing by PracticesController#show as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPractice Load (0.7ms)[0m  SELECT "practices".* FROM "practices"  ORDER BY "practices"."date" ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered practices/show.html.haml within layouts/application (7.2ms)
+Completed 200 OK in 109ms (Views: 106.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assignments/new" for 127.0.0.1 at 2019-04-16 17:55:31 -0500
+Processing by AssignmentsController#new as HTML
+  [1m[36mHorse Load (0.5ms)[0m  [1mSELECT "horses".* FROM "horses"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "horses".* FROM "horses"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "horses".* FROM "horses"[0m
+  Rendered assignments/new.html.haml within layouts/application (42.2ms)
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (undefined method `summary' for #<Assignment:0x007faf5e761370>):
+    32: 
+    33:           .form-group 
+    34:             = label :label_summary, :summary, 'Comments'
+    35:             = text_area :assignment, 'summary', :class => "form-control"
+    36: 
+    37:           = submit_tag 'Save Changes', :class => "btn btn-primary"
+  app/views/assignments/new.html.haml:35:in `block in _app_views_assignments_new_html_haml___4211787311397764319_70195586619880'
+  app/views/assignments/new.html.haml:20:in `_app_views_assignments_new_html_haml___4211787311397764319_70195586619880'
+
+
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.5ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.5ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (68.7ms)
+
+
+Started GET "/assignments/new" for 127.0.0.1 at 2019-04-16 17:55:50 -0500
+Processing by AssignmentsController#new as HTML
+  [1m[35mHorse Load (0.4ms)[0m  SELECT "horses".* FROM "horses"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "horses".* FROM "horses"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "horses".* FROM "horses"
+  Rendered assignments/new.html.haml within layouts/application (24.9ms)
+Completed 200 OK in 125ms (Views: 123.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/assignments/new" for 127.0.0.1 at 2019-04-16 17:55:52 -0500
+Processing by AssignmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BkS1MM4RnLpRjQqtm67sTmi1Q+td/sBmfIho5G02s3s5O9MJjDUNZ14ecRkICEHNmTGjwdK4XqpWtM74Sq0S3A==", "a"=>{"horse1"=>"1", "horse2"=>"1", "horse3"=>"1", "summary"=>""}, "commit"=>"Save Changes"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Redirected to http://localhost:3000/practices
+Completed 302 Found in 4ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/practices" for 127.0.0.1 at 2019-04-16 17:55:52 -0500
+Processing by PracticesController#show as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPractice Load (0.6ms)[0m  [1mSELECT "practices".* FROM "practices"  ORDER BY "practices"."date" ASC[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered practices/show.html.haml within layouts/application (12.6ms)
+Completed 200 OK in 122ms (Views: 120.0ms | ActiveRecord: 1.2ms)
