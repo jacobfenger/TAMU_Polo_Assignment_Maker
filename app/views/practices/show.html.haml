@@ -11,6 +11,7 @@
         %th{:scope => "col"} Date
         %th{:scope => "col"} Time
         %th{:scope => "col"} Summary
+        %th{:scope => "col"} Sign-Up Link
         %th{:scope => "col"} Creator
     %tbody
       - @practices.each do |practice|
@@ -18,6 +19,7 @@
           %td= practice.date.strftime("%B %d, %Y") # reformat date
           %td= practice.time.strftime("%I:%M %p") # reformat time display
           %td= practice.summary
+          %td= link_to "Sign Up", assignments_new_path
           %td= practice.user.first_name + " " + practice.user.last_name
 
 

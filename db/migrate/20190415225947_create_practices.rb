@@ -5,6 +5,7 @@ class CreatePractices < ActiveRecord::Migration
       t.timestamps :time
       t.date_field :date
       t.string :summary
+      t.references :assignment, foreign_key: true
     end
   end
 end

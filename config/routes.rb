@@ -25,6 +25,9 @@ Rails.application.routes.draw do
   post '/practices/new', to: 'practices#create'
   get '/practices/new', to: 'practices#new'
 
+  post '/assignments/new', to: 'assignments#create'
+  get 'assignments/new', to: 'assignments#new'
+
   resources :users
 end
 
