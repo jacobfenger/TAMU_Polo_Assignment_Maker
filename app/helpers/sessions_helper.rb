@@ -5,6 +5,12 @@ module SessionsHelper
     session[:logged_in] = true
   end
 
+  def current_practice
+      if session[:practice]
+        Practice.find_by(id: session[:practice])
+      end
+  end
+
   # Returns true if an officer is logged in
   def logged_in
 	  return session[:logged_in]

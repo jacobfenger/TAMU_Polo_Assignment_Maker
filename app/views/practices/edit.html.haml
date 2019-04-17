@@ -1,0 +1,23 @@
+%head
+  = stylesheet_link_tag    'users'
+.custom_container{:id => "practices_cont"}
+  .container
+    .row{:class => "justify-content-center"}
+      %h1 Edit Existing Practice
+    .row{:class => "justify-content-center"}
+      .login
+        = form_tag practices_path(@practice), :method => :put do
+          .form-group
+            = label :p, :time, 'Practice Time'
+            = time_field :p, 'time', :class => "form-control", :value => @practice.time.strftime("%T")
+          .form-group
+            = label :p, :date, 'Practice Date'
+            = date_field :p, 'date', :class => "form-control", :Value => @practice.date
+
+          .form-group
+            = label :p, :summary, 'Practice Summary'
+            = text_area :p, 'summary', :class => "form-control", :value => @practice.summary
+
+          = submit_tag 'Save Changes', :class => "btn btn-primary col-4"
+
+        = button_to 'Delete', practices_path(@practice), :method => :delete, :class => "btn btn-danger col-4"

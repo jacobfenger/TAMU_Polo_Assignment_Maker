@@ -1,21 +1,35 @@
 class AssignmentsController < ApplicationController
 	include SessionsHelper
 
+	def show
+	  session[:practice] = params["p"] # Pass in practice that we are accessing
+	  @assignments = current_practice.assignments.all
+
+	  p "SHOW: "
+	  p @assignments
+	end
+
 	def new
+	  session[:practice] = params["p"]
 	  @assignment = Assignment.new
 	end 
 
-	def create 
-	  @assignment = Assignment.new
+	def create
+	  @assignment = current_practice.assignments.create
 	  @assignment.user = current_user
-	  p Horse.where(id: params["a"]["horse1"])
-	  @assignment.horse1_id = Horse.where(id: params["a"]["horse1"])
-	  @assignment.horse2_id = Horse.where(id: params["a"]["horse2"])
-	  @assignment.horse3_id = Horse.where(id: params["a"]["horse3"])
+	  @assignment.horse1 = Horse.find_by(id: params["a"]["horse1"])
+	  @assignment.horse2 = Horse.find_by(id: params["a"]["horse2"])
+	  @assignment.horse3 = Horse.find_by(id: params["a"]["horse3"])
 	  @assignment.note = params["a"]["note"]
 
-	  p @assignment
+	  p current_practice.assignments.all
 
-	  redirect_to practices_path
+	  if @assignment.save
+	  	flash[:notice] = "Successfully created a practice"
+	  	redirect_to practices_path
+	  else
+	  	flash[:notice] = "An error occured during signup"
+  	  	render "new"
+	  end
 	end
 end

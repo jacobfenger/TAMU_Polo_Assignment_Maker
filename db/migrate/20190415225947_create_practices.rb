@@ -2,10 +2,10 @@ class CreatePractices < ActiveRecord::Migration
   def change
     create_table :practices do |t|
       t.references :user, foreign_key: true
+      t.references :assignment, foregin_key:true, index: true
       t.timestamps :time
-      t.date_field :date
+      t.datetime :date
       t.string :summary
-      t.references :assignment, foreign_key: true
     end
   end
 end

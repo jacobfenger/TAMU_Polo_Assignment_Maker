@@ -1,0 +1,22 @@
+.container
+  %h1 Assignments
+  // Display all practices //
+  %table#assignments{:class => "table table-responsive-sm table-hover table-striped"}
+    %thead{:class => "thead-dark"}
+      %tr
+        %th{:scope => "col"} Name
+        %th{:scope => "col"} Horse 1
+        %th{:scope => "col"} Horse 2
+        %th{:scope => "col"} Horse 3
+        %th{:scope => "col"} Note
+    %tbody
+      - @assignments.each do |assignment|
+        %tr
+          %td= assignment.user.first_name + " " + assignment.user.last_name
+          %td= assignment.horse1.name
+          %td= assignment.horse2.name
+          %td= assignment.horse3.name
+          %td= assignment.note
+
+
+  

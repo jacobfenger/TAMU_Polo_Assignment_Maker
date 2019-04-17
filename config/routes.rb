@@ -23,10 +23,16 @@ Rails.application.routes.draw do
 
   get '/practices', to: 'practices#show'
   post '/practices/new', to: 'practices#create'
+  post '/practices/', to: 'practices#create'
   get '/practices/new', to: 'practices#new'
+  get '/practices/edit', to: 'practices#edit'
+  put '/practices', to: 'practices#save'
+  delete '/practices', to: 'practices#delete'
 
   post '/assignments/new', to: 'assignments#create'
-  get 'assignments/new', to: 'assignments#new'
+  get '/assignments/new', to: 'assignments#new'
+  get '/assignments', to: 'assignments#show'
+  post '/assignments', to: 'assignments#show'
 
   resources :users
 end

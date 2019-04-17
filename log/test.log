@@ -6415,3 +6415,22 @@ Processing by UsersController#show as HTML
   Rendered users/show.html.haml within layouts/application (0.8ms)
 Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms)
   [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (27.0ms)[0m  DROP TABLE "assignments" CASCADE
+  [1m[36m (92.5ms)[0m  [1mCREATE TABLE "assignments" ("id" serial primary key, "user_id" integer, "horse1_id" integer, "horse2_id" integer, "horse3_id" integer, "note" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (25.8ms)[0m  DROP TABLE "horses" CASCADE
+  [1m[36m (125.1ms)[0m  [1mCREATE TABLE "horses" ("id" serial primary key, "name" character varying, "age" integer, "summary" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (29.6ms)[0m  DROP TABLE "practices" CASCADE
+  [1m[36m (99.7ms)[0m  [1mCREATE TABLE "practices" ("id" serial primary key, "user_id" integer, "created_at" timestamp, "updated_at" timestamp, "time" timestamp, "date" date, "summary" character varying) [0m
+  [1m[35m (44.8ms)[0m  DROP TABLE "users" CASCADE
+  [1m[36m (106.2ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "user_role" character varying, "first_name" character varying, "last_name" character varying, "email" character varying, "phone" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "password_digest" character varying, "role" character varying) [0m
+  [1m[35m (28.4ms)[0m  ALTER TABLE "assignments" ADD CONSTRAINT "fk_rails_aa6b76dac2"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+
+  [1m[36m (25.6ms)[0m  [1mALTER TABLE "practices" ADD CONSTRAINT "fk_rails_9c17933408"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (0.4ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m

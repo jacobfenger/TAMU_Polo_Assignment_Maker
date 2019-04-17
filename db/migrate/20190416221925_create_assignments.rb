@@ -5,6 +5,7 @@ class CreateAssignments < ActiveRecord::Migration
       t.references :horse1
       t.references :horse2
       t.references :horse3
+      t.references :practice, index: true
       t.string :note
       t.timestamps null: false
     end
