@@ -2,7 +2,37 @@ class UsersController < ApplicationController
   include SessionsHelper
 
   def show
-  	@users = User.all.order(:id) # Grab all users and order
+    if(params[:officer_sort].nil? == false)
+      @sortOfficers = params[:officer_sort]
+    elsif(session[:current_officer_sort].nil? == false)
+      @sortOfficers = session[:current_officer_sort]
+      redNeed = true
+    else
+      @sortOfficers = "id"
+    end
+    
+    if(params[:member_sort].nil? == false)
+      @sortMembers = params[:member_sort]
+    elsif(session[:current_member_sort].nil? == false)
+      @sortMembers = session[:current_member_sort]
+      redNeed = true
+    else
+      @sortMembers = "id"
+    end
+    
+    if(redNeed == true)
+      redirect_to users_path(:officer_sort => @sortOfficers, :member_sort => @sortMembers)
+    end
+    
+    o_sort = "LOWER(" + @sortOfficers + ")"
+    m_sort = "LOWER(" + @sortMembers + ")"
+    @officers = User.where(role: 'Officer').order(o_sort)
+    @members = User.where(role: 'Member').order(m_sort)
+    
+    session[:current_officer_sort] = @sortOfficers
+    session[:current_member_sort] = @sortMembers
+
+  	
   end
 
   def new

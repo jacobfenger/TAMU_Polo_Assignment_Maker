@@ -1,20 +1,43 @@
 .container
-  %h1 User Information
+  %h1 Officers
   <br>
-  // Display all horses //
+  // Display officers //
   %table#users{:class => "table table-responsive-sm table-hover table-striped"}
     %thead{:class => "thead-dark"}
       %tr
-        %th{:scope => "col"} Id
+        %th{:scope => "col", :class => ("hilite" if @sortOfficers == "id")}= link_to "Id", :officer_sort => "id" 
         %th{:scope => "col"} Role
-        %th{:scope => "col"} First Name
-        %th{:scope => "col"} Last Name
+        %th{:scope => "col", :class => ("hilite" if @sortOfficers == "first_name")}= link_to "First Name", :id => "id_header", :officer_sort => "first_name"
+        %th{:scope => "col", :class => ("hilite" if @sortOfficers == "last_name")}= link_to "Last Name", :id => "id_header", :officer_sort => "last_name"
         %th{:scope => "col"} Phone
-        %th{:scope => "col"} Email
-        %th{:class => "text-center", :scope => "col"} Promote
+        %th{:scope => "col", :class => ("hilite" if @sortOfficers == "email")}= link_to "Email", :id => "id_header", :officer_sort => "email"
         %th{:class => "text-center", :scope => "col"} Demote
     %tbody
-      - @users.each do |u|
+      - @officers.each do |u|
+        %tr
+          %th{:scope => "row"}= u.id
+          %td= u.role
+          %td= u.first_name
+          %td= u.last_name
+          %td= u.phone
+          %td= u.email
+          %td{:class => "text-center"}= link_to "", users_demote_path(u),  :class => "fas fa-thumbs-down", :title => "Demote Officer to Member"
+          
+  %h1 Members
+  <br>
+  // Display members //
+  %table#users{:class => "table table-responsive-sm table-hover table-striped"}
+    %thead{:class => "thead-dark"}
+      %tr
+        %th{:scope => "col", :class => ("hilite" if @sortMembers == "id")}= link_to "Id", :member_sort => "id" 
+        %th{:scope => "col"} Role
+        %th{:scope => "col", :class => ("hilite" if @sortMembers == "first_name")}= link_to "First Name", :id => "id_header", :member_sort => "first_name"
+        %th{:scope => "col", :class => ("hilite" if @sortMembers == "last_name")}= link_to "Last Name", :id => "id_header", :member_sort => "last_name"
+        %th{:scope => "col"} Phone
+        %th{:scope => "col", :class => ("hilite" if @sortMembers == "email")}= link_to "Email", :id => "id_header", :member_sort => "email"
+        %th{:class => "text-center", :scope => "col"} Promote
+    %tbody
+      - @members.each do |u|
         %tr
           %th{:scope => "row"}= u.id
           %td= u.role
@@ -23,4 +46,3 @@
           %td= u.phone
           %td= u.email
           %td{:class => "text-center"}= link_to "", users_promote_path(u), :class => "fas fa-thumbs-up",   :title => "Promote Member to Officer"
-          %td{:class => "text-center"}= link_to "", users_demote_path(u),  :class => "fas fa-thumbs-down", :title => "Demote Officer to Member"
