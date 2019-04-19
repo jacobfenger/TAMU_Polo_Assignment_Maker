@@ -2,7 +2,7 @@
   %h1 Officers
   <br>
   // Display officers //
-  %table#users{:class => "table table-responsive-sm table-hover table-striped"}
+  %table#users{:class => "table table-responsive-sm table-hover table-striped", :id => "officers_table"}
     %thead{:class => "thead-dark"}
       %tr
         %th{:scope => "col", :class => ("hilite" if @sortOfficers == "id")}= link_to "Id", :officer_sort => "id" 
@@ -12,7 +12,7 @@
         %th{:scope => "col"} Phone
         %th{:scope => "col", :class => ("hilite" if @sortOfficers == "email")}= link_to "Email", :id => "id_header", :officer_sort => "email"
         %th{:class => "text-center", :scope => "col"} Demote
-    %tbody
+    %tbody{:id => "officer_list"}
       - @officers.each do |u|
         %tr
           %th{:scope => "row"}= u.id
@@ -26,7 +26,7 @@
   %h1 Members
   <br>
   // Display members //
-  %table#users{:class => "table table-responsive-sm table-hover table-striped"}
+  %table#users{:class => "table table-responsive-sm table-hover table-striped", :id => "members_table"}
     %thead{:class => "thead-dark"}
       %tr
         %th{:scope => "col", :class => ("hilite" if @sortMembers == "id")}= link_to "Id", :member_sort => "id" 

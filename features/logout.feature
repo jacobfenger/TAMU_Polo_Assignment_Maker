@@ -12,4 +12,4 @@ Scenario:
 
 	And I follow "Logout"
 	Then I should see "Login"
-	And I should see "Welcome to the Home Page!"
+	

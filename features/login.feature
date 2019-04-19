@@ -11,12 +11,12 @@ Background:
 
 Scenario: Successful signup
 	
-	And I fill in "First Name:" with "admin_first"
-	And I fill in "Last Name:" with "admin_last"
-	And I fill in "Email" with "fake@gmail.com"
-	And I fill in "Phone" with "911"
+	And I fill in "user_first_name" with "admin_first"
+	And I fill in "user_last_name" with "admin_last"
+	And I fill in "user_email" with "fake@gmail.com"
+	And I fill in "user_phone" with "911"
 	And I fill in "user_password" with "asd123"
-	And I fill in "Password Confirmation" with "asd123"
+	And I fill in "user_password_confirmation" with "asd123"
 	And I press "Save Changes"
 	Then I should see "Successfully created an account."
 	And I should see "Logout"

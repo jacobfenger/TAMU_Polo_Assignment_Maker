@@ -11,14 +11,13 @@ end
 World(WithinHelpers)
 
 Given /^I am logged into the officers panel$/ do
-  visit '/login'
   visit '/users/new'
-  fill_in 'First Name:', :with => 'admin_first'
-  fill_in 'Last Name:', :with => 'last_name'
-  fill_in 'Email:', :with => 'fake@email.com'
-  fill_in 'Phone:', :with => '911'
-  fill_in 'Password:', :with => 'admin123'
-  fill_in 'Password Confirmation:', :with => 'admin123'
+  fill_in 'user_first_name', :with => 'admin_first'
+  fill_in 'user_last_name', :with => 'last_name'
+  fill_in 'user_email', :with => 'fake@email.com'
+  fill_in 'user_phone', :with => '911'
+  fill_in 'user_password', :with => 'admin123'
+  fill_in 'user_password_confirmation', :with => 'admin123'
   click_button 'Save Changes'
   if page.respond_to? :should
     page.should have_content('Logout')
@@ -32,9 +31,28 @@ Given /^(?:|I )am on (.+)$/ do |page_name|
   visit path_to(page_name)
 end
 
+Given /the following users exist/ do |users_table|
+  users_table.hashes.each do |user|
+    User.create user
+  end
+end
+
 When /^(?:|I )follow "([^"]*)"$/ do |link|
   click_link(link)
 end
+
+When /^(?:|I )follow Officer's Table "([^"]*)"$/ do |link|
+  within("#users_officers_table") do
+    click_link(link)
+  end
+end
+
+When /^(?:|I )follow Member's Table "([^"]*)"$/ do |link|
+  within("#users_members_table") do
+    click_link(link)
+  end
+end
+
 
 When /^(?:|I )fill in "([^"]*)" with "([^"]*)"$/ do |field, value|
   fill_in(field, :with => value)
@@ -82,4 +100,15 @@ Then /^(?:|I )should not see \/([^\/]*)\/$/ do |regexp|
   else
     assert page.has_no_xpath?('//*', :text => regexp)
   end
+end
+
+Then /I should see "(.*)" before "(.*)"/ do |e1, e2|
+
+  expect(page.body.index(e1) < page.body.index(e2))
+end
+
+Then /^I should see the "([^"]*)" in this order:$/ do |selector, table|
+  expected_order = table.raw
+  actual_order = page.all(selector).collect(&:text)
+  actual_order.should == expected_order.flatten
 end
