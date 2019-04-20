@@ -24,10 +24,10 @@ class UsersController < ApplicationController
       redirect_to users_path(:officer_sort => @sortOfficers, :member_sort => @sortMembers)
     end
     
-    o_sort = "LOWER(" + @sortOfficers + ")"
-    m_sort = "LOWER(" + @sortMembers + ")"
-    @officers = User.where(role: 'Officer').order(o_sort)
-    @members = User.where(role: 'Member').order(m_sort)
+    # o_sort = "LOWER(" + @sortOfficers + ")"
+    # m_sort = "LOWER(" + @sortMembers + ")"
+    @officers = User.where(role: 'Officer').order(@sortOfficers)
+    @members = User.where(role: 'Member').order(@sortMemberst)
     
     session[:current_officer_sort] = @sortOfficers
     session[:current_member_sort] = @sortMembers
