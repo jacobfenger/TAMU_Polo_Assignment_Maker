@@ -5,7 +5,7 @@
   %table#users{:class => "table table-responsive-sm table-hover table-striped", :id => "officers_table"}
     %thead{:class => "thead-dark"}
       %tr
-        %th{:scope => "col", :class => ("hilite" if @sortOfficers == "id")}= link_to "Id", :officer_sort => "id" 
+        %th{:scope => "col"} Id 
         %th{:scope => "col"} Role
         %th{:scope => "col", :class => ("hilite" if @sortOfficers == "first_name")}= link_to "First Name", :id => "id_header", :officer_sort => "first_name"
         %th{:scope => "col", :class => ("hilite" if @sortOfficers == "last_name")}= link_to "Last Name", :id => "id_header", :officer_sort => "last_name"
@@ -29,7 +29,7 @@
   %table#users{:class => "table table-responsive-sm table-hover table-striped", :id => "members_table"}
     %thead{:class => "thead-dark"}
       %tr
-        %th{:scope => "col", :class => ("hilite" if @sortMembers == "id")}= link_to "Id", :member_sort => "id" 
+        %th{:scope => "col"} Id
         %th{:scope => "col"} Role
         %th{:scope => "col", :class => ("hilite" if @sortMembers == "first_name")}= link_to "First Name", :id => "id_header", :member_sort => "first_name"
         %th{:scope => "col", :class => ("hilite" if @sortMembers == "last_name")}= link_to "Last Name", :id => "id_header", :member_sort => "last_name"
