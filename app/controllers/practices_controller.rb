@@ -2,7 +2,10 @@ class PracticesController < ApplicationController
   include SessionsHelper
 
   def show
-  	@practices = Practice.all.order(:date) # Grab all users and order
+    @upcoming_practices = Practice.where(['date >= ?', DateTime.now]).order(:date)
+    
+    # Sort previous practices to show the latest ones first
+    @previous_practices = Practice.where(['date < ?', DateTime.now]).order(:date).reverse_order
   end
 
   def new
