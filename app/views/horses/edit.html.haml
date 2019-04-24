@@ -23,7 +23,7 @@
 
         = button_to 'Delete', horses_path(@horse), :method => :delete, :class => "btn btn-danger col-4"
 
-      = image_tag "jockey.png", :alt => "A Jockey", :id => "horse_image"
+      = image_tag :image, :alt => "A Jockey", :id => "horse_image"
 -# -# almost the same as new, should probably be combined
 -#
 -# = form_tag horses_path(@horse), :method => :put do
