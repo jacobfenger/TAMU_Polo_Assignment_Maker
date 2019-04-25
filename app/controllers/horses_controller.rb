@@ -50,6 +50,6 @@ class HorsesController < ApplicationController
 		# More secure way of adding a horse
 		# Prevents attacker from inputting their own fields
 		def horse_params
-			params.require(:horse).permit(:name, :age, :summary)
+			params.require(:horse).permit(:name, :age, :summary, :image)
 		end
 end

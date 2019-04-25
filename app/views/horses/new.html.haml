@@ -20,8 +20,9 @@
             = text_area :horse, 'summary', :class => "form-control", :placeholder =>"Summary"
             
           .form-group
-            = file_field :horse, :image
+            = label :horse, :image, 'Image'
+            = file_field :horse, 'image', :class => "form-control", :placeholder =>"Image"
 
           = submit_tag 'Save Changes', :class => "btn btn-primary"
-
-      = image_tag :image, :alt => "A Jockey", :id => "horse_image"
+          
+      = image_tag "jockey.png", :alt => "A Jockey", :id => "horse_image"

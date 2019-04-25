@@ -38,7 +38,8 @@
     - @horses.each do |h|
       .col-sm-4
         .card{:class => "bg-light mb-3 w-75"}
-          %img{:class => "card-img-top", :src => h.image.thumb.url, :alt => "Horse"}
+          = image_tag "horse_main.png", :width => 200, :height => 200
+          -p h.image
           .card-body
             %h5{:class => "card-title"}
               =h.name
