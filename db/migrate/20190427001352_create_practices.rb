@@ -3,7 +3,7 @@ class CreatePractices < ActiveRecord::Migration
     create_table :practices do |t|
       t.references :user, foreign_key: true
       t.references :assignment, foregin_key:true, index: true
-      t.timestamps :time
+      t.time :time
       t.datetime :date
       t.string :summary
     end

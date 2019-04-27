@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190417221136) do
+ActiveRecord::Schema.define(version: 20190427001352) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,11 +21,13 @@ ActiveRecord::Schema.define(version: 20190417221136) do
     t.integer  "horse1_id"
     t.integer  "horse2_id"
     t.integer  "horse3_id"
+    t.integer  "practice_id"
     t.string   "note"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.integer  "practice_id"
   end
+
+  add_index "assignments", ["practice_id"], name: "index_assignments_on_practice_id", using: :btree
 
   create_table "horses", force: :cascade do |t|
     t.string   "name"
@@ -37,23 +39,25 @@ ActiveRecord::Schema.define(version: 20190417221136) do
 
   create_table "practices", force: :cascade do |t|
     t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.datetime "time"
-    t.date     "date"
+    t.integer  "assignment_id"
+    t.time     "time"
+    t.datetime "date"
     t.string   "summary"
   end
 
+  add_index "practices", ["assignment_id"], name: "index_practices_on_assignment_id", using: :btree
+
   create_table "users", force: :cascade do |t|
-    t.string   "user_role"
+    t.string   "role"
     t.string   "first_name"
     t.string   "last_name"
     t.string   "email"
     t.string   "phone"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.string   "password"
+    t.string   "password_confirmation"
     t.string   "password_digest"
-    t.string   "role"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
   end
 
   add_foreign_key "assignments", "users"

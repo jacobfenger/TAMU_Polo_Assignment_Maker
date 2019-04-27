@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+  xmlns:x="urn:schemas-microsoft-com:office:excel"
+  xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:html="http://www.w3.org/TR/REC-html40">
+  <Worksheet ss:Name="Sheet1">
+    <Table>
+      <Row>
+        <Cell><Data ss:Type="String">Name</Data></Cell>
+        <Cell><Data ss:Type="String">Horse 1</Data></Cell>
+        <Cell><Data ss:Type="String">Horse 2</Data></Cell>
+        <Cell><Data ss:Type="String">Horse 3</Data></Cell>
+        <Cell><Data ss:Type="String">Note</Data></Cell>
+      </Row>
+    <% @assignments.each do |assignment| %>
+      <Row>
+        <Cell><Data ss:Type="String"><%= assignment.user.first_name + " " + assignment.user.last_name %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= assignment.horse1.name %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= assignment.horse2.name %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= assignment.horse3.name %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= assignment.note %></Data></Cell>
+      </Row>
+    <% end %>
+    </Table>
+  </Worksheet>
+</Workbook>

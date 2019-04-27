@@ -1,0 +1,41 @@
+  [1m[36mSQL (2.2ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (9.6ms)[0m  DROP TABLE "assignments" CASCADE
+  [1m[36m (4.3ms)[0m  [1mCREATE TABLE "assignments" ("id" serial primary key, "user_id" integer, "horse1_id" integer, "horse2_id" integer, "horse3_id" integer, "practice_id" integer, "note" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (1.3ms)[0m  CREATE  INDEX  "index_assignments_on_practice_id" ON "assignments" USING btree ("practice_id")
+  [1m[36m (2.1ms)[0m  [1mDROP TABLE "horses" CASCADE[0m
+  [1m[35m (4.1ms)[0m  CREATE TABLE "horses" ("id" serial primary key, "name" character varying, "age" integer, "summary" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (2.1ms)[0m  [1mDROP TABLE "practices" CASCADE[0m
+  [1m[35m (3.8ms)[0m  CREATE TABLE "practices" ("id" serial primary key, "user_id" integer, "assignment_id" integer, "created_at" timestamp, "updated_at" timestamp, "date" timestamp, "summary" character varying) 
+  [1m[36m (1.1ms)[0m  [1mCREATE  INDEX  "index_practices_on_assignment_id" ON "practices" USING btree ("assignment_id")[0m
+  [1m[35m (2.7ms)[0m  DROP TABLE "users" CASCADE
+  [1m[36m (2.9ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "user_role" character varying, "first_name" character varying, "last_name" character varying, "email" character varying, "phone" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "password_digest" character varying, "role" character varying) [0m
+  [1m[35m (1.8ms)[0m  ALTER TABLE "assignments" ADD CONSTRAINT "fk_rails_aa6b76dac2"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+
+  [1m[36m (1.1ms)[0m  [1mALTER TABLE "practices" ADD CONSTRAINT "fk_rails_9c17933408"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (0.3ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (2.1ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (24.1ms)[0m  CREATE TABLE "assignments" ("id" serial primary key, "user_id" integer, "horse1_id" integer, "horse2_id" integer, "horse3_id" integer, "practice_id" integer, "note" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (1.4ms)[0m  [1mCREATE  INDEX  "index_assignments_on_practice_id" ON "assignments" USING btree ("practice_id")[0m
+  [1m[35m (5.2ms)[0m  DROP TABLE "horses" CASCADE
+  [1m[36m (3.9ms)[0m  [1mCREATE TABLE "horses" ("id" serial primary key, "name" character varying, "age" integer, "summary" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (2.8ms)[0m  CREATE TABLE "practices" ("id" serial primary key, "user_id" integer, "assignment_id" integer, "created_at" timestamp, "updated_at" timestamp, "date" timestamp, "summary" character varying) 
+  [1m[36m (1.2ms)[0m  [1mCREATE  INDEX  "index_practices_on_assignment_id" ON "practices" USING btree ("assignment_id")[0m
+  [1m[35m (2.1ms)[0m  DROP TABLE "users" CASCADE
+  [1m[36m (3.9ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "user_role" character varying, "first_name" character varying, "last_name" character varying, "email" character varying, "phone" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "password_digest" character varying, "role" character varying) [0m
+  [1m[35m (6.4ms)[0m  ALTER TABLE "assignments" ADD CONSTRAINT "fk_rails_aa6b76dac2"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+
+  [1m[36m (1.3ms)[0m  [1mALTER TABLE "practices" ADD CONSTRAINT "fk_rails_9c17933408"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (1.9ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (1.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20190416221925')[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20190415225947')
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m

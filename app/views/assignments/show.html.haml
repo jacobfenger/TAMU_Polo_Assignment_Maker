@@ -1,6 +1,12 @@
+%head
+  = stylesheet_link_tag    'practices'
 .container
   %h1 Assignments
   // Display all practices //
+  .right_box
+    =link_to "Sign Up", assignments_new_path(p: params[:p]), class:"btn btn-primary" # Pass practice
+    =link_to '<i class="fas fa-file-excel"></i> Download as Excel'.html_safe, assignments_path({p: params[:p], format: :xls}), class:"btn btn-outline-warning"
+
   %table#assignments{:class => "table table-responsive-sm table-hover table-striped"}
     %thead{:class => "thead-dark"}
       %tr
@@ -17,6 +23,3 @@
           %td= assignment.horse2.name
           %td= assignment.horse3.name
           %td= assignment.note
-
-
-  

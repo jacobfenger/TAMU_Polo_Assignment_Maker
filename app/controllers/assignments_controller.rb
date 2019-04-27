@@ -7,12 +7,16 @@ class AssignmentsController < ApplicationController
 
 	  p "SHOW: "
 	  p @assignments
+		respond_to do |format|
+  		format.html  	
+  		format.xls
+		end
 	end
 
 	def new
 	  session[:practice] = params["p"]
 	  @assignment = Assignment.new
-	end 
+	end
 
 	def create
 	  @assignment = current_practice.assignments.create

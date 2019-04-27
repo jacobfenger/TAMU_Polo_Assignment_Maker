@@ -1,0 +1,574 @@
+
+
+Started GET "/" for ::1 at 2019-04-26 16:44:21 -0500
+
+PG::ConnectionBad (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+):
+  activerecord (4.2.10) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `initialize'
+  activerecord (4.2.10) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `new'
+  activerecord (4.2.10) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `connect'
+  activerecord (4.2.10) lib/active_record/connection_adapters/postgresql_adapter.rb:242:in `initialize'
+  activerecord (4.2.10) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `new'
+  activerecord (4.2.10) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `postgresql_connection'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /Users/satdey/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/monitor.rb:214:in `mon_synchronize'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /Users/satdey/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/monitor.rb:214:in `mon_synchronize'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:571:in `retrieve_connection'
+  activerecord (4.2.10) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.10) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.10) lib/active_record/migration.rb:383:in `connection'
+  activerecord (4.2.10) lib/active_record/migration.rb:370:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.11) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.11) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.11) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  rack (1.6.11) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.11) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/satdey/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+  /Users/satdey/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+  /Users/satdey/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+
+
+  Rendered /Users/satdey/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.9ms)
+  Rendered /Users/satdey/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/satdey/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/satdey/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (78.8ms)
+
+
+Started GET "/" for ::1 at 2019-04-26 16:44:52 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (4.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.10) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.10) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.11) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.11) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.11) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  rack (1.6.11) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.11) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/satdey/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+  /Users/satdey/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+  /Users/satdey/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+
+
+  Rendered /Users/satdey/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.8ms)
+  Rendered /Users/satdey/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/satdey/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/satdey/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (65.6ms)
+
+
+Started GET "/" for ::1 at 2019-04-26 16:45:46 -0500
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (4043.8ms)
+Completed 200 OK in 7469ms (Views: 7463.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/navbar.self-a73e13a024bc076b94a17f3362ecbbf0b8dedde0f2993415ddb470828ba6094d.css?body=1" for ::1 at 2019-04-26 16:45:54 -0500
+
+
+Started GET "/assets/application.self-3fc108d19863e49d720f1a7b0b0d10e9be2bbb42cf89dccea76c54b6dddb46ac.css?body=1" for ::1 at 2019-04-26 16:45:54 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2019-04-26 16:45:54 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2019-04-26 16:45:54 -0500
+
+
+Started GET "/assets/home.self-5945cd0ae8ec7557d60207aa13c20e1d617ec0639a5ac62557344ac7f4ff89c3.css?body=1" for ::1 at 2019-04-26 16:45:54 -0500
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2019-04-26 16:45:54 -0500
+
+
+Started GET "/assets/assignments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2019-04-26 16:45:54 -0500
+
+
+Started GET "/assets/turbolinks.self-569ee74eaa15c1e2019317ff770b8769b1ec033a0f572a485f64c82ddc8f989e.js?body=1" for ::1 at 2019-04-26 16:45:54 -0500
+
+
+Started GET "/assets/horses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2019-04-26 16:45:54 -0500
+
+
+Started GET "/assets/practices.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2019-04-26 16:45:54 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2019-04-26 16:45:54 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2019-04-26 16:45:54 -0500
+
+
+Started GET "/assets/jquery3.self-5af507e253c37e9c9dcf65064fc3f93795e6e28012780579975a4d709f4074ad.js?body=1" for ::1 at 2019-04-26 16:45:54 -0500
+
+
+Started GET "/assets/popper.self-70e1b2b78096eb80eb35ebac513e7a8007033ee3e881919cfdca4ece7779cffd.js?body=1" for ::1 at 2019-04-26 16:45:54 -0500
+
+
+Started GET "/assets/bootstrap.self-91405a85c7ea7ffc2407472f08a86cd29ba078b4e18f962931a4cf3270a7ba4d.js?body=1" for ::1 at 2019-04-26 16:45:54 -0500
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for ::1 at 2019-04-26 16:45:54 -0500
+
+
+Started GET "/assets/font-awesome/fa-solid-900-f18c486a80175cf02fee0e05c2b4acd86c04cdbaecec61c1ef91f920509b5efe.woff2" for ::1 at 2019-04-26 16:45:55 -0500
+
+
+Started GET "/" for ::1 at 2019-04-26 16:46:58 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (3.2ms)
+Completed 200 OK in 59ms (Views: 58.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/horses" for ::1 at 2019-04-26 16:46:58 -0500
+Processing by HorsesController#index as HTML
+  [1m[36mHorse Load (2.4ms)[0m  [1mSELECT "horses".* FROM "horses"[0m
+  Rendered horses/index.html.haml within layouts/application (14.1ms)
+Completed 200 OK in 80ms (Views: 59.7ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/login" for ::1 at 2019-04-26 16:47:02 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.haml within layouts/application (20.1ms)
+Completed 200 OK in 58ms (Views: 56.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/horse_main-b734fd662f5fc0f356ae1b3c7d6d45801990cb29bd9d165f5089fb8284d66a7d.png" for ::1 at 2019-04-26 16:47:02 -0500
+
+
+Started GET "/assets/users.self-eb928cff46e22eceb4a8cd7cf6d8bbe5d6a8b8729e70bffe84d2c249652ea90f.css?body=1" for ::1 at 2019-04-26 16:47:02 -0500
+
+
+Started GET "/users/new" for ::1 at 2019-04-26 16:47:09 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (15.0ms)
+Completed 200 OK in 85ms (Views: 60.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/cowboy-9fa54e4ec31c0afcb04920ac3fded9c8be278166d4ed9c4dbfdde9f3fb6a5f4c.png" for ::1 at 2019-04-26 16:47:09 -0500
+
+
+Started POST "/users/new" for ::1 at 2019-04-26 16:47:32 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LRDybeW0jeao11/S5r3SMREoK5u2nMidTV3T4I08sk0kudwbhbNhnA0m9z2DVnyiwnzrMOYjqCb9YZPC38Z4gg==", "user"=>{"first_name"=>"Check", "last_name"=>"Mate", "email"=>"seabiscuit@sea.com", "phone"=>"123456789", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Save Changes"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (4.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('seabiscuit@sea.com') LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  Rendered users/new.html.haml within layouts/application (5.8ms)
+Completed 200 OK in 117ms (Views: 37.3ms | ActiveRecord: 4.5ms)
+
+
+Started POST "/users/new" for ::1 at 2019-04-26 16:47:37 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OEp265rmvXLrucSNzzhbjZmnOxKyGIJ38/zJt0WPFssx41id+uFRCE5IbGKq0/UeSvP7ueKn4sxDwImVF3XcBA==", "user"=>{"first_name"=>"Check", "last_name"=>"Mate", "email"=>"seabiscuit@sea.com", "phone"=>"123456789", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Save Changes"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (1.2ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('seabiscuit@sea.com') LIMIT 1
+  [1m[36mSQL (6.5ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "email", "phone", "password_digest", "role", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Check"], ["last_name", "Mate"], ["email", "seabiscuit@sea.com"], ["phone", "123456789"], ["password_digest", "$2a$10$k51QKHcKLMaINebjIR0L.uC69TEnC6c0G9QAvyUctpwu/utZZ4.De"], ["role", "Officer"], ["created_at", "2019-04-26 21:47:37.758864"], ["updated_at", "2019-04-26 21:47:37.758864"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 74ms (ActiveRecord: 10.9ms)
+
+
+Started GET "/" for ::1 at 2019-04-26 16:47:37 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (1.9ms)
+Completed 200 OK in 35ms (Views: 34.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/practices" for ::1 at 2019-04-26 16:47:41 -0500
+Processing by PracticesController#show as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mPractice Load (2.7ms)[0m  [1mSELECT "practices".* FROM "practices" WHERE (date >= '2019-04-26 21:47:41.093480')  ORDER BY "practices"."date" ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mPractice Load (0.3ms)[0m  [1mSELECT "practices".* FROM "practices" WHERE (date < '2019-04-26 21:47:41.096224')  ORDER BY "practices"."date" DESC[0m
+  Rendered practices/show.html.haml within layouts/application (30.4ms)
+Completed 200 OK in 79ms (Views: 58.8ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/users" for ::1 at 2019-04-26 16:47:42 -0500
+Processing by UsersController#show as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."role" = $1  ORDER BY id  [["role", "Officer"]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", "Member"]]
+  Rendered users/show.html.haml within layouts/application (16.9ms)
+Completed 200 OK in 58ms (Views: 55.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/demote.2" for ::1 at 2019-04-26 16:47:50 -0500
+Processing by UsersController#demote as 
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  UPDATE "users" SET "role" = $1, "updated_at" = $2 WHERE "users"."id" = $3  [["role", "Member"], ["updated_at", "2019-04-26 21:47:50.426438"], ["id", 2]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 6ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/users" for ::1 at 2019-04-26 16:47:50 -0500
+Processing by UsersController#show as HTML
+Redirected to http://localhost:3000/users?member_sort=id&officer_sort=id
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users?member_sort=id&officer_sort=id" for ::1 at 2019-04-26 16:47:50 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"member_sort"=>"id", "officer_sort"=>"id"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."role" = $1  ORDER BY id  [["role", "Officer"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", "Member"]]
+  Rendered users/show.html.haml within layouts/application (2.9ms)
+Completed 200 OK in 33ms (Views: 32.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/horses" for ::1 at 2019-04-26 16:47:53 -0500
+Processing by HorsesController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mHorse Load (0.6ms)[0m  [1mSELECT "horses".* FROM "horses"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered horses/index.html.haml within layouts/application (5.7ms)
+Completed 200 OK in 52ms (Views: 50.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users" for ::1 at 2019-04-26 16:47:54 -0500
+Processing by UsersController#show as HTML
+Redirected to http://localhost:3000/users?member_sort=id&officer_sort=id
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users?member_sort=id&officer_sort=id" for ::1 at 2019-04-26 16:47:54 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"member_sort"=>"id", "officer_sort"=>"id"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."role" = $1  ORDER BY id  [["role", "Officer"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", "Member"]]
+  Rendered users/show.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 41ms (Views: 40.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/practices" for ::1 at 2019-04-26 16:47:55 -0500
+Processing by PracticesController#show as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mPractice Load (1.6ms)[0m  SELECT "practices".* FROM "practices" WHERE (date >= '2019-04-26 21:47:55.066285')  ORDER BY "practices"."date" ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mPractice Load (0.6ms)[0m  SELECT "practices".* FROM "practices" WHERE (date < '2019-04-26 21:47:55.066560')  ORDER BY "practices"."date" DESC
+  Rendered practices/show.html.haml within layouts/application (6.0ms)
+Completed 200 OK in 43ms (Views: 39.4ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/practices/new" for ::1 at 2019-04-26 16:47:56 -0500
+Processing by PracticesController#new as HTML
+  Rendered practices/new.html.haml within layouts/application (13.8ms)
+Completed 200 OK in 70ms (Views: 61.5ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/practices/new" for ::1 at 2019-04-26 16:48:17 -0500
+Processing by PracticesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KGRrZJZ1OoMuCcMOlz/Ch4GS2D8ZwdvlHE5jaojmgK4hzUUS9nLW+Yv4a+Hy1GwUUsYYlEl+u16sciNI2hxKYQ==", "p"=>{"time"=>"19:23", "date"=>"2019-05-03", "summary"=>"Try Downloading Stuff"}, "commit"=>"Save Changes"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+ActiveRecord::UnknownAttributeError (unknown attribute 'time' for Practice.):
+  app/controllers/practices_controller.rb:16:in `create'
+
+
+  Rendered /Users/satdey/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.6ms)
+  Rendered /Users/satdey/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/satdey/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/satdey/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (82.3ms)
+
+
+Started GET "/practices" for ::1 at 2019-04-26 16:48:34 -0500
+Processing by PracticesController#show as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mPractice Load (1.5ms)[0m  [1mSELECT "practices".* FROM "practices" WHERE (date >= '2019-04-26 21:48:34.382486')  ORDER BY "practices"."date" ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mPractice Load (0.5ms)[0m  [1mSELECT "practices".* FROM "practices" WHERE (date < '2019-04-26 21:48:34.382680')  ORDER BY "practices"."date" DESC[0m
+  Rendered practices/show.html.haml within layouts/application (15.0ms)
+Completed 200 OK in 57ms (Views: 53.5ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/users" for ::1 at 2019-04-26 16:48:38 -0500
+Processing by UsersController#show as HTML
+Redirected to http://localhost:3000/users?member_sort=id&officer_sort=id
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users?member_sort=id&officer_sort=id" for ::1 at 2019-04-26 16:48:38 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"member_sort"=>"id", "officer_sort"=>"id"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."role" = $1  ORDER BY id  [["role", "Officer"]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", "Member"]]
+  Rendered users/show.html.haml within layouts/application (4.8ms)
+Completed 200 OK in 39ms (Views: 37.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/practices" for ::1 at 2019-04-26 16:48:39 -0500
+Processing by PracticesController#show as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mPractice Load (0.5ms)[0m  SELECT "practices".* FROM "practices" WHERE (date >= '2019-04-26 21:48:39.674455')  ORDER BY "practices"."date" ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mPractice Load (0.9ms)[0m  SELECT "practices".* FROM "practices" WHERE (date < '2019-04-26 21:48:39.674789')  ORDER BY "practices"."date" DESC
+  Rendered practices/show.html.haml within layouts/application (6.2ms)
+Completed 200 OK in 50ms (Views: 47.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/practices" for ::1 at 2019-04-26 17:23:54 -0500
+Processing by PracticesController#show as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mPractice Load (0.3ms)[0m  [1mSELECT "practices".* FROM "practices" WHERE (date >= '2019-04-26 22:23:54.143445')  ORDER BY "practices"."date" ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mPractice Load (0.2ms)[0m  [1mSELECT "practices".* FROM "practices" WHERE (date < '2019-04-26 22:23:54.143770')  ORDER BY "practices"."date" DESC[0m
+  Rendered practices/show.html.haml within layouts/application (16.8ms)
+Completed 200 OK in 103ms (Views: 94.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/practices/new" for ::1 at 2019-04-26 17:23:55 -0500
+Processing by PracticesController#new as HTML
+  Rendered practices/new.html.haml within layouts/application (9.1ms)
+Completed 200 OK in 95ms (Views: 82.2ms | ActiveRecord: 2.8ms)
+
+
+Started POST "/practices/new" for ::1 at 2019-04-26 17:24:07 -0500
+Processing by PracticesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"peR8eEc/Tptl+Es4JnDm4PEK68CO+DGVjc5mxdscuAKsTVIOJzii4cAJ49dDm0hzIl4ra95HUS498ibnieZyzQ==", "p"=>{"time"=>"19:30", "date"=>"2019-02-05", "summary"=>"ads"}, "commit"=>"Save Changes"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+ActiveRecord::UnknownAttributeError (unknown attribute 'time' for Practice.):
+  app/controllers/practices_controller.rb:16:in `create'
+
+
+  Rendered /Users/satdey/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.1ms)
+  Rendered /Users/satdey/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /Users/satdey/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/satdey/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (88.6ms)
+
+
+Started GET "/practices/" for ::1 at 2019-04-26 17:31:07 -0500
+Processing by PracticesController#show as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered practices/show.html.haml within layouts/application (9.2ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (undefined method `role' for nil:NilClass):
+    1: .container
+    2:   - if is_officer?
+    3:     = link_to 'Create new practice', practices_new_path, :class => "btn btn-primary"
+    4:     <br> <br>
+    5:     
+  app/helpers/sessions_helper.rb:34:in `is_officer?'
+  app/views/practices/show.html.haml:2:in `_app_views_practices_show_html_haml__626122783715045142_70366211383060'
+
+
+  Rendered /Users/satdey/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.9ms)
+  Rendered /Users/satdey/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/satdey/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/satdey/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (81.4ms)
+
+
+Started GET "/" for ::1 at 2019-04-26 17:31:13 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (4.3ms)
+Completed 200 OK in 68ms (Views: 67.6ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/logout" for ::1 at 2019-04-26 17:31:15 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"maV1yieCbsCujtULj6yaS0PEzJP9oV6zrMiXiyrEfReQDFu8R4WCugt/feTqRzTYkJAMOK0ePggc9NepeD632A=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-04-26 17:31:15 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (1.7ms)
+Completed 200 OK in 34ms (Views: 33.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2019-04-26 17:31:16 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 61ms (Views: 60.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/horse_main-b734fd662f5fc0f356ae1b3c7d6d45801990cb29bd9d165f5089fb8284d66a7d.png" for ::1 at 2019-04-26 17:31:17 -0500
+
+
+Started POST "/login" for ::1 at 2019-04-26 17:31:33 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GJ8ZjMV+FgL93P+2lP99bnGGKu/X0ZoIlRYrCwnx2qcRNjf6pXn6eFgtV1nxFNP9otLqRIdu+rMlKmspWwsQaA==", "session"=>{"email"=>"sateendradey@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1[0m  [["email", "sateendradey@gmail.com"]]
+  Rendered sessions/new.html.haml within layouts/application (5.6ms)
+Completed 200 OK in 54ms (Views: 50.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/login" for ::1 at 2019-04-26 17:31:37 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cXf01Z9w0lJI/8j4ukSN1wdW8G5Nrl0Y5vpDQBLNRAp43tqj/3c+KO0OYBffryNE1AIwxR0RPaNWxgNiQDeOxQ==", "session"=>{"email"=>"sateendradey@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "sateendradey@gmail.com"]]
+  Rendered sessions/new.html.haml within layouts/application (5.4ms)
+Completed 200 OK in 56ms (Views: 51.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/new" for ::1 at 2019-04-26 17:31:39 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (4.3ms)
+Completed 200 OK in 49ms (Views: 44.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/cowboy-9fa54e4ec31c0afcb04920ac3fded9c8be278166d4ed9c4dbfdde9f3fb6a5f4c.png" for ::1 at 2019-04-26 17:31:39 -0500
+
+
+Started POST "/users/new" for ::1 at 2019-04-26 17:31:47 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+XjQ+TTb604YFMGUDiHRyy8SO8MPDVF9KpP2USsxBU3w0f6PVNwHNL3laXtryn9Y/Eb7aF+yMcaar7ZzecvPgg==", "user"=>{"first_name"=>"Sateendra", "last_name"=>"Dey", "email"=>"sateendradey@gmail.com", "phone"=>"4699205222", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Save Changes"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('sateendradey@gmail.com') LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "email", "phone", "password_digest", "role", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Sateendra"], ["last_name", "Dey"], ["email", "sateendradey@gmail.com"], ["phone", "4699205222"], ["password_digest", "$2a$10$amrO4YLSjR.2t7s7XZJalurZohButJfKhC6ISgPuqbYbDtth2QhAm"], ["role", "Officer"], ["created_at", "2019-04-26 22:31:47.558423"], ["updated_at", "2019-04-26 22:31:47.558423"]]
+  [1m[35m (2.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 70ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/" for ::1 at 2019-04-26 17:31:47 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (1.8ms)
+Completed 200 OK in 42ms (Views: 42.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/practices" for ::1 at 2019-04-26 17:31:49 -0500
+Processing by PracticesController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPractice Load (1.8ms)[0m  [1mSELECT "practices".* FROM "practices" WHERE (date >= '2019-04-26 22:31:49.539545')  ORDER BY "practices"."date" ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPractice Load (0.8ms)[0m  [1mSELECT "practices".* FROM "practices" WHERE (date < '2019-04-26 22:31:49.539806')  ORDER BY "practices"."date" DESC[0m
+  Rendered practices/show.html.haml within layouts/application (7.4ms)
+Completed 200 OK in 45ms (Views: 40.9ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/practices/new" for ::1 at 2019-04-26 17:31:50 -0500
+Processing by PracticesController#new as HTML
+  Rendered practices/new.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 54ms (Views: 45.5ms | ActiveRecord: 3.5ms)
+
+
+Started POST "/practices/new" for ::1 at 2019-04-26 17:31:58 -0500
+Processing by PracticesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SpE9xmSgL77TkzEzEIfUkPrd9ohdeyXmwT3yTZbDG0dDOBOwBKfDxHZimdx1bHoDKYk2Iw3ERV1xAbJvxDnRiA==", "p"=>{"time"=>"05:30", "date"=>"2019-05-02", "summary"=>"Hello"}, "commit"=>"Save Changes"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+ActiveRecord::UnknownAttributeError (unknown attribute 'time' for Practice.):
+  app/controllers/practices_controller.rb:16:in `create'
+
+
+  Rendered /Users/satdey/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.6ms)
+  Rendered /Users/satdey/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/satdey/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/satdey/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (73.2ms)
+
+
+Started GET "/users" for ::1 at 2019-04-26 17:32:32 -0500
+Processing by UsersController#show as HTML
+Redirected to http://localhost:3000/users?member_sort=id&officer_sort=id
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users?member_sort=id&officer_sort=id" for ::1 at 2019-04-26 17:32:32 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"member_sort"=>"id", "officer_sort"=>"id"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."role" = $1  ORDER BY id  [["role", "Officer"]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", "Member"]]
+  Rendered users/show.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 78ms (Views: 76.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/practices" for ::1 at 2019-04-26 17:33:15 -0500
+Processing by PracticesController#show as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPractice Load (0.8ms)[0m  SELECT "practices".* FROM "practices" WHERE (date >= '2019-04-26 22:33:15.975525')  ORDER BY "practices"."date" ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPractice Load (0.3ms)[0m  SELECT "practices".* FROM "practices" WHERE (date < '2019-04-26 22:33:15.975812')  ORDER BY "practices"."date" DESC
+  Rendered practices/show.html.haml within layouts/application (5.5ms)
+Completed 200 OK in 49ms (Views: 46.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/practices/new" for ::1 at 2019-04-26 17:33:17 -0500
+Processing by PracticesController#new as HTML
+  Rendered practices/new.html.haml within layouts/application (9.2ms)
+Completed 200 OK in 120ms (Views: 118.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/practices/new" for ::1 at 2019-04-26 17:33:24 -0500
+Processing by PracticesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NcoD/PDZnJGvwkyK1p2d4p4Rm8fWMik7hC6fEwTFShU8Yy2KkN5w6woz5GWzdjNxTUVbbIaNSYA0Et8xVj+A2g==", "p"=>{"time"=>"05:30", "date"=>"2019-05-02", "summary"=>""}, "commit"=>"Save Changes"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+ActiveRecord::UnknownAttributeError (unknown attribute 'time' for Practice.):
+  app/controllers/practices_controller.rb:16:in `create'
+
+
+  Rendered /Users/satdey/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.9ms)
+  Rendered /Users/satdey/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/satdey/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/satdey/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (70.6ms)
