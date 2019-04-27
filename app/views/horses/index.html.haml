@@ -38,7 +38,7 @@
     - @horses.each do |h|
       .col-sm-4
         .card{:class => "bg-light mb-3 w-75"}
-          = image_tag h.image.url, :width => 200, :height => 200 if h.image?
+          = image_tag h.image, :width => 200, :height => 200 if h.image?
           .card-body
             %h5{:class => "card-title"}
               =h.name

@@ -7,7 +7,6 @@ class HorsesController < ApplicationController
 
 	def create
 		@horse = Horse.new(horse_params)
-
 		# This ensures that a name and age are filled out when
 		# adding a horse as an officer
 		if @horse.has_required_fields?
@@ -18,6 +17,7 @@ class HorsesController < ApplicationController
 			flash[:notice] = "Horse was not saved successfully"
 			redirect_to horses_path
 		end
+		print @horse.image
 	end
 	
 	def edit
