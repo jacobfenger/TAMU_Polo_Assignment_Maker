@@ -38,7 +38,7 @@
     - @horses.each do |h|
       .col-sm-4
         .card{:class => "bg-light mb-3 w-75"}
-          %img{:class => "card-img-top", :src => "https://imagesvc.timeincapp.com/v3/mm/image?url=https%3A%2F%2Ftimedotcom.files.wordpress.com%2F2016%2F03%2F25069634243_08e8d5b81a_o.jpg&w=800&c=sc&poi=face&q=85", :alt => "Horse"}
+          = image_tag h.image, :width => 200, :height => 200 if h.image?
           .card-body
             %h5{:class => "card-title"}
               =h.name

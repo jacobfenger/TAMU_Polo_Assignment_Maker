@@ -7,7 +7,6 @@ class HorsesController < ApplicationController
 
 	def create
 		@horse = Horse.new(horse_params)
-
 		# This ensures that a name and age are filled out when
 		# adding a horse as an officer
 		if @horse.has_required_fields?
@@ -50,6 +49,6 @@ class HorsesController < ApplicationController
 		# More secure way of adding a horse
 		# Prevents attacker from inputting their own fields
 		def horse_params
-			params.require(:horse).permit(:name, :age, :summary)
+			params.require(:horse).permit(:name, :age, :summary, :image)
 		end
 end

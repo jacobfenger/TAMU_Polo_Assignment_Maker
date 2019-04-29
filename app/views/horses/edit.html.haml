@@ -6,23 +6,27 @@
       %h1 Edit Existing Horse
     .row{:class => "justify-content-center"}
       .login
-        = form_tag horses_path(@horse), :method => :put do
+        = form_for :horse, url: horses_path(@horse), :method => :put do |h|
           .form-group
-            = label :horse, :name, 'Name'
-            = text_field :horse, 'name', :class => "form-control", :placeholder =>"Horse name"
+            = label :name, 'Name'
+            = h.text_field :name, :class => "form-control", :placeholder =>"Horse name"
 
           .form-group
-            = label :horse, :age, 'Age'
-            = text_field :horse, 'age', :type => "number", :class => "form-control", :placeholder =>"Age"
+            = label :age, 'Age'
+            = h.text_field :age, :type => "number", :class => "form-control", :placeholder =>"Age"
 
           .form-group
-            = label :horse, :summary, 'Summary'
-            = text_area :horse, 'summary', :class => "form-control", :placeholder =>"Summary"
+            = label :summary, 'Summary'
+            = h.text_area :summary, :class => "form-control", :placeholder =>"Summary"
+            
+          .form-group
+            = label :image, 'Image'
+            = h.file_field :image, :class => "form-control"
 
           = submit_tag 'Save Changes', :class => "btn btn-primary col-4"
 
         = button_to 'Delete', horses_path(@horse), :method => :delete, :class => "btn btn-danger col-4"
-
+        
       = image_tag "jockey.png", :alt => "A Jockey", :id => "horse_image"
 -# -# almost the same as new, should probably be combined
 -#
