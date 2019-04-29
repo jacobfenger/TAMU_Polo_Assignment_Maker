@@ -17,7 +17,6 @@ class HorsesController < ApplicationController
 			flash[:notice] = "Horse was not saved successfully"
 			redirect_to horses_path
 		end
-		print @horse.image
 	end
 	
 	def edit
