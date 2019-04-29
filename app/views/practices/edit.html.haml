@@ -12,12 +12,12 @@
             = time_field :p, 'time', :class => "form-control", :value => @practice.time.strftime("%T")
           .form-group
             = label :p, :date, 'Practice Date'
-            = date_field :p, 'date', :class => "form-control", :Value => @practice.date
+            = datetime_field :p, 'date', :class => "form-control", :Value => @practice.date.strftime("%m/%d/%Y")
 
           .form-group
             = label :p, :summary, 'Practice Summary'
             = text_area :p, 'summary', :class => "form-control", :value => @practice.summary
 
-          = submit_tag 'Save Changes', :class => "btn btn-primary col-4"
+          = submit_tag 'Save Changes', :method => :put, :class => "btn btn-primary col-4"
 
         = button_to 'Delete', practices_path(@practice), :method => :delete, :class => "btn btn-danger col-4"

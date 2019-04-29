@@ -375,3 +375,1493 @@ Processing by AssignmentsController#show as HTML
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "horses".* FROM "horses" WHERE "horses"."id" = $1 LIMIT 1[0m  [["id", 1]]
   Rendered assignments/show.html.haml within layouts/application (7.0ms)
 Completed 200 OK in 58ms (Views: 55.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-29 13:44:59 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (329.0ms)
+Completed 200 OK in 460ms (Views: 450.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/practices" for 127.0.0.1 at 2019-04-29 13:45:01 -0500
+Processing by PracticesController#show as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPractice Load (0.8ms)[0m  SELECT "practices".* FROM "practices" WHERE (date >= '2019-04-29 18:45:01.335121')  ORDER BY "practices"."date" ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPractice Load (0.3ms)[0m  SELECT "practices".* FROM "practices" WHERE (date < '2019-04-29 18:45:01.335420')  ORDER BY "practices"."date" DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered practices/show.html.haml within layouts/application (52.6ms)
+Completed 200 OK in 123ms (Views: 99.1ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/practices/new" for 127.0.0.1 at 2019-04-29 13:45:03 -0500
+Processing by PracticesController#new as HTML
+  Rendered practices/new.html.haml within layouts/application (26.6ms)
+Completed 200 OK in 77ms (Views: 76.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/practices/new" for 127.0.0.1 at 2019-04-29 13:45:05 -0500
+Processing by PracticesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rbl5xmy9v6uWELkLQoR4iWGKj9YAFMCtV2A7UbsRavjGsmeyaKXpRNbeRYzPP/fQg/BbS+mCmzmHhvCtg6WzcA==", "p"=>{"time"=>"12:31", "date"=>"3123-03-12", "summary"=>"123"}, "commit"=>"Save Changes"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "practices" ("time", "date", "summary", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["time", "2000-01-01 12:31:00.000000"], ["date", "3123-03-12 00:00:00.000000"], ["summary", "123"], ["user_id", 1]]
+  [1m[35m (9.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/practices
+Completed 302 Found in 15ms (ActiveRecord: 10.3ms)
+
+
+Started GET "/practices" for 127.0.0.1 at 2019-04-29 13:45:05 -0500
+Processing by PracticesController#show as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPractice Load (0.2ms)[0m  [1mSELECT "practices".* FROM "practices" WHERE (date >= '2019-04-29 18:45:05.531536')  ORDER BY "practices"."date" ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPractice Load (0.2ms)[0m  [1mSELECT "practices".* FROM "practices" WHERE (date < '2019-04-29 18:45:05.531683')  ORDER BY "practices"."date" DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered practices/show.html.haml within layouts/application (5.0ms)
+Completed 200 OK in 61ms (Views: 59.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/practices/edit.2" for 127.0.0.1 at 2019-04-29 13:45:06 -0500
+Processing by PracticesController#edit as 
+  [1m[35mPractice Load (0.2ms)[0m  SELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered practices/edit.html.haml within layouts/application (6.2ms)
+Completed 200 OK in 85ms (Views: 84.0ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/practices.2" for 127.0.0.1 at 2019-04-29 13:45:07 -0500
+Processing by PracticesController#save as 
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+L1GVJCshV+I+zwm5hfX552LIU3Nd1+QtcCNvmJWiB6TtlgglLTTsMg1wKFrrFi+f/H10CThBARlJkZCWuJRlg==", "p"=>{"time"=>"12:31:00", "date"=>"", "summary"=>"1235151"}, "commit"=>"Save Changes"}
+  [1m[36mPractice Load (0.2ms)[0m  [1mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+Redirected to http://localhost:3000/practices
+Completed 302 Found in 7ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/practices" for 127.0.0.1 at 2019-04-29 13:45:07 -0500
+Processing by PracticesController#show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPractice Load (0.4ms)[0m  SELECT "practices".* FROM "practices" WHERE (date >= '2019-04-29 18:45:07.373829')  ORDER BY "practices"."date" ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPractice Load (0.3ms)[0m  SELECT "practices".* FROM "practices" WHERE (date < '2019-04-29 18:45:07.373955')  ORDER BY "practices"."date" DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered practices/show.html.haml within layouts/application (6.6ms)
+Completed 200 OK in 58ms (Views: 56.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/practices" for 127.0.0.1 at 2019-04-29 13:45:15 -0500
+Processing by PracticesController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPractice Load (0.3ms)[0m  [1mSELECT "practices".* FROM "practices" WHERE (date >= '2019-04-29 18:45:15.850837')  ORDER BY "practices"."date" ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPractice Load (0.4ms)[0m  [1mSELECT "practices".* FROM "practices" WHERE (date < '2019-04-29 18:45:15.851150')  ORDER BY "practices"."date" DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered practices/show.html.haml within layouts/application (26.0ms)
+Completed 200 OK in 84ms (Views: 75.8ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/practices/edit.2" for 127.0.0.1 at 2019-04-29 13:45:16 -0500
+Processing by PracticesController#edit as 
+  [1m[35mPractice Load (0.2ms)[0m  SELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered practices/edit.html.haml within layouts/application (4.4ms)
+Completed 200 OK in 77ms (Views: 76.2ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/practices.2" for 127.0.0.1 at 2019-04-29 13:45:18 -0500
+Processing by PracticesController#save as 
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"N2gj7bQ3CrcRiXmrvbyKgqFO7hyjmtmAxQ2Ay3ZFj2FcYz2ZsC9cWFFHhSwwBwXbQzQ6gUoMghQV60s3TvFW6Q==", "p"=>{"time"=>"12:31:00", "date"=>"", "summary"=>"1234"}, "commit"=>"Save Changes"}
+  [1m[36mPractice Load (0.2ms)[0m  [1mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+Redirected to http://localhost:3000/practices
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/practices" for 127.0.0.1 at 2019-04-29 13:45:18 -0500
+Processing by PracticesController#show as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPractice Load (0.2ms)[0m  SELECT "practices".* FROM "practices" WHERE (date >= '2019-04-29 18:45:18.837794')  ORDER BY "practices"."date" ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPractice Load (0.2ms)[0m  SELECT "practices".* FROM "practices" WHERE (date < '2019-04-29 18:45:18.837932')  ORDER BY "practices"."date" DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered practices/show.html.haml within layouts/application (5.0ms)
+Completed 200 OK in 56ms (Views: 54.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/practices/edit.2" for 127.0.0.1 at 2019-04-29 13:45:43 -0500
+Processing by PracticesController#edit as 
+  [1m[36mPractice Load (0.2ms)[0m  [1mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered practices/edit.html.haml within layouts/application (7.2ms)
+Completed 200 OK in 94ms (Views: 85.3ms | ActiveRecord: 1.6ms)
+
+
+Started DELETE "/practices.2" for 127.0.0.1 at 2019-04-29 13:45:43 -0500
+Processing by PracticesController#delete as 
+  Parameters: {"authenticity_token"=>"qorM2DJ4a/1T9uPFebSopN7KjauX6MwF6drpAq63fwTBgdKsNmA9EhM4H0L0Dyf9PLBZNn5+l5E5PCL+lgOmjA=="}
+  [1m[35mPractice Load (0.2ms)[0m  SELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "practices" WHERE "practices"."id" = $1  [["id", 2]]
+  [1m[36m (21.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/practices
+Completed 302 Found in 24ms (ActiveRecord: 21.5ms)
+
+
+Started GET "/practices" for 127.0.0.1 at 2019-04-29 13:45:43 -0500
+Processing by PracticesController#show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPractice Load (0.2ms)[0m  SELECT "practices".* FROM "practices" WHERE (date >= '2019-04-29 18:45:43.844143')  ORDER BY "practices"."date" ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPractice Load (0.2ms)[0m  SELECT "practices".* FROM "practices" WHERE (date < '2019-04-29 18:45:43.844282')  ORDER BY "practices"."date" DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered practices/show.html.haml within layouts/application (14.7ms)
+Completed 200 OK in 66ms (Views: 63.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assignments?p=1" for 127.0.0.1 at 2019-04-29 13:45:45 -0500
+Processing by AssignmentsController#show as HTML
+  Parameters: {"p"=>"1"}
+  [1m[36mPractice Load (0.2ms)[0m  [1mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mAssignment Load (0.5ms)[0m  SELECT "assignments".* FROM "assignments" WHERE "assignments"."practice_id" = $1  [["practice_id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mHorse Load (0.5ms)[0m  SELECT  "horses".* FROM "horses" WHERE "horses"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "horses".* FROM "horses" WHERE "horses"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "horses".* FROM "horses" WHERE "horses"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered assignments/show.html.haml within layouts/application (30.3ms)
+Completed 200 OK in 115ms (Views: 90.1ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/practices/new" for 127.0.0.1 at 2019-04-29 13:45:46 -0500
+Processing by PracticesController#new as HTML
+  Rendered practices/new.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 56ms (Views: 55.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/practices/new" for 127.0.0.1 at 2019-04-29 13:45:49 -0500
+Processing by PracticesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ccx5/z+zSXW7ysk1K0JtkIQ2LPrdh585Ck/pXkBWzktix2eLO6sfmvsENbKm+eLJZkz4ZzQRxK3aqSKieOIXww==", "p"=>{"time"=>"12:31", "date"=>"3123-03-12", "summary"=>"123"}, "commit"=>"Save Changes"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "practices" ("time", "date", "summary", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["time", "2000-01-01 12:31:00.000000"], ["date", "3123-03-12 00:00:00.000000"], ["summary", "123"], ["user_id", 1]]
+  [1m[35m (22.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/practices
+Completed 302 Found in 27ms (ActiveRecord: 22.8ms)
+
+
+Started GET "/practices" for 127.0.0.1 at 2019-04-29 13:45:49 -0500
+Processing by PracticesController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPractice Load (0.3ms)[0m  [1mSELECT "practices".* FROM "practices" WHERE (date >= '2019-04-29 18:45:49.227963')  ORDER BY "practices"."date" ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPractice Load (0.2ms)[0m  [1mSELECT "practices".* FROM "practices" WHERE (date < '2019-04-29 18:45:49.228127')  ORDER BY "practices"."date" DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered practices/show.html.haml within layouts/application (5.2ms)
+Completed 200 OK in 57ms (Views: 55.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/practices/edit.3" for 127.0.0.1 at 2019-04-29 13:45:50 -0500
+Processing by PracticesController#edit as 
+  [1m[35mPractice Load (0.2ms)[0m  SELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered practices/edit.html.haml within layouts/application (4.6ms)
+Completed 200 OK in 79ms (Views: 77.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/practices/edit.3" for 127.0.0.1 at 2019-04-29 13:46:59 -0500
+Processing by PracticesController#edit as 
+  [1m[36mPractice Load (0.2ms)[0m  [1mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered practices/edit.html.haml within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.2ms)
+
+SyntaxError (/mnt/c/Projects/TAMU_Polo_Assignment_Maker/app/views/practices/edit.html.haml:21: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+button_to 'Save', submit_tag 'Save Changes', :class => "btn 
+                              ^
+/mnt/c/Projects/TAMU_Polo_Assignment_Maker/app/views/practices/edit.html.haml:21: syntax error, unexpected ',', expecting ')'
+e', submit_tag 'Save Changes', :class => "btn btn-primary co
+                              ^):
+  app/views/practices/edit.html.haml:21: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+  app/views/practices/edit.html.haml:21: syntax error, unexpected ',', expecting ')'
+
+
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.3ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (32.6ms)
+
+
+Started GET "/practices" for 127.0.0.1 at 2019-04-29 13:47:13 -0500
+Processing by PracticesController#show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPractice Load (0.3ms)[0m  SELECT "practices".* FROM "practices" WHERE (date >= '2019-04-29 18:47:13.806470')  ORDER BY "practices"."date" ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPractice Load (0.3ms)[0m  SELECT "practices".* FROM "practices" WHERE (date < '2019-04-29 18:47:13.806625')  ORDER BY "practices"."date" DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered practices/show.html.haml within layouts/application (6.8ms)
+Completed 200 OK in 66ms (Views: 64.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/practices/edit.3" for 127.0.0.1 at 2019-04-29 13:47:14 -0500
+Processing by PracticesController#edit as 
+  [1m[36mPractice Load (0.1ms)[0m  [1mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered practices/edit.html.haml within layouts/application (6.6ms)
+Completed 200 OK in 84ms (Views: 83.0ms | ActiveRecord: 0.1ms)
+
+
+Started PUT "/practices.3" for 127.0.0.1 at 2019-04-29 13:47:15 -0500
+Processing by PracticesController#save as 
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bwGmALZzeMMtXJwULlXoUft3fejPqAWFQ94JlkbKjhMECrh0smsuLG2SYJOj7mcIGQ2pdSY+XhGTOMJqfn5Xmw==", "p"=>{"time"=>"12:31:00", "date"=>"", "summary"=>"123"}, "commit"=>"Save Changes"}
+  [1m[35mPractice Load (0.2ms)[0m  SELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+Redirected to http://localhost:3000/practices
+Completed 302 Found in 5ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/practices" for 127.0.0.1 at 2019-04-29 13:47:15 -0500
+Processing by PracticesController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPractice Load (0.3ms)[0m  [1mSELECT "practices".* FROM "practices" WHERE (date >= '2019-04-29 18:47:15.223990')  ORDER BY "practices"."date" ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPractice Load (0.3ms)[0m  [1mSELECT "practices".* FROM "practices" WHERE (date < '2019-04-29 18:47:15.224138')  ORDER BY "practices"."date" DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered practices/show.html.haml within layouts/application (5.3ms)
+Completed 200 OK in 59ms (Views: 57.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/practices/edit.3" for 127.0.0.1 at 2019-04-29 13:47:16 -0500
+Processing by PracticesController#edit as 
+  [1m[35mPractice Load (0.2ms)[0m  SELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered practices/edit.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 80ms (Views: 79.5ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/practices.3" for 127.0.0.1 at 2019-04-29 13:47:17 -0500
+Processing by PracticesController#save as 
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1+POvIZq1nMHApr6xqkPNgqsfsXEj6mZwygSR8hQbVS86NDIgnKAnEfMZn1LEoBv6NaqWC0Z8g0Tztm78OS03A==", "p"=>{"time"=>"12:31:00", "date"=>"", "summary"=>"1234"}, "commit"=>"Save Changes"}
+  [1m[36mPractice Load (0.2ms)[0m  [1mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+Redirected to http://localhost:3000/practices
+Completed 302 Found in 8ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/practices" for 127.0.0.1 at 2019-04-29 13:47:17 -0500
+Processing by PracticesController#show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPractice Load (0.3ms)[0m  SELECT "practices".* FROM "practices" WHERE (date >= '2019-04-29 18:47:17.792541')  ORDER BY "practices"."date" ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPractice Load (0.3ms)[0m  SELECT "practices".* FROM "practices" WHERE (date < '2019-04-29 18:47:17.792680')  ORDER BY "practices"."date" DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered practices/show.html.haml within layouts/application (5.8ms)
+Completed 200 OK in 58ms (Views: 56.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/practices" for 127.0.0.1 at 2019-04-29 13:47:36 -0500
+Processing by PracticesController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPractice Load (0.2ms)[0m  [1mSELECT "practices".* FROM "practices" WHERE (date >= '2019-04-29 18:47:36.484160')  ORDER BY "practices"."date" ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPractice Load (0.2ms)[0m  [1mSELECT "practices".* FROM "practices" WHERE (date < '2019-04-29 18:47:36.484306')  ORDER BY "practices"."date" DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered practices/show.html.haml within layouts/application (6.0ms)
+Completed 200 OK in 58ms (Views: 56.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/practices" for 127.0.0.1 at 2019-04-29 13:47:36 -0500
+Processing by PracticesController#show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPractice Load (0.3ms)[0m  SELECT "practices".* FROM "practices" WHERE (date >= '2019-04-29 18:47:36.832703')  ORDER BY "practices"."date" ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPractice Load (0.2ms)[0m  SELECT "practices".* FROM "practices" WHERE (date < '2019-04-29 18:47:36.832923')  ORDER BY "practices"."date" DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered practices/show.html.haml within layouts/application (6.1ms)
+Completed 200 OK in 62ms (Views: 60.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/practices/edit.3" for 127.0.0.1 at 2019-04-29 13:47:37 -0500
+Processing by PracticesController#edit as 
+  [1m[36mPractice Load (0.2ms)[0m  [1mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered practices/edit.html.haml within layouts/application (32.5ms)
+Completed 500 Internal Server Error in 65ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (wrong number of arguments (given 3, expected 0..2)):
+    18:             = label :p, :summary, 'Practice Summary'
+    19:             = text_area :p, 'summary', :class => "form-control", :value => @practice.summary
+    20: 
+    21:           = submit_tag 'Save Changes', practices_path(@practice), :method => :put, :class => "btn btn-primary col-4"
+    22: 
+    23:         = button_to 'Delete', practices_path(@practice), :method => :delete, :class => "btn btn-danger col-4"
+  app/views/practices/edit.html.haml:21:in `block in _app_views_practices_edit_html_haml__2287590556735107690_70065355541160'
+  app/views/practices/edit.html.haml:9:in `_app_views_practices_edit_html_haml__2287590556735107690_70065355541160'
+
+
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.6ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (31.6ms)
+
+
+Started GET "/practices" for 127.0.0.1 at 2019-04-29 13:47:44 -0500
+Processing by PracticesController#show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPractice Load (0.2ms)[0m  SELECT "practices".* FROM "practices" WHERE (date >= '2019-04-29 18:47:44.222931')  ORDER BY "practices"."date" ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPractice Load (0.2ms)[0m  SELECT "practices".* FROM "practices" WHERE (date < '2019-04-29 18:47:44.223075')  ORDER BY "practices"."date" DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered practices/show.html.haml within layouts/application (4.7ms)
+Completed 200 OK in 61ms (Views: 59.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/practices/edit.3" for 127.0.0.1 at 2019-04-29 13:47:44 -0500
+Processing by PracticesController#edit as 
+  [1m[36mPractice Load (0.2ms)[0m  [1mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered practices/edit.html.haml within layouts/application (6.6ms)
+Completed 200 OK in 81ms (Views: 80.2ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/practices.3" for 127.0.0.1 at 2019-04-29 13:47:45 -0500
+Processing by PracticesController#save as 
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eogd2FL90ezB72385rt8etQi0wWFny4nTXBuFA/qVjsRgwOsVuWHA4EhkXtrAPMjNlgHmGwJdbOdlqXoN16Psw==", "p"=>{"time"=>"12:31:00", "date"=>"", "summary"=>"123"}, "commit"=>"Save Changes"}
+  [1m[35mPractice Load (0.4ms)[0m  SELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+Redirected to http://localhost:3000/practices
+Completed 302 Found in 5ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/practices" for 127.0.0.1 at 2019-04-29 13:47:45 -0500
+Processing by PracticesController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPractice Load (0.3ms)[0m  [1mSELECT "practices".* FROM "practices" WHERE (date >= '2019-04-29 18:47:45.599268')  ORDER BY "practices"."date" ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPractice Load (0.2ms)[0m  [1mSELECT "practices".* FROM "practices" WHERE (date < '2019-04-29 18:47:45.599407')  ORDER BY "practices"."date" DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered practices/show.html.haml within layouts/application (5.0ms)
+Completed 200 OK in 57ms (Views: 55.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/practices/edit.3" for 127.0.0.1 at 2019-04-29 13:47:46 -0500
+Processing by PracticesController#edit as 
+  [1m[35mPractice Load (0.1ms)[0m  SELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered practices/edit.html.haml within layouts/application (4.7ms)
+Completed 200 OK in 84ms (Views: 82.9ms | ActiveRecord: 0.1ms)
+
+
+Started PUT "/practices.3" for 127.0.0.1 at 2019-04-29 13:47:47 -0500
+Processing by PracticesController#save as 
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c6+y7qx/BvnuNSbhSCLXN03w8n2Mej7yolaAF7AIRHcYpKyaqGdQFq772mbFmVhur4om4GXsZWZysEvriLyd/w==", "p"=>{"time"=>"12:31:00", "date"=>"", "summary"=>"1234"}, "commit"=>"Save Changes"}
+  [1m[36mPractice Load (0.2ms)[0m  [1mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+Redirected to http://localhost:3000/practices
+Completed 302 Found in 5ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/practices" for 127.0.0.1 at 2019-04-29 13:47:47 -0500
+Processing by PracticesController#show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPractice Load (0.3ms)[0m  SELECT "practices".* FROM "practices" WHERE (date >= '2019-04-29 18:47:47.844666')  ORDER BY "practices"."date" ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPractice Load (0.3ms)[0m  SELECT "practices".* FROM "practices" WHERE (date < '2019-04-29 18:47:47.844836')  ORDER BY "practices"."date" DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered practices/show.html.haml within layouts/application (6.3ms)
+Completed 200 OK in 72ms (Views: 70.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/practices" for 127.0.0.1 at 2019-04-29 13:47:54 -0500
+Processing by PracticesController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPractice Load (0.3ms)[0m  [1mSELECT "practices".* FROM "practices" WHERE (date >= '2019-04-29 18:47:54.367146')  ORDER BY "practices"."date" ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPractice Load (0.3ms)[0m  [1mSELECT "practices".* FROM "practices" WHERE (date < '2019-04-29 18:47:54.367346')  ORDER BY "practices"."date" DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered practices/show.html.haml within layouts/application (19.5ms)
+Completed 200 OK in 76ms (Views: 68.8ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/practices/edit.3" for 127.0.0.1 at 2019-04-29 13:47:54 -0500
+Processing by PracticesController#edit as 
+  [1m[35mPractice Load (0.2ms)[0m  SELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered practices/edit.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 79ms (Views: 77.8ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/practices.3" for 127.0.0.1 at 2019-04-29 13:47:56 -0500
+Processing by PracticesController#save as 
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WjhKCTL5ZIkyTV/XAk9RXSo5xVagrTfwOBpjyH1yC84xM1R9NuEyZnKDo1CP9N4EyEMRy0k7bGTo/Kg0RcbSRg==", "p"=>{"time"=>"12:31:00", "date"=>"", "summary"=>"1234"}, "commit"=>"Save Changes"}
+  [1m[36mPractice Load (0.2ms)[0m  [1mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+Redirected to http://localhost:3000/practices
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/practices" for 127.0.0.1 at 2019-04-29 13:47:56 -0500
+Processing by PracticesController#show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPractice Load (0.3ms)[0m  SELECT "practices".* FROM "practices" WHERE (date >= '2019-04-29 18:47:56.118509')  ORDER BY "practices"."date" ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPractice Load (0.2ms)[0m  SELECT "practices".* FROM "practices" WHERE (date < '2019-04-29 18:47:56.118650')  ORDER BY "practices"."date" DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered practices/show.html.haml within layouts/application (5.0ms)
+Completed 200 OK in 57ms (Views: 55.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/practices" for 127.0.0.1 at 2019-04-29 13:48:12 -0500
+Processing by PracticesController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPractice Load (0.2ms)[0m  [1mSELECT "practices".* FROM "practices" WHERE (date >= '2019-04-29 18:48:12.105190')  ORDER BY "practices"."date" ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPractice Load (0.3ms)[0m  [1mSELECT "practices".* FROM "practices" WHERE (date < '2019-04-29 18:48:12.105434')  ORDER BY "practices"."date" DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered practices/show.html.haml within layouts/application (19.3ms)
+Completed 200 OK in 80ms (Views: 72.0ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/practices/edit.3" for 127.0.0.1 at 2019-04-29 13:48:12 -0500
+Processing by PracticesController#edit as 
+  [1m[35mPractice Load (0.1ms)[0m  SELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered practices/edit.html.haml within layouts/application (4.6ms)
+Completed 200 OK in 80ms (Views: 78.9ms | ActiveRecord: 0.1ms)
+
+
+Started PUT "/practices.3" for 127.0.0.1 at 2019-04-29 13:48:13 -0500
+Processing by PracticesController#save as 
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YA0NPpSfeDWsu4jaRcP5d9GkZ/afn62NazsAlclYyiILBhNKkIcu2ux1dF3IeHYuM96za3YJ9hm73ctp8ewTqg==", "p"=>{"time"=>"12:31:00", "date"=>"", "summary"=>"123"}, "commit"=>"Save Changes"}
+  [1m[36mPractice Load (0.2ms)[0m  [1mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+Redirected to http://localhost:3000/practices
+Completed 302 Found in 5ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/practices" for 127.0.0.1 at 2019-04-29 13:48:13 -0500
+Processing by PracticesController#show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPractice Load (0.3ms)[0m  SELECT "practices".* FROM "practices" WHERE (date >= '2019-04-29 18:48:13.693458')  ORDER BY "practices"."date" ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPractice Load (0.3ms)[0m  SELECT "practices".* FROM "practices" WHERE (date < '2019-04-29 18:48:13.693584')  ORDER BY "practices"."date" DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered practices/show.html.haml within layouts/application (5.8ms)
+Completed 200 OK in 59ms (Views: 58.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/practices" for 127.0.0.1 at 2019-04-29 13:48:53 -0500
+Processing by PracticesController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPractice Load (0.3ms)[0m  [1mSELECT "practices".* FROM "practices" WHERE (date >= '2019-04-29 18:48:53.478545')  ORDER BY "practices"."date" ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPractice Load (0.3ms)[0m  [1mSELECT "practices".* FROM "practices" WHERE (date < '2019-04-29 18:48:53.478762')  ORDER BY "practices"."date" DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered practices/show.html.haml within layouts/application (19.4ms)
+Completed 200 OK in 76ms (Views: 68.6ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/practices/edit.3" for 127.0.0.1 at 2019-04-29 13:48:54 -0500
+Processing by PracticesController#edit as 
+  [1m[35mPractice Load (0.2ms)[0m  SELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered practices/edit.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 82ms (Views: 80.4ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/practices.3" for 127.0.0.1 at 2019-04-29 13:48:55 -0500
+Processing by PracticesController#save as 
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UXssf9CpTsQO055B4pOZ25wYFQargbVxIx2X0EcQP4E6cDIL1LEYK04dYsZvKBaCfmLBm0IX7uXz+1wsf6TmCQ==", "p"=>{"time"=>"12:31:00", "date"=>"", "summary"=>"123"}, "commit"=>"Save Changes"}
+  [1m[36mPractice Load (0.1ms)[0m  [1mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 1.8ms)
+
+ArgumentError (wrong number of arguments (given 0, expected 2)):
+  app/controllers/practices_controller.rb:40:in `save'
+
+
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.4ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/jacob/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (30.6ms)
+
+
+Started PUT "/practices.3" for 127.0.0.1 at 2019-04-29 13:49:10 -0500
+Processing by PracticesController#save as 
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UXssf9CpTsQO055B4pOZ25wYFQargbVxIx2X0EcQP4E6cDIL1LEYK04dYsZvKBaCfmLBm0IX7uXz+1wsf6TmCQ==", "p"=>{"time"=>"12:31", "date"=>"", "summary"=>"123"}, "commit"=>"Save Changes"}
+  [1m[35mPractice Load (0.2ms)[0m  SELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+Redirected to http://localhost:3000/practices
+Completed 302 Found in 12ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/practices" for 127.0.0.1 at 2019-04-29 13:49:10 -0500
+Processing by PracticesController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPractice Load (0.2ms)[0m  [1mSELECT "practices".* FROM "practices" WHERE (date >= '2019-04-29 18:49:10.303263')  ORDER BY "practices"."date" ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPractice Load (0.2ms)[0m  [1mSELECT "practices".* FROM "practices" WHERE (date < '2019-04-29 18:49:10.303432')  ORDER BY "practices"."date" DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered practices/show.html.haml within layouts/application (20.7ms)
+Completed 200 OK in 75ms (Views: 72.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/practices/edit.3" for 127.0.0.1 at 2019-04-29 13:49:18 -0500
+Processing by PracticesController#edit as 
+  [1m[35mPractice Load (0.2ms)[0m  SELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered practices/edit.html.haml within layouts/application (4.7ms)
+Completed 200 OK in 80ms (Views: 78.9ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/practices.3" for 127.0.0.1 at 2019-04-29 13:49:20 -0500
+Processing by PracticesController#save as 
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/fzV++3QqasPp8H0L+gIHZbvSRm5PHqEHY7qBncKE0qW98uP6cj/RE9pPXOiU4dEdJWdhFCqIRDNaCH6T77Kwg==", "p"=>{"time"=>"12:31:00", "date"=>"23123-12-31", "summary"=>"123"}, "commit"=>"Save Changes"}
+  [1m[36mPractice Load (0.1ms)[0m  [1mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "practices" SET "date" = $1 WHERE "practices"."id" = $2[0m  [["date", "23123-12-31 00:00:00.000000"], ["id", 3]]
+  [1m[35m (76.9ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/practices
+Completed 302 Found in 81ms (ActiveRecord: 77.5ms)
+
+
+Started GET "/practices" for 127.0.0.1 at 2019-04-29 13:49:20 -0500
+Processing by PracticesController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPractice Load (0.3ms)[0m  [1mSELECT "practices".* FROM "practices" WHERE (date >= '2019-04-29 18:49:20.224075')  ORDER BY "practices"."date" ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPractice Load (0.2ms)[0m  [1mSELECT "practices".* FROM "practices" WHERE (date < '2019-04-29 18:49:20.224233')  ORDER BY "practices"."date" DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered practices/show.html.haml within layouts/application (5.8ms)
+Completed 200 OK in 63ms (Views: 61.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/practices/edit.3" for 127.0.0.1 at 2019-04-29 13:49:23 -0500
+Processing by PracticesController#edit as 
+  [1m[35mPractice Load (0.2ms)[0m  SELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered practices/edit.html.haml within layouts/application (4.6ms)
+Completed 200 OK in 81ms (Views: 80.2ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/practices.3" for 127.0.0.1 at 2019-04-29 13:49:25 -0500
+Processing by PracticesController#save as 
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5EXIYhtGnCSw39mXNRF3E1nV0n9z/zDOjHdMcewdZKGPTtYWH17Ky/ARJRC4qvhKu68G4pppa1pckYeN1Km9KQ==", "p"=>{"time"=>"12:31:00", "date"=>"23123-12-31", "summary"=>"12354"}, "commit"=>"Save Changes"}
+  [1m[36mPractice Load (0.2ms)[0m  [1mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "practices" SET "summary" = $1 WHERE "practices"."id" = $2[0m  [["summary", "12354"], ["id", 3]]
+  [1m[35m (79.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/practices
+Completed 302 Found in 85ms (ActiveRecord: 80.2ms)
+
+
+Started GET "/practices" for 127.0.0.1 at 2019-04-29 13:49:25 -0500
+Processing by PracticesController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPractice Load (0.3ms)[0m  [1mSELECT "practices".* FROM "practices" WHERE (date >= '2019-04-29 18:49:25.493458')  ORDER BY "practices"."date" ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPractice Load (0.3ms)[0m  [1mSELECT "practices".* FROM "practices" WHERE (date < '2019-04-29 18:49:25.493592')  ORDER BY "practices"."date" DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered practices/show.html.haml within layouts/application (7.7ms)
+Completed 200 OK in 76ms (Views: 74.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/practices/edit.3" for 127.0.0.1 at 2019-04-29 13:50:30 -0500
+Processing by PracticesController#edit as 
+  [1m[35mPractice Load (0.1ms)[0m  SELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered practices/edit.html.haml within layouts/application (6.8ms)
+Completed 200 OK in 97ms (Views: 88.0ms | ActiveRecord: 1.6ms)
+
+
+Started PUT "/practices.3" for 127.0.0.1 at 2019-04-29 13:50:31 -0500
+Processing by PracticesController#save as 
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EPClU3Hq8GOhEKRSKZFKK6wTvOV4fyW2jpv/9e4agEx7+7sndfKmjOHeWNWkKsVyTmloeJHpfiJefTQJ1q5ZxA==", "p"=>{"time"=>"12:31:00", "date"=>"23123-12-31 00:00:00 UTC", "summary"=>"12354"}, "commit"=>"Save Changes"}
+  [1m[36mPractice Load (0.2ms)[0m  [1mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/practices
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/practices" for 127.0.0.1 at 2019-04-29 13:50:31 -0500
+Processing by PracticesController#show as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPractice Load (0.3ms)[0m  SELECT "practices".* FROM "practices" WHERE (date >= '2019-04-29 18:50:31.862376')  ORDER BY "practices"."date" ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPractice Load (0.2ms)[0m  SELECT "practices".* FROM "practices" WHERE (date < '2019-04-29 18:50:31.862504')  ORDER BY "practices"."date" DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered practices/show.html.haml within layouts/application (16.6ms)
+Completed 200 OK in 70ms (Views: 68.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/practices/edit.3" for 127.0.0.1 at 2019-04-29 13:50:33 -0500
+Processing by PracticesController#edit as 
+  [1m[36mPractice Load (0.2ms)[0m  [1mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered practices/edit.html.haml within layouts/application (4.6ms)
+Completed 200 OK in 85ms (Views: 84.0ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/practices.3" for 127.0.0.1 at 2019-04-29 13:50:34 -0500
+Processing by PracticesController#save as 
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sLeHz3DRUb/4MTaHCUPmOMcgDjdALN8B6sVglXl7MenbvJm7dMkHULj/ygCE+GlhJVraqqm6hJU6I6tpQc/oYQ==", "p"=>{"time"=>"12:31:00", "date"=>"23123-12-31 00:00:00 UTC", "summary"=>"123546"}, "commit"=>"Save Changes"}
+  [1m[35mPractice Load (0.1ms)[0m  SELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "practices" SET "summary" = $1 WHERE "practices"."id" = $2  [["summary", "123546"], ["id", 3]]
+  [1m[36m (14.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/practices
+Completed 302 Found in 19ms (ActiveRecord: 15.3ms)
+
+
+Started GET "/practices" for 127.0.0.1 at 2019-04-29 13:50:34 -0500
+Processing by PracticesController#show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPractice Load (0.3ms)[0m  SELECT "practices".* FROM "practices" WHERE (date >= '2019-04-29 18:50:34.257437')  ORDER BY "practices"."date" ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPractice Load (0.3ms)[0m  SELECT "practices".* FROM "practices" WHERE (date < '2019-04-29 18:50:34.257637')  ORDER BY "practices"."date" DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered practices/show.html.haml within layouts/application (10.1ms)
+Completed 200 OK in 65ms (Views: 63.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/practices/edit.3" for 127.0.0.1 at 2019-04-29 13:50:35 -0500
+Processing by PracticesController#edit as 
+  [1m[36mPractice Load (0.2ms)[0m  [1mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered practices/edit.html.haml within layouts/application (4.7ms)
+Completed 200 OK in 82ms (Views: 81.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/practices/edit.3" for 127.0.0.1 at 2019-04-29 13:50:41 -0500
+Processing by PracticesController#edit as 
+  [1m[35mPractice Load (0.1ms)[0m  SELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered practices/edit.html.haml within layouts/application (6.5ms)
+Completed 200 OK in 81ms (Views: 80.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/practices/edit.3" for 127.0.0.1 at 2019-04-29 13:50:45 -0500
+Processing by PracticesController#edit as 
+  [1m[36mPractice Load (0.1ms)[0m  [1mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered practices/edit.html.haml within layouts/application (6.7ms)
+Completed 200 OK in 86ms (Views: 84.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/practices/edit.3" for 127.0.0.1 at 2019-04-29 13:51:07 -0500
+Processing by PracticesController#edit as 
+  [1m[35mPractice Load (0.1ms)[0m  SELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered practices/edit.html.haml within layouts/application (6.5ms)
+Completed 200 OK in 81ms (Views: 80.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/practices/edit.3" for 127.0.0.1 at 2019-04-29 13:51:08 -0500
+Processing by PracticesController#edit as 
+  [1m[36mPractice Load (0.2ms)[0m  [1mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered practices/edit.html.haml within layouts/application (4.4ms)
+Completed 200 OK in 79ms (Views: 77.9ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/practices.3" for 127.0.0.1 at 2019-04-29 13:51:09 -0500
+Processing by PracticesController#save as 
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fPil59240CsabFgFBee0GnreVZBs8yo7hYeP3sobFH0X87uT2aCGxFqipIKIXDtDmKSBDYVlca9VYUQi8q/N9Q==", "p"=>{"time"=>"12:31:00", "date"=>"31-12-23123", "summary"=>"123546"}, "commit"=>"Save Changes"}
+  [1m[35mPractice Load (0.2ms)[0m  SELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/practices
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/practices" for 127.0.0.1 at 2019-04-29 13:51:09 -0500
+Processing by PracticesController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPractice Load (0.3ms)[0m  [1mSELECT "practices".* FROM "practices" WHERE (date >= '2019-04-29 18:51:09.347096')  ORDER BY "practices"."date" ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPractice Load (0.2ms)[0m  [1mSELECT "practices".* FROM "practices" WHERE (date < '2019-04-29 18:51:09.347243')  ORDER BY "practices"."date" DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered practices/show.html.haml within layouts/application (5.7ms)
+Completed 200 OK in 58ms (Views: 56.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/practices/edit.3" for 127.0.0.1 at 2019-04-29 13:51:10 -0500
+Processing by PracticesController#edit as 
+  [1m[35mPractice Load (0.2ms)[0m  SELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered practices/edit.html.haml within layouts/application (4.7ms)
+Completed 200 OK in 82ms (Views: 81.0ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/practices.3" for 127.0.0.1 at 2019-04-29 13:51:16 -0500
+Processing by PracticesController#save as 
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"numSaeVpl28I9FTUA87XROfYicmeMj57XqPy2+RWL4P14owd4XHBgEg6qFOOdVgdBaJdVHekZe+ORTkn3OL2Cw==", "p"=>{"time"=>"12:31:00", "date"=>"12-30-45", "summary"=>"123546"}, "commit"=>"Save Changes"}
+  [1m[36mPractice Load (0.1ms)[0m  [1mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+Redirected to http://localhost:3000/practices
+Completed 302 Found in 6ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/practices" for 127.0.0.1 at 2019-04-29 13:51:16 -0500
+Processing by PracticesController#show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPractice Load (0.2ms)[0m  SELECT "practices".* FROM "practices" WHERE (date >= '2019-04-29 18:51:16.284592')  ORDER BY "practices"."date" ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPractice Load (0.2ms)[0m  SELECT "practices".* FROM "practices" WHERE (date < '2019-04-29 18:51:16.284736')  ORDER BY "practices"."date" DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered practices/show.html.haml within layouts/application (4.8ms)
+Completed 200 OK in 59ms (Views: 57.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/practices/edit.3" for 127.0.0.1 at 2019-04-29 13:51:18 -0500
+Processing by PracticesController#edit as 
+  [1m[36mPractice Load (0.1ms)[0m  [1mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered practices/edit.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 79ms (Views: 78.1ms | ActiveRecord: 0.1ms)
+
+
+Started PUT "/practices.3" for 127.0.0.1 at 2019-04-29 13:51:21 -0500
+Processing by PracticesController#save as 
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VAaLl1GnzAg8T06rBuSQhAdhs8r2XSh4NBUmxhUvU1M/DZXjVb+a53yBsiyLXx/d5RtnVx/Lc+zk8+06LZuK2w==", "p"=>{"time"=>"12:31:00", "date"=>"32-12-23123", "summary"=>"123546"}, "commit"=>"Save Changes"}
+  [1m[35mPractice Load (0.1ms)[0m  SELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+Redirected to http://localhost:3000/practices
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/practices" for 127.0.0.1 at 2019-04-29 13:51:21 -0500
+Processing by PracticesController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPractice Load (0.2ms)[0m  [1mSELECT "practices".* FROM "practices" WHERE (date >= '2019-04-29 18:51:21.140995')  ORDER BY "practices"."date" ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPractice Load (0.2ms)[0m  [1mSELECT "practices".* FROM "practices" WHERE (date < '2019-04-29 18:51:21.141150')  ORDER BY "practices"."date" DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered practices/show.html.haml within layouts/application (5.5ms)
+Completed 200 OK in 61ms (Views: 59.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/practices/edit.3" for 127.0.0.1 at 2019-04-29 13:51:22 -0500
+Processing by PracticesController#edit as 
+  [1m[35mPractice Load (0.2ms)[0m  SELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered practices/edit.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 79ms (Views: 78.4ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/practices.3" for 127.0.0.1 at 2019-04-29 13:51:23 -0500
+Processing by PracticesController#save as 
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tMvsrqZVfCrLhfdB3RMxFhtREKxAdmCtstTpzjbvJNTfwPLaok0qxYtLC8ZQqL5P+SvEMangOzliMiIyDlv9XA==", "p"=>{"time"=>"12:31:00", "date"=>"31-12-2000", "summary"=>"123546"}, "commit"=>"Save Changes"}
+  [1m[36mPractice Load (0.2ms)[0m  [1mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "practices" SET "date" = $1 WHERE "practices"."id" = $2[0m  [["date", "2000-12-31 00:00:00.000000"], ["id", 3]]
+  [1m[35m (50.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/practices
+Completed 302 Found in 55ms (ActiveRecord: 51.1ms)
+
+
+Started GET "/practices" for 127.0.0.1 at 2019-04-29 13:51:24 -0500
+Processing by PracticesController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPractice Load (0.3ms)[0m  [1mSELECT "practices".* FROM "practices" WHERE (date >= '2019-04-29 18:51:24.040746')  ORDER BY "practices"."date" ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPractice Load (0.2ms)[0m  [1mSELECT "practices".* FROM "practices" WHERE (date < '2019-04-29 18:51:24.040891')  ORDER BY "practices"."date" DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered practices/show.html.haml within layouts/application (4.6ms)
+Completed 200 OK in 56ms (Views: 54.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/practices/new" for 127.0.0.1 at 2019-04-29 13:51:32 -0500
+Processing by PracticesController#new as HTML
+  Rendered practices/new.html.haml within layouts/application (4.6ms)
+Completed 200 OK in 55ms (Views: 54.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/practices/new" for 127.0.0.1 at 2019-04-29 13:51:42 -0500
+Processing by PracticesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"atEMH2F3q74L8kp0IUs6xMugzL65+idKRkLxxGMJZR4B2hJrZW/9UUs8tvOs8LWdKdoYI1BsfN6WpDo4W728lg==", "p"=>{"time"=>"12:31", "date"=>"3123-12-31", "summary"=>"123123"}, "commit"=>"Save Changes"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "practices" ("time", "date", "summary", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"  [["time", "2000-01-01 12:31:00.000000"], ["date", "3123-12-31 00:00:00.000000"], ["summary", "123123"], ["user_id", 1]]
+  [1m[36m (41.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/practices
+Completed 302 Found in 45ms (ActiveRecord: 42.1ms)
+
+
+Started GET "/practices" for 127.0.0.1 at 2019-04-29 13:51:42 -0500
+Processing by PracticesController#show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPractice Load (0.2ms)[0m  SELECT "practices".* FROM "practices" WHERE (date >= '2019-04-29 18:51:42.440863')  ORDER BY "practices"."date" ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPractice Load (0.1ms)[0m  SELECT "practices".* FROM "practices" WHERE (date < '2019-04-29 18:51:42.441036')  ORDER BY "practices"."date" DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered practices/show.html.haml within layouts/application (5.4ms)
+Completed 200 OK in 61ms (Views: 60.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/practices/edit.4" for 127.0.0.1 at 2019-04-29 13:51:43 -0500
+Processing by PracticesController#edit as 
+  [1m[36mPractice Load (0.2ms)[0m  [1mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  Rendered practices/edit.html.haml within layouts/application (7.5ms)
+Completed 200 OK in 89ms (Views: 88.0ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/practices.4" for 127.0.0.1 at 2019-04-29 13:51:46 -0500
+Processing by PracticesController#save as 
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jAvAP7diJ1luOFKw5TgJAdD9zCqbUkV8843N0WmlreXnAN5Ls3pxti72rjdog4ZYMocYt3LEHugjawYtURF0bQ==", "p"=>{"time"=>"12:31:00", "date"=>"31/14/3123", "summary"=>"123123"}, "commit"=>"Save Changes"}
+  [1m[35mPractice Load (0.2ms)[0m  SELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+Redirected to http://localhost:3000/practices
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/practices" for 127.0.0.1 at 2019-04-29 13:51:46 -0500
+Processing by PracticesController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPractice Load (0.3ms)[0m  [1mSELECT "practices".* FROM "practices" WHERE (date >= '2019-04-29 18:51:46.456629')  ORDER BY "practices"."date" ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPractice Load (0.2ms)[0m  [1mSELECT "practices".* FROM "practices" WHERE (date < '2019-04-29 18:51:46.456788')  ORDER BY "practices"."date" DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered practices/show.html.haml within layouts/application (5.8ms)
+Completed 200 OK in 58ms (Views: 56.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/practices/edit.4" for 127.0.0.1 at 2019-04-29 13:51:48 -0500
+Processing by PracticesController#edit as 
+  [1m[35mPractice Load (0.2ms)[0m  SELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1  [["id", 4]]
+  Rendered practices/edit.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 82ms (Views: 80.8ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/practices.4" for 127.0.0.1 at 2019-04-29 13:51:50 -0500
+Processing by PracticesController#save as 
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9CVku9InsLYw9DK+FVdg5YXBXU92btdXSZTXeAGUeTSfLnrP1j/mWXA6zjmY7O+8Z7uJ0p/4jMOZchyEOSCgvA==", "p"=>{"time"=>"12:31:00", "date"=>"12/12/3123", "summary"=>"123123"}, "commit"=>"Save Changes"}
+  [1m[36mPractice Load (0.2ms)[0m  [1mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "practices" SET "date" = $1 WHERE "practices"."id" = $2[0m  [["date", "3123-12-12 00:00:00.000000"], ["id", 4]]
+  [1m[35m (72.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/practices
+Completed 302 Found in 78ms (ActiveRecord: 73.1ms)
+
+
+Started GET "/practices" for 127.0.0.1 at 2019-04-29 13:51:50 -0500
+Processing by PracticesController#show as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPractice Load (0.3ms)[0m  [1mSELECT "practices".* FROM "practices" WHERE (date >= '2019-04-29 18:51:50.141522')  ORDER BY "practices"."date" ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPractice Load (0.3ms)[0m  [1mSELECT "practices".* FROM "practices" WHERE (date < '2019-04-29 18:51:50.141789')  ORDER BY "practices"."date" DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered practices/show.html.haml within layouts/application (7.5ms)
+Completed 200 OK in 67ms (Views: 65.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/practices/edit.4" for 127.0.0.1 at 2019-04-29 13:51:51 -0500
+Processing by PracticesController#edit as 
+  [1m[35mPractice Load (0.1ms)[0m  SELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1  [["id", 4]]
+  Rendered practices/edit.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 80ms (Views: 79.2ms | ActiveRecord: 0.1ms)
+
+
+Started PUT "/practices.4" for 127.0.0.1 at 2019-04-29 13:51:52 -0500
+Processing by PracticesController#save as 
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Nu7Y2W0YgOb1SjW6XuJy5KkAoJ9PR3luXDxIShu+l0Rd5cataQDWCbWEyT3TWf29S3p0AqbRIvqM2oO2IwpOzA==", "p"=>{"time"=>"12:31:00", "date"=>"12/11/3123", "summary"=>"123123"}, "commit"=>"Save Changes"}
+  [1m[36mPractice Load (0.2ms)[0m  [1mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "practices" SET "date" = $1 WHERE "practices"."id" = $2[0m  [["date", "3123-11-12 00:00:00.000000"], ["id", 4]]
+  [1m[35m (70.8ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/practices
+Completed 302 Found in 75ms (ActiveRecord: 71.7ms)
+
+
+Started GET "/practices" for 127.0.0.1 at 2019-04-29 13:51:52 -0500
+Processing by PracticesController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPractice Load (0.3ms)[0m  [1mSELECT "practices".* FROM "practices" WHERE (date >= '2019-04-29 18:51:52.887976')  ORDER BY "practices"."date" ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPractice Load (0.2ms)[0m  [1mSELECT "practices".* FROM "practices" WHERE (date < '2019-04-29 18:51:52.888113')  ORDER BY "practices"."date" DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered practices/show.html.haml within layouts/application (5.8ms)
+Completed 200 OK in 57ms (Views: 56.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/practices/edit.4" for 127.0.0.1 at 2019-04-29 13:51:55 -0500
+Processing by PracticesController#edit as 
+  [1m[35mPractice Load (0.1ms)[0m  SELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1  [["id", 4]]
+  Rendered practices/edit.html.haml within layouts/application (4.6ms)
+Completed 200 OK in 82ms (Views: 80.9ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/practices.4" for 127.0.0.1 at 2019-04-29 13:51:56 -0500
+Processing by PracticesController#delete as 
+  Parameters: {"authenticity_token"=>"dDJLEJAN6hYSdClJwZNkD2IxttjjxWC2G+7J8Ibaa7kfOVVklBW8+VK61c5MKOtWgEtiRQpTOyLLCAIMvm6yMQ=="}
+  [1m[36mPractice Load (0.1ms)[0m  [1mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "practices" WHERE "practices"."id" = $1[0m  [["id", 4]]
+  [1m[35m (44.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/practices
+Completed 302 Found in 47ms (ActiveRecord: 44.8ms)
+
+
+Started GET "/practices" for 127.0.0.1 at 2019-04-29 13:51:56 -0500
+Processing by PracticesController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPractice Load (0.3ms)[0m  [1mSELECT "practices".* FROM "practices" WHERE (date >= '2019-04-29 18:51:56.802231')  ORDER BY "practices"."date" ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPractice Load (0.2ms)[0m  [1mSELECT "practices".* FROM "practices" WHERE (date < '2019-04-29 18:51:56.802390')  ORDER BY "practices"."date" DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered practices/show.html.haml within layouts/application (5.1ms)
+Completed 200 OK in 57ms (Views: 55.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/practices/new" for 127.0.0.1 at 2019-04-29 13:51:57 -0500
+Processing by PracticesController#new as HTML
+  Rendered practices/new.html.haml within layouts/application (4.3ms)
+Completed 200 OK in 55ms (Views: 54.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/practices" for 127.0.0.1 at 2019-04-29 13:52:05 -0500
+Processing by PracticesController#show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPractice Load (0.2ms)[0m  SELECT "practices".* FROM "practices" WHERE (date >= '2019-04-29 18:52:05.562270')  ORDER BY "practices"."date" ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPractice Load (0.2ms)[0m  SELECT "practices".* FROM "practices" WHERE (date < '2019-04-29 18:52:05.562450')  ORDER BY "practices"."date" DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered practices/show.html.haml within layouts/application (5.3ms)
+Completed 200 OK in 61ms (Views: 60.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/practices/new" for 127.0.0.1 at 2019-04-29 13:52:06 -0500
+Processing by PracticesController#new as HTML
+  Rendered practices/new.html.haml within layouts/application (4.6ms)
+Completed 200 OK in 55ms (Views: 54.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/practices/new" for 127.0.0.1 at 2019-04-29 13:52:08 -0500
+Processing by PracticesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pA7EURRJ7cl5SboMFk/u3dyRIQaLlxhlrxsna22v0BLPBdolEFG7JjmHRoub9GGEPuv1m2IBQ/F//eyXVRsJmg==", "p"=>{"time"=>"12:31", "date"=>"2312-12-31", "summary"=>"123"}, "commit"=>"Save Changes"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "practices" ("time", "date", "summary", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["time", "2000-01-01 12:31:00.000000"], ["date", "2312-12-31 00:00:00.000000"], ["summary", "123"], ["user_id", 1]]
+  [1m[35m (49.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/practices
+Completed 302 Found in 54ms (ActiveRecord: 50.0ms)
+
+
+Started GET "/practices" for 127.0.0.1 at 2019-04-29 13:52:08 -0500
+Processing by PracticesController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPractice Load (0.2ms)[0m  [1mSELECT "practices".* FROM "practices" WHERE (date >= '2019-04-29 18:52:08.638021')  ORDER BY "practices"."date" ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPractice Load (0.2ms)[0m  [1mSELECT "practices".* FROM "practices" WHERE (date < '2019-04-29 18:52:08.638160')  ORDER BY "practices"."date" DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered practices/show.html.haml within layouts/application (6.4ms)
+Completed 200 OK in 59ms (Views: 57.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/practices/edit.5" for 127.0.0.1 at 2019-04-29 13:52:09 -0500
+Processing by PracticesController#edit as 
+  [1m[35mPractice Load (0.2ms)[0m  SELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1  [["id", 5]]
+  Rendered practices/edit.html.haml within layouts/application (6.6ms)
+Completed 200 OK in 82ms (Views: 81.1ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/practices.5" for 127.0.0.1 at 2019-04-29 13:52:11 -0500
+Processing by PracticesController#save as 
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fqcPqRqi+knQu+NRmnR5i2091UX/dRJ+nDFxPgdcGoEVrBHdHrqsppB1H9YXz/bSj0cB2BbjSepM17rCP+jDCQ==", "p"=>{"time"=>"12:31:00", "date"=>"11231231232/31/2312", "summary"=>"123"}, "commit"=>"Save Changes"}
+  [1m[36mPractice Load (0.1ms)[0m  [1mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+Redirected to http://localhost:3000/practices
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/practices" for 127.0.0.1 at 2019-04-29 13:52:11 -0500
+Processing by PracticesController#show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPractice Load (0.3ms)[0m  SELECT "practices".* FROM "practices" WHERE (date >= '2019-04-29 18:52:11.646743')  ORDER BY "practices"."date" ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPractice Load (0.3ms)[0m  SELECT "practices".* FROM "practices" WHERE (date < '2019-04-29 18:52:11.646876')  ORDER BY "practices"."date" DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered practices/show.html.haml within layouts/application (6.7ms)
+Completed 200 OK in 58ms (Views: 57.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/practices/edit.5" for 127.0.0.1 at 2019-04-29 13:52:13 -0500
+Processing by PracticesController#edit as 
+  [1m[36mPractice Load (0.2ms)[0m  [1mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  Rendered practices/edit.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 78ms (Views: 77.5ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/practices.5" for 127.0.0.1 at 2019-04-29 13:52:17 -0500
+Processing by PracticesController#save as 
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Hpdw81rePjQSTfRq7BY6RorRlyK9+aCqkV+ulWjFk6Z1nG6HXsZo21KDCO1hrbUfaKtDv1Rv+z5BuWVpUHFKLg==", "p"=>{"time"=>"12:31:00", "date"=>"19/31/2312", "summary"=>"123"}, "commit"=>"Save Changes"}
+  [1m[35mPractice Load (0.2ms)[0m  SELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+Redirected to http://localhost:3000/practices
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/practices" for 127.0.0.1 at 2019-04-29 13:52:17 -0500
+Processing by PracticesController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPractice Load (0.2ms)[0m  [1mSELECT "practices".* FROM "practices" WHERE (date >= '2019-04-29 18:52:17.610843')  ORDER BY "practices"."date" ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPractice Load (0.2ms)[0m  [1mSELECT "practices".* FROM "practices" WHERE (date < '2019-04-29 18:52:17.610982')  ORDER BY "practices"."date" DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered practices/show.html.haml within layouts/application (6.2ms)
+Completed 200 OK in 60ms (Views: 59.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/practices/edit.5" for 127.0.0.1 at 2019-04-29 13:52:18 -0500
+Processing by PracticesController#edit as 
+  [1m[35mPractice Load (0.2ms)[0m  SELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1  [["id", 5]]
+  Rendered practices/edit.html.haml within layouts/application (4.7ms)
+Completed 200 OK in 84ms (Views: 82.7ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/practices.5" for 127.0.0.1 at 2019-04-29 13:52:20 -0500
+Processing by PracticesController#save as 
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6FElYFULTsqhBqquiZcO9xLaic5LyZl7VgaVXSwQo6uDWjsUURMYJeHIVikELIGu8KBdU6Jfwu+G4F6hFKR6Iw==", "p"=>{"time"=>"12:31:00", "date"=>"1/31/2312", "summary"=>"123"}, "commit"=>"Save Changes"}
+  [1m[36mPractice Load (0.1ms)[0m  [1mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+Redirected to http://localhost:3000/practices
+Completed 302 Found in 5ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/practices" for 127.0.0.1 at 2019-04-29 13:52:20 -0500
+Processing by PracticesController#show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPractice Load (0.3ms)[0m  SELECT "practices".* FROM "practices" WHERE (date >= '2019-04-29 18:52:20.415520')  ORDER BY "practices"."date" ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPractice Load (0.2ms)[0m  SELECT "practices".* FROM "practices" WHERE (date < '2019-04-29 18:52:20.415664')  ORDER BY "practices"."date" DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered practices/show.html.haml within layouts/application (6.4ms)
+Completed 200 OK in 58ms (Views: 56.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/practices/edit.5" for 127.0.0.1 at 2019-04-29 13:52:22 -0500
+Processing by PracticesController#edit as 
+  [1m[36mPractice Load (0.1ms)[0m  [1mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  Rendered practices/edit.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 80ms (Views: 79.0ms | ActiveRecord: 0.1ms)
+
+
+Started PUT "/practices.5" for 127.0.0.1 at 2019-04-29 13:52:26 -0500
+Processing by PracticesController#save as 
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1LyC39v1nRheJfn1NZ6oeZdmQ/QlL8ZL3EkFWni6z4i/t5yr3+3L9x7rBXK4JScgdRyXacy5nd8Mr86mQA4WAA==", "p"=>{"time"=>"12:31:00", "date"=>"12/30/2312", "summary"=>"123"}, "commit"=>"Save Changes"}
+  [1m[35mPractice Load (0.2ms)[0m  SELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+Redirected to http://localhost:3000/practices
+Completed 302 Found in 6ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/practices" for 127.0.0.1 at 2019-04-29 13:52:26 -0500
+Processing by PracticesController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPractice Load (0.3ms)[0m  [1mSELECT "practices".* FROM "practices" WHERE (date >= '2019-04-29 18:52:26.385556')  ORDER BY "practices"."date" ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPractice Load (0.2ms)[0m  [1mSELECT "practices".* FROM "practices" WHERE (date < '2019-04-29 18:52:26.385698')  ORDER BY "practices"."date" DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered practices/show.html.haml within layouts/application (5.7ms)
+Completed 200 OK in 62ms (Views: 60.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/practices/edit.5" for 127.0.0.1 at 2019-04-29 13:52:27 -0500
+Processing by PracticesController#edit as 
+  [1m[35mPractice Load (0.2ms)[0m  SELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1  [["id", 5]]
+  Rendered practices/edit.html.haml within layouts/application (5.5ms)
+Completed 200 OK in 88ms (Views: 86.7ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/practices.5" for 127.0.0.1 at 2019-04-29 13:52:29 -0500
+Processing by PracticesController#save as 
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5q3FjJNECpfNizz+nncU6kLegpmwl8lyFKBR8uOzekuNptv4l1xceI1FwHkTzJuzoKRWBFkBkubERpoO2wejww==", "p"=>{"time"=>"12:31:00", "date"=>"12/31/2000", "summary"=>"123"}, "commit"=>"Save Changes"}
+  [1m[36mPractice Load (0.2ms)[0m  [1mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+Redirected to http://localhost:3000/practices
+Completed 302 Found in 6ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/practices" for 127.0.0.1 at 2019-04-29 13:52:29 -0500
+Processing by PracticesController#show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPractice Load (0.3ms)[0m  SELECT "practices".* FROM "practices" WHERE (date >= '2019-04-29 18:52:29.654481')  ORDER BY "practices"."date" ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPractice Load (0.2ms)[0m  SELECT "practices".* FROM "practices" WHERE (date < '2019-04-29 18:52:29.654616')  ORDER BY "practices"."date" DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered practices/show.html.haml within layouts/application (6.1ms)
+Completed 200 OK in 57ms (Views: 56.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/practices/edit.5" for 127.0.0.1 at 2019-04-29 13:52:35 -0500
+Processing by PracticesController#edit as 
+  [1m[36mPractice Load (0.1ms)[0m  [1mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  Rendered practices/edit.html.haml within layouts/application (6.6ms)
+Completed 200 OK in 85ms (Views: 83.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/practices/edit.5" for 127.0.0.1 at 2019-04-29 13:53:08 -0500
+Processing by PracticesController#edit as 
+  [1m[35mPractice Load (0.2ms)[0m  SELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1  [["id", 5]]
+  Rendered practices/edit.html.haml within layouts/application (6.4ms)
+Completed 200 OK in 86ms (Views: 84.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/practices" for 127.0.0.1 at 2019-04-29 13:53:09 -0500
+Processing by PracticesController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPractice Load (0.3ms)[0m  [1mSELECT "practices".* FROM "practices" WHERE (date >= '2019-04-29 18:53:09.410234')  ORDER BY "practices"."date" ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPractice Load (0.2ms)[0m  [1mSELECT "practices".* FROM "practices" WHERE (date < '2019-04-29 18:53:09.410376')  ORDER BY "practices"."date" DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered practices/show.html.haml within layouts/application (7.0ms)
+Completed 200 OK in 59ms (Views: 57.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/practices/edit.5" for 127.0.0.1 at 2019-04-29 13:53:10 -0500
+Processing by PracticesController#edit as 
+  [1m[35mPractice Load (0.3ms)[0m  SELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1  [["id", 5]]
+  Rendered practices/edit.html.haml within layouts/application (4.7ms)
+Completed 200 OK in 87ms (Views: 85.4ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/practices.5" for 127.0.0.1 at 2019-04-29 13:53:12 -0500
+Processing by PracticesController#save as 
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"htC7vPm+7g7bNnlyLbOyE/b4mZaNHnjLpERILcGQZ0Dt26XI/aa44Zv4hfWgCD1KFIJNC2SII190ooPR+SS+yA==", "p"=>{"time"=>"12:31:00", "date"=>"12/12/2312", "summary"=>"123"}, "commit"=>"Save Changes"}
+  [1m[36mPractice Load (0.1ms)[0m  [1mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "practices" SET "date" = $1 WHERE "practices"."id" = $2[0m  [["date", "2312-12-12 00:00:00.000000"], ["id", 5]]
+  [1m[35m (115.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/practices
+Completed 302 Found in 121ms (ActiveRecord: 116.1ms)
+
+
+Started GET "/practices" for 127.0.0.1 at 2019-04-29 13:53:13 -0500
+Processing by PracticesController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPractice Load (0.3ms)[0m  [1mSELECT "practices".* FROM "practices" WHERE (date >= '2019-04-29 18:53:13.035419')  ORDER BY "practices"."date" ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPractice Load (0.2ms)[0m  [1mSELECT "practices".* FROM "practices" WHERE (date < '2019-04-29 18:53:13.035550')  ORDER BY "practices"."date" DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered practices/show.html.haml within layouts/application (5.6ms)
+Completed 200 OK in 57ms (Views: 55.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/practices/edit.5" for 127.0.0.1 at 2019-04-29 13:53:14 -0500
+Processing by PracticesController#edit as 
+  [1m[35mPractice Load (0.2ms)[0m  SELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1  [["id", 5]]
+  Rendered practices/edit.html.haml within layouts/application (5.7ms)
+Completed 200 OK in 87ms (Views: 86.3ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/practices.5" for 127.0.0.1 at 2019-04-29 13:53:17 -0500
+Processing by PracticesController#save as 
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"n5kpNWdr9SbKuAXVDEVrD1SMqti99+OaWys6OceOx9f0kjdBY3OjyYp2+VKB/uRWtvZ+RVRhuA6LzfHF/zoeXw==", "p"=>{"time"=>"12:31:00", "date"=>"12/12/2020", "summary"=>"123"}, "commit"=>"Save Changes"}
+  [1m[36mPractice Load (0.2ms)[0m  [1mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "practices" SET "date" = $1 WHERE "practices"."id" = $2[0m  [["date", "2020-12-12 00:00:00.000000"], ["id", 5]]
+  [1m[35m (118.8ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/practices
+Completed 302 Found in 124ms (ActiveRecord: 119.6ms)
+
+
+Started GET "/practices" for 127.0.0.1 at 2019-04-29 13:53:17 -0500
+Processing by PracticesController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPractice Load (0.3ms)[0m  [1mSELECT "practices".* FROM "practices" WHERE (date >= '2019-04-29 18:53:17.663883')  ORDER BY "practices"."date" ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPractice Load (0.2ms)[0m  [1mSELECT "practices".* FROM "practices" WHERE (date < '2019-04-29 18:53:17.664014')  ORDER BY "practices"."date" DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered practices/show.html.haml within layouts/application (6.4ms)
+Completed 200 OK in 65ms (Views: 63.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/practices/edit.5" for 127.0.0.1 at 2019-04-29 13:53:25 -0500
+Processing by PracticesController#edit as 
+  [1m[35mPractice Load (0.1ms)[0m  SELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1  [["id", 5]]
+  Rendered practices/edit.html.haml within layouts/application (6.8ms)
+Completed 200 OK in 92ms (Views: 83.9ms | ActiveRecord: 1.6ms)
+
+
+Started PUT "/practices.5" for 127.0.0.1 at 2019-04-29 13:53:26 -0500
+Processing by PracticesController#save as 
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"O3IouRxpd/+3VSIYjQgiSoyMXroYeHc9jcvEsJlbBo1QeTbNGHEhEPeb3p8As60TbvaKJ/HuLKldLQ9Moe/fBQ==", "p"=>{"time"=>"12:31:00", "date"=>"", "summary"=>"123"}, "commit"=>"Save Changes"}
+  [1m[36mPractice Load (0.2ms)[0m  [1mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+Redirected to http://localhost:3000/practices
+Completed 302 Found in 5ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/practices" for 127.0.0.1 at 2019-04-29 13:53:26 -0500
+Processing by PracticesController#show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPractice Load (0.4ms)[0m  SELECT "practices".* FROM "practices" WHERE (date >= '2019-04-29 18:53:26.722838')  ORDER BY "practices"."date" ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPractice Load (0.3ms)[0m  SELECT "practices".* FROM "practices" WHERE (date < '2019-04-29 18:53:26.722992')  ORDER BY "practices"."date" DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered practices/show.html.haml within layouts/application (20.9ms)
+Completed 200 OK in 84ms (Views: 81.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/practices/edit.5" for 127.0.0.1 at 2019-04-29 13:53:28 -0500
+Processing by PracticesController#edit as 
+  [1m[36mPractice Load (0.2ms)[0m  [1mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  Rendered practices/edit.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 81ms (Views: 80.2ms | ActiveRecord: 0.2ms)
