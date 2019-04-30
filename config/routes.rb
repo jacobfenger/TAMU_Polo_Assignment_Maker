@@ -32,7 +32,10 @@ Rails.application.routes.draw do
   post '/assignments/new', to: 'assignments#create'
   get '/assignments/new', to: 'assignments#new'
   get '/assignments', to: 'assignments#show'
-  post '/assignments', to: 'assignments#show'
+  post '/assignments', to: 'assignments#show' 
+  get '/assignments/edit', to: 'assignments#edit'
+  put '/assignments', to: 'assignments#save'
+  delete '/assignments', to: 'assignments#delete'
 
   resources :users
 end
