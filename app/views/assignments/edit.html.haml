@@ -1,0 +1,29 @@
+%head
+  = stylesheet_link_tag    'users'
+.custom_container{:id => "assignments_cont"}
+  .container
+    .row{:class => "justify-content-center"}
+      %h1 Edit Existing Assignment
+    .row{:class => "justify-content-center"}
+      .login
+        = form_tag assignments_path(@assignment), :method => :put do
+        
+          .form-group
+            = label :label_horse1, :horse1, 'Horse 1: '
+            = collection_select :a, :horse1, Horse.all, :id, :name, :value => @assignment.horse1
+
+          .form-group
+            = label :label_horse2, :horse2, 'Horse 2: '
+            = collection_select :a, :horse2, Horse.all, :id, :name, :value => @assignment.horse2
+
+          .form-group
+            = label :label_horse3, :horse3, 'Horse 3: '
+            = collection_select :a, :horse3, Horse.all, :id, :name, :value => @assignment.horse3
+
+          .form-group
+            = label :p, :label_summary, 'Assignment Comments'
+            = text_area :p, 'label_summary', :class => "form-control", :value => @assignment.summary
+
+          = submit_tag 'Save Changes', :method => :put, :class => "btn btn-primary col-4"
+
+        = button_to 'Delete', assignments_path(@assignment), :method => :delete, :class => "btn btn-danger col-4"
