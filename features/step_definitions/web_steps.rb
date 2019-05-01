@@ -37,6 +37,12 @@ Given /the following users exist/ do |users_table|
   end
 end
 
+Given /the following practices exist/ do |practices_table|
+  practices_table.hashes.each do |practice|
+    Practice.create practice
+  end
+end
+
 When /^(?:|I )follow "([^"]*)"$/ do |link|
   click_link(link)
 end
