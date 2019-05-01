@@ -41,4 +41,4 @@ Scenario: Sign Up for a Practice
 	Then I should see "Assignments"
 	And I follow "Sign Up"
 	And I press "Save Changes"
-	Then I should see "Successfully created a practice"
+	Then I should see "Successfully signed up"
