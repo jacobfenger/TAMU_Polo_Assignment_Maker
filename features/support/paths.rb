@@ -27,6 +27,8 @@ module NavigationHelpers
 
     when /^the signup page$/ then '/users/new'
 
+    when /^the practices page$/ then '/practices'
+
     else
       begin
         page_name =~ /^the (.*) page$/

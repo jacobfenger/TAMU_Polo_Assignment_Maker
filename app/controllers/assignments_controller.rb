@@ -29,7 +29,7 @@ class AssignmentsController < ApplicationController
 	  p current_practice.assignments.all
 
 	  if @assignment.save
-	  	flash[:notice] = "Successfully created a practice"
+	  	flash[:notice] = "Successfully signed up"
 	  	redirect_to practices_path
 	  else
 	  	flash[:notice] = "An error occured during signup"
